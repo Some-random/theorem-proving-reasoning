@@ -1,0 +1,40 @@
+Let's break down the given theory and rules:
+
+Statements:
+
+Charlie is cold.
+Charlie is smart.
+Dave is smart.
+Fiona is green.
+Fiona is smart.
+Fiona is young.
+Harry is red.
+Rules:
+
+Rule 1: If Charlie is round and Charlie is big then Charlie is smart.
+Rule 2: If something is smart and not red then it is round.
+Rule 3: All red, young things are round.
+Rule 4: Big things are young.
+Rule 5: Red things are big.
+Rule 6: If something is red then it is smart.
+Rule 7: All round, red things are cold.
+Rule 8: All round, green things are cold.
+Rule 9: If something is red and cold then it is green.
+
+The question is: Is Harry not cold?
+
+From the theory we know that Harry is red.
+
+Following the rules:
+
+From Rule 5, we know that "Red things are big". Therefore, Harry is big.
+
+From Rule 4, we know that "Big things are young". Therefore, Harry is young.
+
+From Rule 3, we know that "All red, young things are round". Therefore, Harry is round.
+
+From Rule 7, we know that "All round, red things are cold". Therefore, Harry is cold.
+
+Thus, the statement "Harry is not cold" is false based on the provided theory and rules.
+
+The answer is False
