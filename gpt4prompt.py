@@ -82,7 +82,7 @@ def run_prompt(random_qa_pairs):
 
 if __name__ == "__main__":
     start_time = time.time()
-    # select random questions from proofwriter OWA depth-5 dataset
+    # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
     random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
     run_prompt(random_qa_pairs)
     print("Time elapsed: ", time.time() - start_time)
