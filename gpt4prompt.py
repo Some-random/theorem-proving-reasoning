@@ -10,8 +10,8 @@ import os
 # MODEL = "gpt-3.5-turbo"
 MODEL = "gpt-4"
 seed = 2024
-# openai.organization = "org-xxx"
-# openai.api_key = "sk-xxx"
+openai.organization = "org-xxx"
+openai.api_key = "sk-xxx"
 prompt_inputs = [example_inputs2, example_inputs3, example_inputs4, example_inputs5]
 # prompt_outputs = [example_outputs2, example_outputs3, example_outputs4, example_outputs5]
 prompt_outputs = [example_outputs2_short, example_outputs3_short, example_outputs4_short, example_outputs5_short]
@@ -80,7 +80,7 @@ def run_prompt(random_qa_pairs):
         res = response["choices"][0]["message"]["content"]
         input_output_pairs.append({"input": qa_pair[0], "input_tokens": response["usage"]["prompt_tokens"], "output": res, "output_tokens": response["usage"]["completion_tokens"]})
         print("This is problem: " + str(i) +  ". The predicted answer is: " + res.strip().split('\n')[-1] + ", The GT answer is: " + str(qa_pair[1]))
-    json.dump(input_output_pairs, json_file, indent=4)
+    json.dump(input_output_pairs, json_file, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
