@@ -8,17 +8,25 @@ example_inputs2 = "natural language input: triple1: The cow is big. triple2: The
 
 example_outputs2 = "".join(open("output_prompt/output2.lean").readlines())
 
+example_outputs2_short = "".join(open("output_prompt/output2_short.lean").readlines())
+
 example_inputs3 = "theory: Charlie is cold. Charlie is smart. Dave is smart. Fiona is green. Fiona is smart. Fiona is young. Harry is red. If Charlie is round and Charlie is big then Charlie is smart. If something is smart and not red then it is round. All red, young things are round. Big things are young. Red things are big. If something is red then it is smart. All round, red things are cold. All round, green things are cold. If something is red and cold then it is green. question: Harry is green"
 
 example_outputs3 = "".join(open("output_prompt/output3.lean").readlines())
+
+example_outputs3_short = "".join(open("output_prompt/output3_short.lean").readlines())
 
 example_inputs4 = "theory: Charlie is cold. Charlie is smart. Dave is smart. Fiona is green. Fiona is smart. Fiona is young. Harry is red. If Charlie is round and Charlie is big then Charlie is smart. If something is smart and not red then it is round. All red, young things are round. Big things are young. Red things are big. If something is red then it is smart. All round, red things are cold. All round, green things are cold. If something is red and cold then it is green. question: Harry is not cold"
 
 example_outputs4 = "".join(open("output_prompt/output4.lean").readlines())
 
+example_outputs4_short = "".join(open("output_prompt/output4_short.lean").readlines())
+
 example_inputs5 = "The cat is blue. The cat is nice. The cat likes the cow. The cat needs the cow. The cat needs the rabbit. The cow does not need the rabbit. The cow needs the tiger. The rabbit is round. The tiger is nice. The tiger does not like the cow. If someone likes the cat and they chase the cat then they are blue. If someone likes the cow and they are red then the cow is round. If someone needs the tiger and they need the cat then they do not chase the cow. If someone needs the cat and the cat is blue then the cat is red. If someone is round then they need the cat. If someone likes the cat and the cat needs the rabbit then the cat chases the tiger. If the rabbit needs the tiger then the rabbit is not round. Question: The cow chases the cow.?"
 
 example_outputs5 = "".join(open("output_prompt/output5.lean").readlines())
+
+example_outputs5_short = "".join(open("output_prompt/output5_short.lean").readlines())
 
 
 system_message_text = "You are a genius that does reasoning on natural language reasoning problems. Apart from solving the problem, there are three additional requirements:\n1 If you think the answer to the question is correct, give me a positive answer. If you think the answer to the question is not correct, give me a negative answer. The positive or negative should be in the last line of response in the form of The answer is True or The answer is False.\n2 Please be logical, think step by step and give me your thought process"
