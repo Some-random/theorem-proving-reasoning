@@ -38,7 +38,9 @@ begin
   sorry
 end
 
+-- Looks like it cannot be proven in Lean.
 -- So let's try to prove the negation of the theorem, which is Harry is cold
+
 theorem harry_is_cold : Cold Harry :=
 begin
   apply R7,
