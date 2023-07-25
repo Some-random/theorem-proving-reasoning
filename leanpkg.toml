@@ -2,4 +2,4 @@
 name = "theorem-proving-reasoning"
 version = "0.1"
 lean_version = "leanprover-community/lean:3.50.3"
-path = "reprover_train"
+path = "reprover_train_temp"
