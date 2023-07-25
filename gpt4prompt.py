@@ -28,15 +28,20 @@ def data_generation_proofwriter(filename):
             questions = d.get("questions")
             for key in questions.keys():
                 q = questions.get(key)
-                if q.get("QDep") == 5 and q.get("answer") != "unknown":
+                if q.get("QDep") == 5 and q.get("answer") != "Unknown":
                     question_temp = q.get("question")
                     answer = q.get("answer")
                     real_question = theory + " Question: " + question_temp + "?"
                     qa_pairs.append((real_question, answer))
     random.seed(seed)
     random_qa_pairs = random.sample(qa_pairs, 50)
+    random_qa_pairs_new = random.sample(qa_pairs, 300)
+    temp_random_qa_pairs = []
+    for item in random_qa_pairs_new:
+        if item not in random_qa_pairs:
+            temp_random_qa_pairs.append(item)
     random_qa_pairs = random_qa_pairs[:5]
-    return random_qa_pairs
+    return temp_random_qa_pairs
 
 
 def run_prompt(random_qa_pairs):
@@ -61,26 +66,29 @@ def run_prompt(random_qa_pairs):
         json.dump(config, json_file)
 
     # make a json file to store the random_qa_pairs and its corresponding outputs
-    json_file = open(folder_name + '/output.json', 'w')
     input_output_pairs = []
     for i in range(len(random_qa_pairs)):
-        qa_pair = random_qa_pairs[i]
-        response = openai.ChatCompletion.create(
-            model=MODEL,
-            messages=[
-                {"role": "system", "content": system_message},
-                {"role": "user", "content": "This is an example:\n" + prompt_inputs[0] + "\n\n" + prompt_outputs[0]},
-                {"role": "user", "content": "This is an example:\n" + prompt_inputs[1] + "\n\n" + prompt_outputs[1]},
-                {"role": "user", "content": "This is an example:\n" + prompt_inputs[2] + "\n\n" + prompt_outputs[2]},
-                {"role": "user", "content": "This is an example:\n" + prompt_inputs[3] + "\n\n" + prompt_outputs[3]},
-                {"role": "assistant", "content": qa_pair[0]},
-            ],  
-            temperature=config["temperature"],
-        )
-        res = response["choices"][0]["message"]["content"]
-        input_output_pairs.append({"input": qa_pair[0], "input_tokens": response["usage"]["prompt_tokens"], "output": res, "output_tokens": response["usage"]["completion_tokens"]})
-        print("This is problem: " + str(i) +  ". The predicted answer is: " + res.strip().split('\n')[-1] + ", The GT answer is: " + str(qa_pair[1]))
-    json.dump(input_output_pairs, json_file, indent=4, ensure_ascii=False)
+        try:
+            qa_pair = random_qa_pairs[i]
+            response = openai.ChatCompletion.create(
+                model=MODEL,
+                messages=[
+                    {"role": "system", "content": system_message},
+                    {"role": "user", "content": "This is an example:\n" + prompt_inputs[0] + "\n\n" + prompt_outputs[0]},
+                    {"role": "user", "content": "This is an example:\n" + prompt_inputs[1] + "\n\n" + prompt_outputs[1]},
+                    {"role": "user", "content": "This is an example:\n" + prompt_inputs[2] + "\n\n" + prompt_outputs[2]},
+                    {"role": "user", "content": "This is an example:\n" + prompt_inputs[3] + "\n\n" + prompt_outputs[3]},
+                    {"role": "assistant", "content": qa_pair[0]},
+                ],  
+                temperature=config["temperature"],
+            )
+            json_file = open(folder_name + '/output_' + str(i) + '.json', 'w')
+            res = response["choices"][0]["message"]["content"]
+            d = {"input": qa_pair[0], "input_tokens": response["usage"]["prompt_tokens"], "output": res, "output_tokens": response["usage"]["completion_tokens"]}
+            print("This is problem: " + str(i) +  ". The predicted answer is: " + res.strip().split('\n')[-1] + ", The GT answer is: " + str(qa_pair[1]))
+            json.dump(d, json_file, indent=4, ensure_ascii=False)
+        except:
+            print("Error in problem: " + str(i) + ".")
 
 
 if __name__ == "__main__":
