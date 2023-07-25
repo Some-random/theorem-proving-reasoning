@@ -13,8 +13,6 @@ seed = 2024
 openai.organization = "org-xxx"
 openai.api_key = "sk-xxx"
 openai.organization = "org-hYYpiO6KyDO0yy7BCxRWdJuE"
-openai.api_key = "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"
-prompt_inputs = [example_inputs2, example_inputs3, example_inputs4, example_inputs5]
 # prompt_outputs = [example_outputs2, example_outputs3, example_outputs4, example_outputs5]
 prompt_outputs = [example_outputs2_short_logiclm, example_outputs3_short_logiclm, example_outputs4_short_logiclm, example_outputs5_short_logiclm]
 
