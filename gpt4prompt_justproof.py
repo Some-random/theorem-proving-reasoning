@@ -15,9 +15,9 @@ openai.organization = "org-xxx"
 openai.api_key = "sk-xxx"
 openai.organization = key.openai_organization
 openai.api_key = key.openai_api_key
+prompt_inputs = [example_inputs2_short_proof, example_inputs3_short_proof, example_inputs4_short_proof, example_inputs5_short_proof]
 # prompt_outputs = [example_outputs2, example_outputs3, example_outputs4, example_outputs5]
-prompt_inputs = [example_inputs2, example_inputs3, example_inputs4, example_inputs5]
-prompt_outputs = [example_outputs2_short_logiclm, example_outputs3_short_logiclm, example_outputs4_short_logiclm, example_outputs5_short_logiclm]
+prompt_outputs = [example_outputs2_short_proof, example_outputs3_short_proof, example_outputs4_short_proof, example_outputs5_short_proof]
 
 
 def data_generation_proofwriter(filename):
@@ -43,6 +43,7 @@ def data_generation_proofwriter(filename):
     for item in random_qa_pairs_new:
         if item not in random_qa_pairs:
             temp_random_qa_pairs.append(item)
+    temp_random_qa_pairs = temp_random_qa_pairs[:53]
     random_qa_pairs = random_qa_pairs[:5]
     return temp_random_qa_pairs
 
@@ -56,7 +57,7 @@ def run_prompt(random_qa_pairs):
     # dump the prompt to a file
     write_file = open(folder_name + '/prompt.txt', 'w')
     write_file.write("System message:\n")
-    write_file.write(system_message + "\n\n")
+    write_file.write(system_message_justprove + "\n\n")
     for i in range(len(prompt_inputs)):
         write_file.write("Example " + str(i + 1) + ":\n")
         write_file.write("Input:\n" + prompt_inputs[i] + "\n\n" + "Output:\n" + prompt_outputs[i] + "\n\n")
@@ -76,19 +77,19 @@ def run_prompt(random_qa_pairs):
             response = openai.ChatCompletion.create(
                 model=MODEL,
                 messages=[
-                    {"role": "system", "content": system_message_logiclm},
+                    {"role": "system", "content": system_message_justprove},
                     {"role": "user", "content": "This is an example:\n" + prompt_inputs[0] + "\n\n" + prompt_outputs[0]},
                     {"role": "user", "content": "This is an example:\n" + prompt_inputs[1] + "\n\n" + prompt_outputs[1]},
                     {"role": "user", "content": "This is an example:\n" + prompt_inputs[2] + "\n\n" + prompt_outputs[2]},
                     {"role": "user", "content": "This is an example:\n" + prompt_inputs[3] + "\n\n" + prompt_outputs[3]},
-                    {"role": "assistant", "content": qa_pair[0]},
+                    {"role": "assistant", "content": qa_pair},
                 ],  
                 temperature=config["temperature"],
             )
             json_file = open(folder_name + '/output_' + str(i) + '.json', 'w')
             res = response["choices"][0]["message"]["content"]
-            d = {"input": qa_pair[0], "input_tokens": response["usage"]["prompt_tokens"], "output": res, "output_tokens": response["usage"]["completion_tokens"]}
-            print("This is problem: " + str(i) +  ". The predicted answer is: " + res.strip().split('\n')[-1] + ", The GT answer is: " + str(qa_pair[1]))
+            d = {"input": qa_pair, "input_tokens": response["usage"]["prompt_tokens"], "output": res, "output_tokens": response["usage"]["completion_tokens"]}
+            print("This is problem: " + str(i) +  ". The predicted answer is: " + res.strip().split('\n')[-1])
             json.dump(d, json_file, indent=4, ensure_ascii=False)
         except:
             print("Error in problem: " + str(i) + ".")
@@ -97,7 +98,14 @@ def run_prompt(random_qa_pairs):
 if __name__ == "__main__":
     start_time = time.time()
     # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
-    random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
-    run_prompt(random_qa_pairs)
+    proof_input = []
+    f_list = os.listdir("2023_Jul_25_12_19_14_gpt-4_50_logiclm")
+    f_list = [f for f in f_list if f.endswith(".json") and f.startswith("output")]
+    f_list = sorted(f_list, key=lambda x: int(x.split('_')[1].split('.')[0]))
+    for f in f_list:
+        if f.startswith("output") and f.endswith(".json"):
+            d = json.load(open("2023_Jul_25_12_19_14_gpt-4_50_logiclm/" + f))
+            proof_input.append(d["output"])
+    run_prompt(proof_input)
     print("Time elapsed: ", time.time() - start_time)
 

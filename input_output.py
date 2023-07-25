@@ -49,3 +49,15 @@ example_outputs2_short_logiclm = "".join(open("output_prompt_formalization_only/
 example_outputs3_short_logiclm = "".join(open("output_prompt_formalization_only/output3_short.lean").readlines())
 example_outputs4_short_logiclm = "".join(open("output_prompt_formalization_only/output4_short.lean").readlines())
 example_outputs5_short_logiclm = "".join(open("output_prompt_formalization_only/output5_short.lean").readlines())
+
+system_message_justprove = "You are given a Lean problem formulation. The task is to:\n1) Prove the theorem if possible, and try to prove the negation of the theorem if you can’t\n2) If you can prove the theorem, give me a positive answer. If you can prove the negation of the theorem, give me a negative answer. The positive or negative should be in the last line of response in the form of The answer is True or The answer is False."
+
+
+example_inputs2_short_proof = "".join(open("output_prompt_formalization_only/output2_short.lean").readlines())
+example_inputs3_short_proof = "".join(open("output_prompt_formalization_only/output3_short.lean").readlines())
+example_inputs4_short_proof = "".join(open("output_prompt_formalization_only/output4_short.lean").readlines())
+example_inputs5_short_proof = "".join(open("output_prompt_formalization_only/output5_short.lean").readlines())
+example_outputs2_short_proof = "".join(open("output_prompt_proof_only/output2_short.lean").readlines())
+example_outputs3_short_proof = "".join(open("output_prompt_proof_only/output3_short.lean").readlines())
+example_outputs4_short_proof = "".join(open("output_prompt_proof_only/output4_short.lean").readlines())
+example_outputs5_short_proof = "".join(open("output_prompt_proof_only/output5_short.lean").readlines())
