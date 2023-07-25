@@ -42,3 +42,10 @@ example_outputs3_text = "".join(open("output_text/output3_text.txt").readlines()
 example_outputs4_text = "".join(open("output_text/output4_text.txt").readlines())
 
 example_outputs5_text = "".join(open("output_text/output5_text.txt").readlines())
+
+
+system_message_logiclm = "You are given a problem description and a question. The task is to:\n1) define all the predicates and entities in the problem \n2) parse the problem into logic rules based on the defined predicates\n3) write all the facts mentioned in the problem\n4) parse the question into Lean code"
+example_outputs2_short_logiclm = "".join(open("output_prompt_formalization_only/output2_short.lean").readlines())
+example_outputs3_short_logiclm = "".join(open("output_prompt_formalization_only/output3_short.lean").readlines())
+example_outputs4_short_logiclm = "".join(open("output_prompt_formalization_only/output4_short.lean").readlines())
+example_outputs5_short_logiclm = "".join(open("output_prompt_formalization_only/output5_short.lean").readlines())

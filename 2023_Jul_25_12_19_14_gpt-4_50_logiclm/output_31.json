@@ -1,0 +1,6 @@
+{
+    "input": "Anne is green. Anne is red. Bob is big. Bob is red. Dave is green. Harry is blue. Harry is green. Furry, big things are red. If something is big then it is rough. If something is blue then it is nice. If something is nice then it is furry. If something is rough then it is blue. If something is nice and furry then it is green. Question: Bob is green.?",
+    "input_tokens": 1889,
+    "output": "universe u\n\nconstant obj : Type u\n\nconstant Anne : obj\nconstant Bob : obj\nconstant Dave : obj\nconstant Harry : obj\n\nconstant Green : obj → Prop\nconstant Red : obj → Prop\nconstant Big : obj → Prop\nconstant Blue : obj → Prop\nconstant Furry : obj → Prop\nconstant Rough : obj → Prop\nconstant Nice : obj → Prop\n\naxiom T1 : Green Anne\naxiom T2 : Red Anne\naxiom T3 : Big Bob\naxiom T4 : Red Bob\naxiom T5 : Green Dave\naxiom T6 : Blue Harry\naxiom T7 : Green Harry\n\naxiom R1 : ∀ x : obj, Furry x ∧ Big x → Red x\naxiom R2 : ∀ x : obj, Big x → Rough x\naxiom R3 : ∀ x : obj, Blue x → Nice x\naxiom R4 : ∀ x : obj, Nice x → Furry x\naxiom R5 : ∀ x : obj, Rough x → Blue x\naxiom R6 : ∀ x : obj, Nice x ∧ Furry x → Green x\n\ntheorem bob_is_green : Green Bob :=\nbegin\n  sorry,\nend",
+    "output_tokens": 255
+}
