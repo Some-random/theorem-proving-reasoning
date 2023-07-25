@@ -46,4 +46,4 @@ So, the cow needs both the tiger and the cat. Hence, according to the first poin
 
 So, the statement "The cow chases the cow" is not true.
 
-The answer is True
+The answer is False
