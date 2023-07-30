@@ -1,6 +1,30 @@
 # system_message = "You are a genius that translates natural language reasoning text to Lean code so that these natural language reasoning problems can be solved. During the translation, please keep close attention to the predicatese and entities and deal with it properly. And there are three additional requirements:\n1 I also want you to try to prove the theorem you translated to Lean and prove the negation of the theorem you translated to Lean.\n2 If you can prove the theorem, give me a positive answer. If you cannot prove the theorem, give me a negative answer. The positive or negative should be in the last line of response in the form of The answer is True or The answer is False.\n3 At the same time, please give me some comments in the Lean code if possible."
 
-system_message = "You are a logician with background in mathematics that translates natural language reasoning text to Lean code so that these natural language reasoning problems can be solved. During the translation, please keep close attention to the predicatese and entities and deal with it properly. And there are three additional requirements:\n1 I also want you to try to prove the theorem you translated to Lean and prove the negation of the theorem you translated to Lean.\n2 If you can prove the theorem, give me a positive answer. If you cannot prove the theorem, give me a negative answer. The positive or negative should be in the last line of response in the form of The answer is True or The answer is False.\n3 At the same time, please give me some comments in the Lean code if possible."
+system_message = "You are a logician with background in mathematics that translates natural language reasoning text to Lean code so that these natural language reasoning problems can be solved. During the translation, please keep close attention to the predicates and entities. There is an additional requirement: I also want you to try to prove the theorem you translated to Lean. If you can prove the theorem, give me True at the end of the answer. If you can prove the negation of the theorem, write False at the end of the answer. If you can neither prove whether the original theorem or the negation of the theorem, please give me Unknown at the end of the answer."
+
+example_true_textual_input = "Textual context: Charlie is cold. Charlie is smart. Dave is smart. Fiona is green. Fiona is smart. Fiona is young. Harry is red. If Charlie is round and Charlie is big then Charlie is smart. If something is smart and not red then it is round. All red, young things are round. Big things are young. Red things are big. If something is red then it is smart. All round, red things are cold. All round, green things are cold. If something is red and cold then it is green.\nQuestion: Based on the above information, is the following statement true, false, or unknown? Harry is green."
+example_false_textual_input = "Textual context: The cat is blue. The cat is nice. The cat likes the cow. The cat needs the cow. The cat needs the rabbit. The cow does not need the rabbit. The cow needs the tiger. The rabbit is round. The tiger is nice. The tiger does not like the cow. If someone likes the cat and they chase the cat then they are blue. If someone likes the cow and they are red then the cow is round. If someone needs the tiger and they need the cat then they do not chase the cow. If someone needs the cat and the cat is blue then the cat is red. If someone is round then they need the cat. If someone likes the cat and the cat needs the rabbit then the cat chases the tiger. If the rabbit needs the tiger then the rabbit is not round.\nQuestion: Based on the above information, is the following statement true, false, or unknown? The cow chases the cow."
+example_unknown_textual_input = "Textual context: Anne is furry. Anne is round. Anne is smart. Anne is white. Erin is furry. Erin is kind. Erin is round. Gary is cold. Harry is cold. Harry is kind. Harry is rough. Harry is white. Round, cold things are white. If Gary is cold then Gary is kind. If something is kind and cold then it is white. Rough things are smart. If something is kind and white then it is rough. If Gary is rough and Gary is white then Gary is round. Kind, smart things are furry. Rough things are kind.\nQuestion: Based on the above information, is the following statement true, false, or unknown? Anne is not kind."
+
+example_true_all_output = "".join(open("output_prompt/output_true.lean").readlines())
+example_false_all_output = "".join(open("output_prompt/output_false.lean").readlines())
+example_unknown_all_output = "".join(open("output_prompt/output_unknown.lean").readlines())
+
+example_true_all_COT_output = "".join(open("output_prompt/output_true_COT.lean").readlines())
+example_false_all_COT_output = "".join(open("output_prompt/output_false_COT.lean").readlines())
+example_unknown_all_COT_output = "".join(open("output_prompt/output_unknown_COT.lean").readlines())
+
+example_true_formalization = "".join(open("output_prompt/output_true_formalization.lean").readlines())
+example_false_formalization = "".join(open("output_prompt/output_false_formalization.lean").readlines())
+example_unknown_formalization = "".join(open("output_prompt/output_unknown_formalization.lean").readlines())
+
+example_true_proof = "".join(open("output_prompt/output_true_proof.lean").readlines())
+example_false_proof = "".join(open("output_prompt/output_false_proof.lean").readlines())
+example_unknown_proof = "".join(open("output_prompt/output_unknown_proof.lean").readlines())
+
+example_true_proof_COT = "".join(open("output_prompt/output_true_proof_COT.lean").readlines())
+example_false_proof_COT = "".join(open("output_prompt/output_false_proof_COT.lean").readlines())
+example_unknown_proof_COT = "".join(open("output_prompt/output_unknown_proof_COT.lean").readlines())
 
 example_inputs1 = "natural language input: Q: Every zumpus is a tumpus. Each zumpus is transparent. Vumpuses are zumpuses. Every vumpus is not brown. Each wumpus is a vumpus. Wumpuses are wooden. Jompuses are wumpuses. Each jompus is not floral. Yumpuses are jompuses. Yumpuses are mean. Dumpuses are yumpuses. Rompuses are brown. Dumpuses are spicy. Impuses are dumpuses. Every impus is large. Every numpus is an impus. Numpuses are not feisty. Polly is a vumpus. True or false: Polly is not brown."
 

@@ -1,6 +1,0 @@
-{
-    "input": "universe u\n\nconstant obj : Type u\n\nconstant Anne : obj\nconstant Bob : obj\nconstant Fiona : obj\nconstant Gary : obj\n\nconstant Cold : obj → Prop\nconstant Young : obj → Prop\nconstant Green : obj → Prop\nconstant Rough : obj → Prop\nconstant Red : obj → Prop\nconstant Nice : obj → Prop\nconstant Kind : obj → Prop\n\naxiom T1 : Cold Anne\naxiom T2 : ¬ Young Anne\naxiom T3 : Green Bob\naxiom T4 : Cold Fiona\naxiom T5 : Rough Fiona\naxiom T6 : Red Gary\naxiom T7 : Young Gary\n\naxiom R1 : ∀ x : obj, Green x ∧ Rough x → Red x\naxiom R2 : Cold Gary ∧ Red Gary → Green Gary\naxiom R3 : ∀ x : obj, Nice x → Rough x\naxiom R4 : ∀ x : obj, Cold x ∧ Rough x → Kind x\naxiom R5 : ∀ x : obj, Cold x ∧ Nice x → Young x\naxiom R6 : ∀ x : obj, Kind x ∧ Cold x → Green x\naxiom R7 : ∀ x : obj, Red x → Nice x\n\ntheorem fiona_is_not_young : ¬ Young Fiona :=\nbegin\n  sorry,\nend",
-    "input_tokens": 1948,
-    "output": "theorem fiona_is_not_young : ¬ Young Fiona :=\nbegin\n  intro H,\n  have H1 : Nice Fiona := R7 Fiona T5,\n  have H2 : Young Fiona := R5 Fiona ⟨T4, H1⟩,\n  exact T2 H2,\nend\n\n-- The answer is True",
-    "output_tokens": 65
-}

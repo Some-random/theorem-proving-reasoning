@@ -1,6 +1,0 @@
-{
-    "input": "universe u\n\nconstant obj : Type u\n\nconstant Bob : obj\nconstant Charlie : obj\nconstant Fiona : obj\nconstant Gary : obj\n\nconstant Smart : obj → Prop\nconstant Kind : obj → Prop\nconstant Blue : obj → Prop\nconstant Rough : obj → Prop\nconstant Cold : obj → Prop\nconstant Quiet : obj → Prop\nconstant Red : obj → Prop\n\naxiom T1 : Smart Bob\naxiom T2 : Kind Charlie\naxiom T3 : ¬ Smart Charlie\naxiom T4 : Blue Fiona\naxiom T5 : Rough Fiona\naxiom T6 : Smart Fiona\naxiom T7 : Kind Gary\n\naxiom R1 : ∀ x : obj, Cold x ∧ Quiet x → Smart x\naxiom R2 : ∀ x : obj, Cold x → Smart x\naxiom R3 : ∀ x : obj, Red x ∧ Kind x → Smart x\naxiom R4 : ∀ x : obj, Quiet x → Blue x\naxiom R5 : ∀ x : obj, Blue x → Quiet x\naxiom R6 : ∀ x : obj, Kind x → Rough x\naxiom R7 : Kind Gary ∧ Rough Gary → Quiet Gary\naxiom R8 : ∀ x : obj, Blue x ∧ Smart x → Red x\naxiom R9 : ∀ x : obj, Blue x ∧ Rough x → Red x\n\ntheorem gary_is_not_smart : ¬ Smart Gary :=\nbegin\n  sorry,\nend",
-    "input_tokens": 1979,
-    "output": "theorem gary_is_not_smart : ¬ Smart Gary :=\nbegin\n  intro H,\n  have H1 : Rough Gary := R6 Gary T7,\n  have H2 : Quiet Gary := R7 ⟨T7, H1⟩,\n  have H3 : Blue Gary := R4 Gary H2,\n  have H4 : Red Gary := R9 Gary ⟨H3, H1⟩,\n  have H5 : Smart Gary := R3 Gary ⟨H4, T7⟩,\n  exact T3 H5,\nend\n\n-- The answer is True",
-    "output_tokens": 115
-}
