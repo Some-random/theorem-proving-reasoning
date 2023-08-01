@@ -1,5 +1,5 @@
 [package]
-name = "theorem-proving-reasoning"
+name = "proofwriter_100_problem_test"
 version = "0.1"
 lean_version = "leanprover-community/lean:3.50.3"
 path = "reprover_train_temp"
