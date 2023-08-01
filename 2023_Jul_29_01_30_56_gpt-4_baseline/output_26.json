@@ -1,0 +1,9 @@
+{
+    "input": "Textual context: Anne is cold. Anne is furry. Anne is not quiet. Charlie is kind. Fiona is not quiet. Fiona is young. Harry is cold. Kind things are furry. Nice things are big. Furry things are nice. If something is young and furry then it is quiet. If Anne is quiet then Anne is cold. Kind, big things are young. If something is kind and not furry then it is not young.\nQuestion: Based on the above information, is the following statement true, false, or unknown? Anne is nice.",
+    "input_tokens": 2459,
+    "output": "universe u\n\nconstant obj : Type u\n\nconstant Anne : obj\nconstant Charlie : obj\nconstant Fiona : obj\nconstant Harry : obj\n\nconstant Cold : obj → Prop\nconstant Furry : obj → Prop\nconstant Quiet : obj → Prop\nconstant Kind : obj → Prop\nconstant Young : obj → Prop\nconstant Nice : obj → Prop\nconstant Big : obj → Prop\n\naxiom A1 : Cold Anne\naxiom A2 : Furry Anne\naxiom A3 : ¬ Quiet Anne\naxiom A4 : Kind Charlie\naxiom A5 : ¬ Quiet Fiona\naxiom A6 : Young Fiona\naxiom A7 : Cold Harry\n\naxiom R1 : ∀ x : obj, Kind x → Furry x\naxiom R2 : ∀ x : obj, Nice x → Big x\naxiom R3 : ∀ x : obj, Furry x → Nice x\naxiom R4 : ∀ x : obj, Young x ∧ Furry x → Quiet x\naxiom R5 : ∀ x : obj, Quiet Anne → Cold Anne\naxiom R6 : ∀ x : obj, Kind x ∧ Big x → Young x\naxiom R7 : ∀ x : obj, Kind x ∧ ¬ Furry x → ¬ Young x\n\ntheorem anne_is_nice : Nice Anne :=\nbegin\n  apply R3,\n  exact A2,\nend\n\n-- Looks like the theorem can be proven in Lean.\n-- So let's try to prove the negation of the theorem, which is Anne is not Nice\n\ntheorem not_nice_Anne : ¬ Nice Anne :=\nbegin\n  have H1 : Furry Anne := A2,\n  have H2 : Nice Anne := R3 Anne H1,\n  sorry,\nend\n\n-- The negation of the theorem can not be proven in Lean. So\n-- The answer is True",
+    "output_tokens": 386,
+    "pred_answer": "A",
+    "gt_answer": "A",
+    "problem_id": 26
+}
