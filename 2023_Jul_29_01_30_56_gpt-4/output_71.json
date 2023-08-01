@@ -1,9 +1,0 @@
-{
-    "input": "Textual context: Bob is kind. Bob is round. Charlie is rough. Erin is green. Erin is rough. Erin is round. Gary is cold. All rough people are green. If someone is green then they are white. If someone is white then they are not big. If someone is green and not big then they are kind. If someone is kind and not big then they are round.\nQuestion: Based on the above information, is the following statement true, false, or unknown? Erin is not white.",
-    "input_tokens": 2451,
-    "output": "universe u\n\nconstant obj : Type u\n\nconstant Bob : obj\nconstant Charlie : obj\nconstant Erin : obj\nconstant Gary : obj\n\nconstant Kind : obj → Prop\nconstant Round : obj → Prop\nconstant Rough : obj → Prop\nconstant Green : obj → Prop\nconstant White : obj → Prop\nconstant Cold : obj → Prop\nconstant Big : obj → Prop\n\naxiom A1 : Kind Bob\naxiom A2 : Round Bob\naxiom A3 : Rough Charlie\naxiom A4 : Green Erin\naxiom A5 : Rough Erin\naxiom A6 : Round Erin\naxiom A7 : Cold Gary\n\naxiom R1 : ∀ x : obj, Rough x → Green x\naxiom R2 : ∀ x : obj, Green x → White x\naxiom R3 : ∀ x : obj, White x → ¬ Big x\naxiom R4 : ∀ x : obj, Green x ∧ ¬ Big x → Kind x\naxiom R5 : ∀ x : obj, Kind x ∧ ¬ Big x → Round x\n\ntheorem not_white_Erin : ¬ White Erin :=\nbegin\n  have H1 : Green Erin := A4,\n  have H2 : White Erin := R2 Erin H1,\n  contradiction,\n  sorry,\nend\n\n-- Looks like the theorem cannot be proven in Lean.\n-- So let's try to prove the negation of the theorem, which is Erin is white\n\ntheorem white_Erin : White Erin :=\nbegin\n  have H1 : Green Erin := A4,\n  apply R2,\n  exact H1,\nend\n\n-- The negation of the theorem can be proven in Lean. So\n-- The answer is False",
-    "output_tokens": 353,
-    "pred_answer": "B",
-    "gt_answer": "B",
-    "problem_id": 71
-}

@@ -1,9 +1,0 @@
-{
-    "input": "Textual context: Bob is big. Bob is blue. Bob is cold. Bob is red. Bob is rough. Charlie is not cold. Charlie is green. Gary is blue. Harry is cold. Harry is rough. If someone is quiet and blue then they are big. If someone is rough and quiet then they are red. Green people are rough. If someone is big and blue then they are green. Blue people are quiet. If Gary is not blue then Gary is big.\nQuestion: Based on the above information, is the following statement true, false, or unknown? Bob is not blue.",
-    "input_tokens": 2468,
-    "output": "universe u\n\nconstant obj : Type u\n\nconstant Bob : obj\nconstant Charlie : obj\nconstant Gary : obj\nconstant Harry : obj\n\nconstant Big : obj → Prop\nconstant Blue : obj → Prop\nconstant Cold : obj → Prop\nconstant Red : obj → Prop\nconstant Rough : obj → Prop\nconstant Green : obj → Prop\nconstant Quiet : obj → Prop\n\naxiom B1 : Big Bob\naxiom B2 : Blue Bob\naxiom B3 : Cold Bob\naxiom B4 : Red Bob\naxiom B5 : Rough Bob\naxiom C1 : ¬ Cold Charlie\naxiom C2 : Green Charlie\naxiom G1 : Blue Gary\naxiom H1 : Cold Harry\naxiom H2 : Rough Harry\n\naxiom R1 : ∀ x : obj, Quiet x ∧ Blue x → Big x\naxiom R2 : ∀ x : obj, Rough x ∧ Quiet x → Red x\naxiom R3 : ∀ x : obj, Green x → Rough x\naxiom R4 : ∀ x : obj, Big x ∧ Blue x → Green x\naxiom R5 : ∀ x : obj, Blue x → Quiet x\naxiom R6 : ∀ x : obj, ¬ Blue Gary → Big Gary\n\ntheorem not_blue_Bob : ¬ Blue Bob :=\nbegin\n  have H1 : Blue Bob := B2,\n  contradiction,\n  sorry,\nend\n\n-- Looks like the theorem cannot be proven in Lean.\n-- So let's try to prove the negation of the theorem, which is Bob is blue\n\ntheorem blue_Bob : Blue Bob :=\nbegin\n  exact B2,\nend\n\n-- The negation of the theorem can be proven in Lean. So\n-- The answer is False",
-    "output_tokens": 365,
-    "pred_answer": "B",
-    "gt_answer": "B",
-    "problem_id": 10
-}

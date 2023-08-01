@@ -7,19 +7,23 @@ import subprocess
 total = 0
 correct_A, correct_B, correct_C = 0, 0, 0
 compile_error = 0
+seperate_formalization_and_proof = True
 
-def check_lean_code(lean_code, file):
+def check_lean_code(lean_code, file, error_type):
     global compile_error
     with open('temp.lean', 'w') as f:
         f.write(lean_code)
+        f.close()
     
     try:
         output = subprocess.check_output(['lean', 'temp.lean'], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
         compile_error += 1
         output = e.output
-        print('This is: ' + str(file))
+        print(error_type + ': ' + str(file))
         print(output.decode())
+    finally:
+        os.system('rm temp.lean')
 
 dir_list, new_dir_list = os.listdir(sys.argv[1]), []
 for item in dir_list:
@@ -44,12 +48,15 @@ for f in dir_list:
                 is_right = True
             if not is_right:
                 print("This is: " + f)
-            output = d['output'].split('theorem')[0]
-            os.system('rm temp.lean')
-            write_file = open('temp.lean', 'w')
-            write_file.write(output)
-            write_file.close()
-            check_lean_code(output, f)
+            if not seperate_formalization_and_proof:
+                output = d['output'].split('theorem')[0]
+                check_lean_code(output, f, 'formalization error')
+                check_lean_code(d['output'], f, 'proving error')
+            else:
+                output = (d['input'] + d['output']).split('---')[1]
+                check_lean_code(output.split('theorem')[0], f, 'proving error')
+                check_lean_code(output, f, 'proving error')
+
         except Exception as e:
             print('This is: ' + f)
             print(e)

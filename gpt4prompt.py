@@ -18,15 +18,19 @@ openai.api_key = "sk-xxx"
 # openai.api_key = utils.openai_fake_api_key
 openai.api_key = utils.openai_api_key
 split_formalization_and_proof = False
-use_COT = False
+use_COT = True
 use_COT_in_all = True
+add_comment_and_use_COT= True
 
 if not split_formalization_and_proof:
     prompt_inputs = [example_true_textual_input, example_false_textual_input, example_unknown_textual_input]
     if not use_COT_in_all:
         prompt_outputs = [example_true_all_output, example_false_all_output, example_unknown_all_output]
     else:
-        prompt_outputs = [example_true_all_COT_output, example_false_all_COT_output, example_unknown_all_COT_output]
+        if not add_comment_and_use_COT:
+            prompt_outputs = [example_true_all_COT_output, example_false_all_COT_output, example_unknown_all_COT_output]
+        else:
+            prompt_outputs = [example_true_all_COT_comment_output, example_false_all_COT_comment_output, example_unknown_all_COT_comment_output]
 else:
     prompt_inputs = [example_true_textual_input + '\n---\n' + example_true_formalization, \
                      example_false_textual_input + '\n---\n' + example_false_formalization, \
@@ -72,14 +76,6 @@ def data_generation_logiclm(json_file):
     for item in d:
         qa_pairs.append((item['context'], item['question'], item['answer']))
     random_qa_pairs = random.sample(qa_pairs, 100)
-    # count_A, count_B, count_C = 0, 0, 0
-    # for item in random_qa_pairs:
-    #     if item[-1] == 'A':
-    #         count_A += 1
-    #     elif item[-1] == 'B':
-    #         count_B += 1
-    #     else:
-    #         count_C += 1
     return random_qa_pairs
 
 
@@ -118,13 +114,13 @@ def run_prompt(random_qa_pairs):
             json.dump(gpt_config, json_file)
 
     # make a json file to store the random_qa_pairs and its corresponding outputs
-    for i in range(80, 100):
+    for i in range(1, 5):
         try:
             qa_pair = random_qa_pairs[i]
             if not split_formalization_and_proof:
                 prompt_input = "Textual context: " + qa_pair[0] + "\n" + "Question: " + qa_pair[1]
             else:
-                temp_d = json.load(open("2023_Jul_27_15_13_11_text-davinci-003_final_result/output_" + str(i) + ".json"))
+                temp_d = json.load(open("2023_Jul_29_01_30_56_gpt-4_baseline/output_" + str(i) + ".json"))
                 prompt_input = "Textual context: " + qa_pair[0] + "\n" + "Question: " + qa_pair[1] + '\n---\n' + \
                         temp_d["output"].split("theorem")[0]
             if MODEL == "text-davinci-003":
@@ -173,7 +169,8 @@ if __name__ == "__main__":
     start_time = time.time()
     # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
     # random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
-    dev_qa_pairs = data_generation_logiclm("data/ProofWriter/dev.json")
-    run_prompt(dev_qa_pairs)
+    proof_writer_dev_qa_pairs = data_generation_logiclm("data/ProofWriter/dev.json")
+    folio_train_qa_pairs = data_generation_logiclm("data/FOLIO/train.json")
+    run_prompt(folio_train_qa_pairs)
     print("Time elapsed: ", time.time() - start_time)
 

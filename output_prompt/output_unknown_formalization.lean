@@ -33,6 +33,6 @@ axiom R2 : ∀ x : obj, Cold Gary → Kind Gary
 axiom R3 : ∀ x : obj, Kind x ∧ Cold x → White x
 axiom R4 : ∀ x : obj, Rough x → Smart x
 axiom R5 : ∀ x : obj, Kind x ∧ White x → Rough x
-axiom R6 : ∀ x : obj, Rough x ∧ White x → Round x
+axiom R6 : ∀ x : obj, Rough Gary ∧ White Gary → Round Gary
 axiom R7 : ∀ x : obj, Kind x ∧ Smart x → Furry x
 axiom R8 : ∀ x : obj, Rough x → Kind x

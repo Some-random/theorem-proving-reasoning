@@ -14,6 +14,10 @@ example_true_all_COT_output = "".join(open("output_prompt/output_true_COT.lean")
 example_false_all_COT_output = "".join(open("output_prompt/output_false_COT.lean").readlines())
 example_unknown_all_COT_output = "".join(open("output_prompt/output_unknown_COT.lean").readlines())
 
+example_true_all_COT_comment_output = "".join(open("output_prompt/output_true_COT_comment.lean").readlines())
+example_false_all_COT_comment_output = "".join(open("output_prompt/output_false_COT_comment.lean").readlines())
+example_unknown_all_COT_comment_output = "".join(open("output_prompt/output_unknown_COT_comment.lean").readlines())
+
 example_true_formalization = "".join(open("output_prompt/output_true_formalization.lean").readlines())
 example_false_formalization = "".join(open("output_prompt/output_false_formalization.lean").readlines())
 example_unknown_formalization = "".join(open("output_prompt/output_unknown_formalization.lean").readlines())
