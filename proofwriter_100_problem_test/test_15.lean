@@ -39,9 +39,11 @@ axiom R8 : ∀ x : obj, Sees x Cow ∧ Chases x Squirrel → Sees x Rabbit
 
 theorem not_sees_squirrel_rabbit : ¬ Sees Squirrel Rabbit :=
 begin
+  sorry
 end
 
 
 theorem sees_squirrel_rabbit : Sees Squirrel Rabbit :=
 begin
+  sorry
 end

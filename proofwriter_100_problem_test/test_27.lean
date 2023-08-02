@@ -33,9 +33,11 @@ axiom R8 : ∀ x : obj, Sees x Mouse → Likes x Lion
 
 theorem mouse_is_rough : Rough Mouse :=
 begin
+  sorry
 end
 
 
 theorem not_rough_mouse : ¬ Rough Mouse :=
 begin
+  sorry
 end

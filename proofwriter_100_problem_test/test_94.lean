@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, Cold x ∧ White x → Rough x
 
 theorem not_white_Harry : ¬ White Harry :=
 begin
+  sorry
 end
 
 
 theorem white_Harry : White Harry :=
 begin
+  sorry
 end

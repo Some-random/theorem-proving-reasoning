@@ -36,9 +36,11 @@ axiom R9 : ∀ x : obj, Eats x Rabbit ∧ Big Rabbit → Kind x
 
 theorem rabbit_chases_cat : Chases Rabbit Cat :=
 begin
+  sorry
 end
 
 
 theorem not_rabbit_chases_cat : ¬ Chases Rabbit Cat :=
 begin
+  sorry
 end

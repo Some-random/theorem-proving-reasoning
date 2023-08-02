@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Big x → Young x
 
 theorem not_big_Fiona : ¬ Big Fiona :=
 begin
+  sorry
 end
 
 
 theorem big_Fiona : Big Fiona :=
 begin
+  sorry
 end

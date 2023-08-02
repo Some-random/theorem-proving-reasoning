@@ -39,9 +39,11 @@ axiom R9 : ∀ x : obj, Chases x Cat → Sees x Dog
 
 theorem not_sees_tiger_dog : ¬ Sees Tiger Dog :=
 begin
+  sorry
 end
 
 
 theorem sees_tiger_dog : Sees Tiger Dog :=
 begin
+  sorry
 end

@@ -45,9 +45,11 @@ axiom R9 : ∀ x : obj, Eats x Lion → Cold x
 
 theorem rabbit_is_cold : Cold Rabbit :=
 begin
+  sorry
 end
 
 
 theorem not_cold_Rabbit : ¬ Cold Rabbit :=
 begin
+  sorry
 end

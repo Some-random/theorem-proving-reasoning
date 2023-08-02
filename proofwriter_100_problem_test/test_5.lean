@@ -38,9 +38,11 @@ axiom R7 : ∀ x : obj, Young x ∧ Furry x → Nice x
 
 theorem charlie_is_cold : Cold Charlie :=
 begin
+  sorry
 end
 
 
 theorem not_cold_Charlie : ¬ Cold Charlie :=
 begin
+  sorry
 end

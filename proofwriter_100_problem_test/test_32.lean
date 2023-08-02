@@ -43,9 +43,11 @@ axiom R9 : ∀ x : obj, Cold x ∧ Blue x → Needs x Lion
 
 theorem mouse_visits_lion : Visits Mouse Lion :=
 begin
+  sorry
 end
 
 
 theorem not_mouse_visits_lion : ¬ Visits Mouse Lion :=
 begin
+  sorry
 end

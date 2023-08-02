@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, Furry x → Rough x
 
 theorem not_quiet_Harry : ¬ Quiet Harry :=
 begin
+  sorry
 end
 
 
 theorem quiet_Harry : Quiet Harry :=
 begin
+  sorry
 end

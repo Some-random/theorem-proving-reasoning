@@ -41,9 +41,11 @@ axiom R9 : ∀ x : obj, Eats x Cat → Blue Cat
 
 theorem not_nice_rabbit : ¬ Nice Rabbit :=
 begin
+  sorry
 end
 
 
 theorem nice_rabbit : Nice Rabbit :=
 begin
+  sorry
 end

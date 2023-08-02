@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Visits x BaldEagle ∧ ¬ Round x → Visits x Lion
 
 theorem squirrel_chases_bald_eagle : Chases Squirrel BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem not_squirrel_chases_bald_eagle : ¬ Chases Squirrel BaldEagle :=
 begin
+  sorry
 end

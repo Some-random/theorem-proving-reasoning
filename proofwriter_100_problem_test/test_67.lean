@@ -10,7 +10,7 @@ constant Lion : obj
 constant Sees : obj → obj → Prop
 constant Eats : obj → obj → Prop
 constant Big : obj → Prop
-constant Kind : obj → obj → Prop
+constant Kind : obj → Prop
 constant Green : obj → Prop
 constant Nice : obj → Prop
 constant Needs : obj → obj → Prop
@@ -40,9 +40,11 @@ axiom R8 : ∀ x : obj, Eats x BaldEagle → Nice BaldEagle
 
 theorem not_needs_cat_bald_eagle : ¬ Needs Cat BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem needs_cat_bald_eagle : Needs Cat BaldEagle :=
 begin
+  sorry
 end

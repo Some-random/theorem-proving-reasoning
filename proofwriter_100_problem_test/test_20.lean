@@ -44,9 +44,11 @@ axiom R9 : ∀ x : obj, Blue x ∧ Quiet x → Cold x
 
 theorem not_quiet_Bob : ¬ Quiet Bob :=
 begin
+  sorry
 end
 
 
 theorem quiet_Bob : Quiet Bob :=
 begin
+  sorry
 end

@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, White x → Smart x
 
 theorem not_smart_erin : ¬ Smart Erin :=
 begin
+  sorry
 end
 
 
 theorem smart_erin : Smart Erin :=
 begin
+  sorry
 end

@@ -45,9 +45,11 @@ axiom R9 : ∀ x : obj, Chases x Tiger → Chases Tiger Squirrel
 
 theorem tiger_needs_rabbit : Needs Tiger Rabbit :=
 begin
+  sorry
 end
 
 
 theorem not_tiger_needs_rabbit : ¬ Needs Tiger Rabbit :=
 begin
+  sorry
 end

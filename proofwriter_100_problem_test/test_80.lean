@@ -51,9 +51,11 @@ axiom R9 : ∀ x : obj, Eats x Bear → Chases x Squirrel
 
 theorem tiger_chases_squirrel : Chases Tiger Squirrel :=
 begin
+  sorry
 end
 
 
 theorem not_tiger_chases_squirrel : ¬ Chases Tiger Squirrel :=
 begin
+  sorry
 end

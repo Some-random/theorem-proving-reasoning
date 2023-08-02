@@ -40,9 +40,11 @@ axiom R7 : ∀ x : obj, Visits x Lion ∧ Needs Lion Dog → Needs x Dog
 
 theorem not_sees_rabbit_bald_eagle : ¬ Sees Rabbit BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem sees_rabbit_bald_eagle : Sees Rabbit BaldEagle :=
 begin
+  sorry
 end

@@ -40,9 +40,11 @@ axiom R8 : ∀ x : obj, Big Squirrel ∧ ¬ Likes Squirrel Tiger → ¬ Big Tige
 
 theorem not_squirrel_visits_lion : ¬ Visits Squirrel Lion :=
 begin
+  sorry
 end
 
 
 theorem squirrel_visits_lion : Visits Squirrel Lion :=
 begin
+  sorry
 end

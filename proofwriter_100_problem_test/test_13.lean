@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, Kind x ∧ Sees x Mouse → Sees x Lion
 
 theorem not_mouse_sees_rabbit : ¬ Sees Mouse Rabbit :=
 begin
+  sorry
 end
 
 
 theorem mouse_sees_rabbit : Sees Mouse Rabbit :=
 begin
+  sorry
 end

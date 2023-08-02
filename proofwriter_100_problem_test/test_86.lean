@@ -46,9 +46,11 @@ axiom R7 : ∀ x : obj, Nice x → Smart x
 
 theorem charlie_is_round : Round Charlie :=
 begin
+  sorry
 end
 
 
 theorem not_round_Charlie : ¬ Round Charlie :=
 begin
+  sorry
 end

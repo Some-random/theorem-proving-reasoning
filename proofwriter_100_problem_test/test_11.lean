@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Furry x → Young x
 
 theorem not_red_Erin : ¬ Red Erin :=
 begin
+  sorry
 end
 
 
 theorem red_Erin : Red Erin :=
 begin
+  sorry
 end

@@ -39,9 +39,11 @@ axiom R9 : ∀ x : obj, Cold x ∧ Nice x → Big x
 
 theorem charlie_is_furry : Furry Charlie :=
 begin
+  sorry
 end
 
 
 theorem not_furry_Charlie : ¬ Furry Charlie :=
 begin
+  sorry
 end

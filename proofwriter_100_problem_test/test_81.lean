@@ -37,9 +37,11 @@ axiom R8 : ∀ x : obj, Green x → Blue x
 
 theorem dave_is_big : Big Dave :=
 begin
+  sorry
 end
 
 
 theorem not_big_Dave : ¬ Big Dave :=
 begin
+  sorry
 end

@@ -43,9 +43,11 @@ axiom R9 : ∀ x : obj, Likes x Bear → Chases x Bear
 
 theorem not_chase_bear : ¬ Chases Bear Bear :=
 begin
+  sorry
 end
 
 
 theorem chase_bear : Chases Bear Bear :=
 begin
+  sorry
 end

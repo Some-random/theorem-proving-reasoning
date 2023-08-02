@@ -11,8 +11,8 @@ constant Chases : obj → obj → Prop
 constant Eats : obj → obj → Prop
 constant Visits : obj → obj → Prop
 constant Red : obj → Prop
-constant Blue : obj → obj → Prop
-constant Green : obj → obj → Prop
+constant Blue : obj → Prop
+constant Green : obj → Prop
 constant Round : obj → Prop
 
 axiom A1 : Chases BaldEagle Squirrel
@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Visits x BaldEagle ∧ ¬ Round x → Visits x Lion
 
 theorem not_round_lion : ¬ Round Lion :=
 begin
+  sorry
 end
 
 
 theorem round_lion : Round Lion :=
 begin
+  sorry
 end

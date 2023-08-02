@@ -38,9 +38,11 @@ axiom R9 : ∀ x : obj, Cold x → Big x
 
 theorem not_smart_Charlie : ¬ Smart Charlie :=
 begin
+  sorry
 end
 
 
 theorem smart_Charlie : Smart Charlie :=
 begin
+  sorry
 end

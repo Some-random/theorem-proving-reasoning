@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, Likes x Lion ∧ Big Lion → Kind x
 
 theorem lion_visits_lion : Visits Lion Lion :=
 begin
+  sorry
 end
 
 
 theorem not_lion_visits_lion : ¬ Visits Lion Lion :=
 begin
+  sorry
 end

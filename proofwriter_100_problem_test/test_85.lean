@@ -37,9 +37,11 @@ axiom R8 : ∀ x : obj, Sees x Lion → Big x
 
 theorem not_sees_squirrel_bear : ¬ Sees Squirrel Bear :=
 begin
+  sorry
 end
 
 
 theorem sees_squirrel_bear : Sees Squirrel Bear :=
 begin
+  sorry
 end

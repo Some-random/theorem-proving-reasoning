@@ -37,9 +37,11 @@ axiom R8 : ∀ x : obj, Nice x → Quiet x
 
 theorem charlie_is_kind : Kind Charlie :=
 begin
+  sorry
 end
 
 
 theorem not_kind_Charlie : ¬ Kind Charlie :=
 begin
+  sorry
 end

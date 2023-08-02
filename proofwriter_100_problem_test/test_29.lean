@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Nice x → Smart x
 
 theorem not_furry_Erin : ¬ Furry Erin :=
 begin
+  sorry
 end
 
 
 theorem furry_Erin : Furry Erin :=
 begin
+  sorry
 end

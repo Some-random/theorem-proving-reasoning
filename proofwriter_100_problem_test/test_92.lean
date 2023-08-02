@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, Young x ∧ Quiet x → Red x
 
 theorem gary_is_big : Big Gary :=
 begin
+  sorry
 end
 
 
 theorem not_big_Gary : ¬ Big Gary :=
 begin
+  sorry
 end

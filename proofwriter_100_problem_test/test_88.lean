@@ -39,9 +39,11 @@ axiom R8 : ∀ x : obj, Visits x Lion ∧ Green Lion → Red x
 
 theorem squirrel_eats_squirrel : Eats Squirrel Squirrel :=
 begin
+  sorry
 end
 
 
 theorem not_squirrel_eats_squirrel : ¬ Eats Squirrel Squirrel :=
 begin
+  sorry
 end

@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Green x → Quiet x
 
 theorem charlie_is_red : Red Charlie :=
 begin
+  sorry
 end
 
 
 theorem not_red_Charlie : ¬ Red Charlie :=
 begin
+  sorry
 end

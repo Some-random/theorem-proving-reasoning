@@ -38,9 +38,11 @@ axiom R8 : ∀ x : obj, Visits x Bear → Kind x
 
 theorem not_mouse_visits_squirrel : ¬ Visits Mouse Squirrel :=
 begin
+  sorry
 end
 
 
 theorem mouse_visits_squirrel : Visits Mouse Squirrel :=
 begin
+  sorry
 end

@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Kind x ∧ ¬ Furry x → ¬ Young x
 
 theorem anne_is_nice : Nice Anne :=
 begin
+  sorry
 end
 
 
 theorem not_nice_Anne : ¬ Nice Anne :=
 begin
+  sorry
 end

@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Kind x ∧ Furry x → Rough x
 
 theorem not_kind_Harry : ¬ Kind Harry :=
 begin
+  sorry
 end
 
 
 theorem kind_Harry : Kind Harry :=
 begin
+  sorry
 end

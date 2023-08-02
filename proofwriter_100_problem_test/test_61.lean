@@ -38,9 +38,11 @@ axiom R8 : ∀ x : obj, Cold x → ¬ Blue x
 
 theorem gary_is_cold : Cold Gary :=
 begin
+  sorry
 end
 
 
 theorem not_cold_Gary : ¬ Cold Gary :=
 begin
+  sorry
 end

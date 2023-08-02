@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Red x ∧ Rough x → Kind x
 
 theorem gary_is_young : Young Gary :=
 begin
+  sorry
 end
 
 
 theorem not_young_Gary : ¬ Young Gary :=
 begin
+  sorry
 end

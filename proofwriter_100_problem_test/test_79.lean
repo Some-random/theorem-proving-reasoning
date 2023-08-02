@@ -36,9 +36,11 @@ axiom R7 : ∀ x : obj, Blue x ∧ Kind x → Quiet x
 
 theorem anne_is_cold : Cold Anne :=
 begin
+  sorry
 end
 
 
 theorem not_cold_Anne : ¬ Cold Anne :=
 begin
+  sorry
 end

@@ -38,9 +38,11 @@ axiom R7 : ∀ x : obj, Visits x Dog → Sees x Cow
 
 theorem nice_BaldEagle : Nice BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem not_nice_BaldEagle : ¬ Nice BaldEagle :=
 begin
+  sorry
 end

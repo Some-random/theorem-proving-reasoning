@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Smart Harry ∧ Blue Harry → Red Harry
 
 theorem harry_is_furry : Furry Harry :=
 begin
+  sorry
 end
 
 
 theorem not_furry_Harry : ¬ Furry Harry :=
 begin
+  sorry
 end

@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Young x → Kind x
 
 theorem not_young_Bob : ¬ Young Bob :=
 begin
+  sorry
 end
 
 
 theorem young_Bob : Young Bob :=
 begin
+  sorry
 end

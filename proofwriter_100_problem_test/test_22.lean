@@ -42,9 +42,11 @@ axiom R8 : ∀ x : obj, Visits x Squirrel ∧ Visits Squirrel Dog → Visits Squ
 
 theorem cat_is_green : Green Cat :=
 begin
+  sorry
 end
 
 
 theorem not_green_cat : ¬ Green Cat :=
 begin
+  sorry
 end

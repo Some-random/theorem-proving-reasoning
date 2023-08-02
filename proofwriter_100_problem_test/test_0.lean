@@ -38,9 +38,11 @@ axiom R9 : ∀ x : obj, Rough x ∧ Nice x → Big x
 
 theorem not_nice_Charlie : ¬ Nice Charlie :=
 begin
+  sorry
 end
 
 
 theorem nice_Charlie : Nice Charlie :=
 begin
+  sorry
 end

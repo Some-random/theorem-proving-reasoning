@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Visits x BaldEagle ∧ Likes BaldEagle Rabbit → Visits
 
 theorem not_rabbit_visits_bald_eagle : ¬ Visits Rabbit BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem rabbit_visits_bald_eagle : Visits Rabbit BaldEagle :=
 begin
+  sorry
 end

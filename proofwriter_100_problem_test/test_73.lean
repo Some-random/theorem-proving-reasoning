@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Blue Fiona → ¬ Green Fiona
 
 theorem not_quiet_Anne : ¬ Quiet Anne :=
 begin
+  sorry
 end
 
 
 theorem quiet_Anne : Quiet Anne :=
 begin
+  sorry
 end

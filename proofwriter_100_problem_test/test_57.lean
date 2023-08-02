@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Blue x ∧ Red x → Smart x
 
 theorem not_smart_Gary : ¬ Smart Gary :=
 begin
+  sorry
 end
 
 
 theorem smart_Gary : Smart Gary :=
 begin
+  sorry
 end

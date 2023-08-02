@@ -40,9 +40,11 @@ axiom R9 : Big Bear → Likes Bear Dog
 
 theorem dog_is_big : Big Dog :=
 begin
+  sorry
 end
 
 
 theorem not_big_dog : ¬ Big Dog :=
 begin
+  sorry
 end

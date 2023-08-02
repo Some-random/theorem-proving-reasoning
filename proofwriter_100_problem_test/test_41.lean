@@ -40,9 +40,11 @@ axiom R8 : ∀ x : obj, Eats x BaldEagle → Nice BaldEagle
 
 theorem lion_sees_lion : Sees Lion Lion :=
 begin
+  sorry
 end
 
 
 theorem not_lion_sees_lion : ¬ Sees Lion Lion :=
 begin
+  sorry
 end

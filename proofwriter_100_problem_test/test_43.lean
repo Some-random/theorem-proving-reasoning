@@ -35,9 +35,11 @@ axiom R6 : ∀ x : obj, Round x ∧ Smart x → Red x
 
 theorem dave_is_rough : Rough Dave :=
 begin
+  sorry
 end
 
 
 theorem not_rough_Dave : ¬ Rough Dave :=
 begin
+  sorry
 end

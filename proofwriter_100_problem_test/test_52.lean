@@ -40,9 +40,11 @@ axiom R9 : Rough Cow → Chases Cow Cat
 
 theorem cat_likes_lion : Likes Cat Lion :=
 begin
+  sorry
 end
 
 
 theorem not_cat_likes_lion : ¬ Likes Cat Lion :=
 begin
+  sorry
 end

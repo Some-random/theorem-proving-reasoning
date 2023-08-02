@@ -40,9 +40,11 @@ axiom R7 : ∀ x : obj, Eats x Bear ∧ Sees x Dog → Big Dog
 
 theorem cat_eats_dog : Eats Cat Dog :=
 begin
+  sorry
 end
 
 
 theorem not_cat_eats_dog : ¬ Eats Cat Dog :=
 begin
+  sorry
 end

@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Cold x → Rough x
 
 theorem not_blue_Dave : ¬ Blue Dave :=
 begin
+  sorry
 end
 
 
 theorem blue_Dave : Blue Dave :=
 begin
+  sorry
 end

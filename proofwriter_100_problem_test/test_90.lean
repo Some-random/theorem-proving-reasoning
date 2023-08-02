@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Round x → Likes x Bear
 
 theorem lion_likes_bald_eagle : Likes Lion BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem not_lion_likes_bald_eagle : ¬ Likes Lion BaldEagle :=
 begin
+  sorry
 end

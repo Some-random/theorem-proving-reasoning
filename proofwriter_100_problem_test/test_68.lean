@@ -38,9 +38,11 @@ axiom R8 : ∀ x : obj, Young x ∧ Likes x Rabbit → Visits x Rabbit
 
 theorem lion_sees_lion : Sees Lion Lion :=
 begin
+  sorry
 end
 
 
 theorem not_lion_sees_lion : ¬ Sees Lion Lion :=
 begin
+  sorry
 end

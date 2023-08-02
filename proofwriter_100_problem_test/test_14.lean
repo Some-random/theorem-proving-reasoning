@@ -37,9 +37,11 @@ axiom R8 : ∀ x : obj, Kind x → Sees x Cat
 
 theorem not_mouse_needs_cow : ¬ Needs Mouse Cow :=
 begin
+  sorry
 end
 
 
 theorem mouse_needs_cow : Needs Mouse Cow :=
 begin
+  sorry
 end

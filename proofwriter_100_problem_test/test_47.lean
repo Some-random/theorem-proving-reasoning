@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Young x ∧ Blue x → Nice x
 
 theorem harry_is_big : Big Harry :=
 begin
+  sorry
 end
 
 
 theorem not_big_Harry : ¬ Big Harry :=
 begin
+  sorry
 end

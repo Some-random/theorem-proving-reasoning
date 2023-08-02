@@ -31,9 +31,11 @@ axiom R6 : ∀ x : obj, Needs x Lion ∧ Sees Lion BaldEagle → Red x
 
 theorem not_bear_needs_lion : ¬ Needs Bear Lion :=
 begin
+  sorry
 end
 
 
 theorem bear_needs_lion : Needs Bear Lion :=
 begin
+  sorry
 end

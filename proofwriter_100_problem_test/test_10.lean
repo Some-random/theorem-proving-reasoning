@@ -35,9 +35,11 @@ axiom R6 : ∀ x : obj, ¬ Blue Gary → Big Gary
 
 theorem not_blue_Bob : ¬ Blue Bob :=
 begin
+  sorry
 end
 
 
 theorem blue_Bob : Blue Bob :=
 begin
+  sorry
 end

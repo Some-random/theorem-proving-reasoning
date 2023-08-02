@@ -32,9 +32,11 @@ axiom R6 : ∀ x : obj, Round x → White x
 
 theorem bob_is_quiet : Quiet Bob :=
 begin
+  sorry
 end
 
 
 theorem not_quiet_Bob : ¬ Quiet Bob :=
 begin
+  sorry
 end

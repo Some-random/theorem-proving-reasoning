@@ -45,9 +45,11 @@ axiom R9 : ∀ x : obj, Needs x Bear ∧ Visits Bear Tiger → Sees x Bear
 
 theorem cow_visits_rabbit : Visits Cow Rabbit :=
 begin
+  sorry
 end
 
 
 theorem not_cow_visits_rabbit : ¬ Visits Cow Rabbit :=
 begin
+  sorry
 end

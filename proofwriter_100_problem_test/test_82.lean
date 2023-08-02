@@ -37,9 +37,11 @@ axiom R8 : ∀ x : obj, Kind x → Sees x Cat
 
 theorem cow_sees_bear : Sees Cow Bear :=
 begin
+  sorry
 end
 
 
 theorem not_cow_sees_bear : ¬ Sees Cow Bear :=
 begin
+  sorry
 end

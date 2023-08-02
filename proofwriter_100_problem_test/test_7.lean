@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, White x ∧ Smart x → Furry x
 
 theorem not_white_Harry : ¬ White Harry :=
 begin
+  sorry
 end
 
 
 theorem white_Harry : White Harry :=
 begin
+  sorry
 end

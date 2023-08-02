@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Eats x Dog ∧ Red x → Young Dog
 
 theorem not_see_dog_tiger : ¬ Sees Tiger Dog :=
 begin
+  sorry
 end
 
 
 theorem see_dog_tiger : Sees Tiger Dog :=
 begin
+  sorry
 end

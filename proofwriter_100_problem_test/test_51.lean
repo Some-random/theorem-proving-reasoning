@@ -45,9 +45,11 @@ axiom R9 : ∀ x : obj, Needs x Bear ∧ Green Bear → Round x
 
 theorem not_young_Tiger : ¬ Young Tiger :=
 begin
+  sorry
 end
 
 
 theorem young_Tiger : Young Tiger :=
 begin
+  sorry
 end

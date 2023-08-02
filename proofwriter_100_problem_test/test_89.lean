@@ -39,9 +39,11 @@ axiom R8 : ∀ x : obj, Smart x → Quiet x
 
 theorem not_quiet_Anne : ¬ Quiet Anne :=
 begin
+  sorry
 end
 
 
 theorem quiet_Anne : Quiet Anne :=
 begin
+  sorry
 end

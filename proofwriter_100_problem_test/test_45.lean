@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Smart x ∧ Cold x → Kind x
 
 theorem erin_is_smart : Smart Erin :=
 begin
+  sorry
 end
 
 
 theorem not_smart_Erin : ¬ Smart Erin :=
 begin
+  sorry
 end

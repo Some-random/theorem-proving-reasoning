@@ -35,9 +35,11 @@ axiom R8 : ∀ x : obj, Sees Dog Squirrel ∧ Rough Squirrel → Likes Squirrel 
 
 theorem bear_visits_bald_eagle : Visits Bear BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem not_bear_visits_bald_eagle : ¬ Visits Bear BaldEagle :=
 begin
+  sorry
 end

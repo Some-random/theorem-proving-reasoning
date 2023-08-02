@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Rough x → Young x
 
 theorem charlie_is_quiet : Quiet Charlie :=
 begin
+  sorry
 end
 
 
 theorem not_quiet_Charlie : ¬ Quiet Charlie :=
 begin
+  sorry
 end

@@ -36,9 +36,11 @@ axiom R8 : ∀ x : obj, Sees x BaldEagle → Young BaldEagle
 
 theorem not_eat_BaldEagle_Rabbit : ¬ Eats BaldEagle Rabbit :=
 begin
+  sorry
 end
 
 
 theorem eat_BaldEagle_Rabbit : Eats BaldEagle Rabbit :=
 begin
+  sorry
 end

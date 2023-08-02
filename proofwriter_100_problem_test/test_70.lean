@@ -42,9 +42,11 @@ axiom R7 : ∀ x : obj, Big x ∧ Sees x BaldEagle → Needs x Mouse
 
 theorem not_big_Mouse : ¬ Big Mouse :=
 begin
+  sorry
 end
 
 
 theorem big_Mouse : Big Mouse :=
 begin
+  sorry
 end

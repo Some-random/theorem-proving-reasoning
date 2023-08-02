@@ -35,9 +35,11 @@ axiom R6 : ∀ x : obj, Visits Squirrel Rabbit ∧ Likes Rabbit Bear → Visits 
 
 theorem rabbit_likes_bear : Likes Rabbit Bear :=
 begin
+  sorry
 end
 
 
 theorem not_rabbit_likes_bear : ¬ Likes Rabbit Bear :=
 begin
+  sorry
 end

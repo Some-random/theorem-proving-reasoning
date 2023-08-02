@@ -39,9 +39,11 @@ axiom R9 : ∀ x : obj, Blue x ∧ Young x → Red x
 
 theorem gary_is_furry : Furry Gary :=
 begin
+  sorry
 end
 
 
 theorem not_furry_Gary : ¬ Furry Gary :=
 begin
+  sorry
 end

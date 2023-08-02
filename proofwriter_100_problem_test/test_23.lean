@@ -36,9 +36,11 @@ axiom R7 : ∀ x : obj, Round Erin → Young Erin
 
 theorem gary_is_quiet : Quiet Gary :=
 begin
+  sorry
 end
 
 
 theorem not_quiet_Gary : ¬ Quiet Gary :=
 begin
+  sorry
 end

@@ -43,9 +43,11 @@ axiom R7 : ∀ x : obj, Big x ∧ Visits x Bear → Green Bear
 
 theorem not_cold_Cat : ¬ Cold Cat :=
 begin
+  sorry
 end
 
 
 theorem cold_Cat : Cold Cat :=
 begin
+  sorry
 end

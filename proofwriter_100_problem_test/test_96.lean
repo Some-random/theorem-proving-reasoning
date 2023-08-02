@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Young x ∧ Cold x → Furry x
 
 theorem erin_is_furry : Furry Erin :=
 begin
+  sorry
 end
 
 
 theorem not_furry_erin : ¬ Furry Erin :=
 begin
+  sorry
 end

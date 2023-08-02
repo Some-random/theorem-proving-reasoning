@@ -37,9 +37,11 @@ axiom R9 : ∀ x : obj, Sees x BaldEagle → Sees x Cat
 
 theorem tiger_chases_tiger : Chases Tiger Tiger :=
 begin
+  sorry
 end
 
 
 theorem not_tiger_chases_tiger : ¬ Chases Tiger Tiger :=
 begin
+  sorry
 end

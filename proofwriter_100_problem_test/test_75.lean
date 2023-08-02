@@ -38,9 +38,11 @@ axiom R9 : ∀ x : obj, Eats x Bear → Chases x Cow
 
 theorem not_red_rabbit : ¬ Red Rabbit :=
 begin
+  sorry
 end
 
 
 theorem red_rabbit : Red Rabbit :=
 begin
+  sorry
 end

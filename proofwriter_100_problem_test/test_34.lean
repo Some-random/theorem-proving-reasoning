@@ -46,9 +46,11 @@ axiom R7 : ∀ x : obj, Nice x → Smart x
 
 theorem not_smart_Erin : ¬ Smart Erin :=
 begin
+  sorry
 end
 
 
 theorem smart_Erin : Smart Erin :=
 begin
+  sorry
 end

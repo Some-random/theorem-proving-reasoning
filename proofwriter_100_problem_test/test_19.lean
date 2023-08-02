@@ -39,9 +39,11 @@ axiom R8 : ∀ x : obj, Visits x Lion ∧ Green Lion → Red x
 
 theorem not_rough_Squirrel : ¬ Rough Squirrel :=
 begin
+  sorry
 end
 
 
 theorem rough_Squirrel : Rough Squirrel :=
 begin
+  sorry
 end

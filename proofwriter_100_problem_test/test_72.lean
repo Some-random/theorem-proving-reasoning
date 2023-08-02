@@ -35,9 +35,11 @@ axiom R5 : ∀ x : obj, Round x → Chases x Cat
 
 theorem cat_eats_mouse : Eats Cat Mouse :=
 begin
+  sorry
 end
 
 
 theorem not_cat_eats_mouse : ¬ Eats Cat Mouse :=
 begin
+  sorry
 end

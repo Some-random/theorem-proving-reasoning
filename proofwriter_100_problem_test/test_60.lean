@@ -39,9 +39,11 @@ axiom R9 : ¬ Eats Squirrel BaldEagle → Visits Squirrel Cow
 
 theorem cow_needs_bald_eagle : Needs Cow BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem not_cow_needs_bald_eagle : ¬ Needs Cow BaldEagle :=
 begin
+  sorry
 end

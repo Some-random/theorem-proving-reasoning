@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Young Anne ∧ Big Anne → Nice Anne
 
 theorem not_big_Bob : ¬ Big Bob :=
 begin
+  sorry
 end
 
 
 theorem big_Bob : Big Bob :=
 begin
+  sorry
 end

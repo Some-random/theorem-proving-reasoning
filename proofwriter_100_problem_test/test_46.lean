@@ -39,9 +39,11 @@ axiom R9 : ∀ x : obj, Green Anne → Round Anne
 
 theorem not_blue_Erin : ¬ Blue Erin :=
 begin
+  sorry
 end
 
 
 theorem blue_Erin : Blue Erin :=
 begin
+  sorry
 end

@@ -33,9 +33,11 @@ axiom R7 : ∀ x : obj, Green x → Kind x
 
 theorem bear_is_rough : Rough Bear :=
 begin
+  sorry
 end
 
 
 theorem not_rough_Bear : ¬ Rough Bear :=
 begin
+  sorry
 end

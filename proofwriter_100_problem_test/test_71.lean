@@ -31,9 +31,11 @@ axiom R5 : ∀ x : obj, Kind x ∧ ¬ Big x → Round x
 
 theorem not_white_Erin : ¬ White Erin :=
 begin
+  sorry
 end
 
 
 theorem white_Erin : White Erin :=
 begin
+  sorry
 end

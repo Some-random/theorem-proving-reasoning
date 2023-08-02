@@ -34,9 +34,11 @@ axiom R8 : ∀ x : obj, Furry x → Rough x
 
 theorem gary_is_young : Young Gary :=
 begin
+  sorry
 end
 
 
 theorem not_young_Gary : ¬ Young Gary :=
 begin
+  sorry
 end

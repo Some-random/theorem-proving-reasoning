@@ -43,9 +43,11 @@ axiom R9 : ∀ x : obj, Likes x Bear → Chases x Bear
 
 theorem bald_eagle_is_cold : Cold BaldEagle :=
 begin
+  sorry
 end
 
 
 theorem not_cold_BaldEagle : ¬ Cold BaldEagle :=
 begin
+  sorry
 end

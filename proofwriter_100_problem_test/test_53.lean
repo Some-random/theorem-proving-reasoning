@@ -36,9 +36,11 @@ axiom R7 : ∀ x : obj, Round x ∧ Nice x → ¬ Big x
 
 theorem bob_is_rough : Rough Bob :=
 begin
+  sorry
 end
 
 
 theorem not_rough_Bob : ¬ Rough Bob :=
 begin
+  sorry
 end

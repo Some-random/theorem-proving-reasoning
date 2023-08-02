@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Cold x ∧ Smart x → Kind x
 
 theorem harry_is_quiet : Quiet Harry :=
 begin
+  sorry
 end
 
 
 theorem not_quiet_Harry : ¬ Quiet Harry :=
 begin
+  sorry
 end

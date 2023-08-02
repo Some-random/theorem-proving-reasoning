@@ -40,9 +40,11 @@ axiom R9 : ∀ x : obj, Likes x Tiger ∧ Kind x → Likes Tiger Cat
 
 theorem cat_eats_cat : Eats Cat Cat :=
 begin
+  sorry
 end
 
 
 theorem not_cat_eats_cat : ¬ Eats Cat Cat :=
 begin
+  sorry
 end

@@ -39,9 +39,11 @@ axiom R9 : ∀ x : obj, Rough x ∧ Green x → Cold x
 
 theorem erin_is_quiet : Quiet Erin :=
 begin
+  sorry
 end
 
 
 theorem not_quiet_Erin : ¬ Quiet Erin :=
 begin
+  sorry
 end

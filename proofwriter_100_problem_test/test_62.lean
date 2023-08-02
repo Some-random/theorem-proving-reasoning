@@ -30,9 +30,11 @@ axiom R5 : ∀ x : obj, Chases x Squirrel → Eats Squirrel Cat
 
 theorem squirrel_chases_bear : Chases Squirrel Bear :=
 begin
+  sorry
 end
 
 
 theorem not_squirrel_chases_bear : ¬ Chases Squirrel Bear :=
 begin
+  sorry
 end

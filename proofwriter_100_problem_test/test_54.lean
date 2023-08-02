@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Blue x ∧ Round x → Big x
 
 theorem not_blue_Charlie : ¬ Blue Charlie :=
 begin
+  sorry
 end
 
 
 theorem blue_Charlie : Blue Charlie :=
 begin
+  sorry
 end

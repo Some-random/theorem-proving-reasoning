@@ -35,9 +35,11 @@ axiom R9 : ∀ x : obj, Young x → Green x
 
 theorem not_nice_Fiona : ¬ Nice Fiona :=
 begin
+  sorry
 end
 
 
 theorem nice_Fiona : Nice Fiona :=
 begin
+  sorry
 end
