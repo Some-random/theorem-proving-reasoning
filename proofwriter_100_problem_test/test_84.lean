@@ -15,17 +15,17 @@ constant Round : obj → Prop
 constant Rough : obj → Prop
 constant Furry : obj → Prop
 
-axiom A1 : Cold Anne
-axiom A2 : ¬ Green Anne
-axiom A3 : ¬ Kind Anne
-axiom A4 : Quiet Anne
-axiom A5 : Round Anne
-axiom A6 : Kind Bob
-axiom A7 : Round Bob
-axiom A8 : Cold Charlie
-axiom A9 : Quiet Charlie
-axiom A10 : Round Charlie
-axiom A11 : Furry Erin
+axiom T1 : Cold Anne
+axiom T2 : ¬ Green Anne
+axiom T3 : ¬ Kind Anne
+axiom T4 : Quiet Anne
+axiom T5 : Round Anne
+axiom T6 : Kind Bob
+axiom T7 : Round Bob
+axiom T8 : Cold Charlie
+axiom T9 : Quiet Charlie
+axiom T10 : Round Charlie
+axiom T11 : Furry Erin
 
 axiom R1 : ∀ x : obj, Quiet x → Rough x
 axiom R2 : ∀ x : obj, Cold x → Round x

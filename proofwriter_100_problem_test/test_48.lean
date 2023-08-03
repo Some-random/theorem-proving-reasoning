@@ -14,16 +14,16 @@ constant Cold : obj → Prop
 constant Young : obj → Prop
 constant Red : obj → Prop
 
-axiom A1 : Eats BaldEagle Dog
-axiom A2 : Sees BaldEagle Dog
-axiom A3 : Cold Dog
-axiom A4 : Likes Dog Squirrel
-axiom A5 : Sees Dog Rabbit
-axiom A6 : Eats Rabbit Dog
-axiom A7 : Eats Rabbit Squirrel
-axiom A8 : Likes Rabbit Dog
-axiom A9 : Sees Rabbit Squirrel
-axiom A10 : Likes Squirrel BaldEagle
+axiom T1 : Eats BaldEagle Dog
+axiom T2 : Sees BaldEagle Dog
+axiom T3 : Cold Dog
+axiom T4 : Likes Dog Squirrel
+axiom T5 : Sees Dog Rabbit
+axiom T6 : Eats Rabbit Dog
+axiom T7 : Eats Rabbit Squirrel
+axiom T8 : Likes Rabbit Dog
+axiom T9 : Sees Rabbit Squirrel
+axiom T10 : Likes Squirrel BaldEagle
 
 axiom R1 : ∀ x : obj, Cold x ∧ Likes x BaldEagle → Eats x Rabbit
 axiom R2 : ∀ x : obj, Likes x Dog ∧ Sees x Squirrel → Likes Dog BaldEagle

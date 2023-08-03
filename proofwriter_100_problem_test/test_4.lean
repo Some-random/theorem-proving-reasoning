@@ -15,18 +15,18 @@ constant Round : obj → Prop
 constant Rough : obj → Prop
 constant Nice : obj → Prop
 
-axiom A1 : Eats BaldEagle Lion
-axiom A2 : Young BaldEagle
-axiom A3 : Sees Cow Dog
-axiom A4 : Sees Cow Lion
-axiom A5 : ¬ Visits Cow BaldEagle
-axiom A6 : Visits Cow Dog
-axiom A7 : ¬ Eats Dog Cow
-axiom A8 : Round Dog
-axiom A9 : ¬ Visits Dog BaldEagle
-axiom A10 : Visits Dog Cow
-axiom A11 : Round Lion
-axiom A12 : Young Lion
+axiom T1 : Eats BaldEagle Lion
+axiom T2 : Young BaldEagle
+axiom T3 : Sees Cow Dog
+axiom T4 : Sees Cow Lion
+axiom T5 : ¬ Visits Cow BaldEagle
+axiom T6 : Visits Cow Dog
+axiom T7 : ¬ Eats Dog Cow
+axiom T8 : Round Dog
+axiom T9 : ¬ Visits Dog BaldEagle
+axiom T10 : Visits Dog Cow
+axiom T11 : Round Lion
+axiom T12 : Young Lion
 
 axiom R1 : ∀ x : obj, Visits x Dog ∧ Sees x Cow → ¬ Sees x BaldEagle
 axiom R2 : ∀ x : obj, Visits x Dog → Eats x BaldEagle

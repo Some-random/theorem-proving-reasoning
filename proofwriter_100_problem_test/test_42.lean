@@ -16,13 +16,13 @@ constant Nice : obj → Prop
 constant Cold : obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Likes BaldEagle Dog
-axiom A2 : Sees BaldEagle Dog
-axiom A3 : Likes Bear Dog
-axiom A4 : Green Dog
-axiom A5 : Sees Dog BaldEagle
-axiom A6 : Sees Dog Bear
-axiom A7 : Sees Squirrel Bear
+axiom T1 : Likes BaldEagle Dog
+axiom T2 : Sees BaldEagle Dog
+axiom T3 : Likes Bear Dog
+axiom T4 : Green Dog
+axiom T5 : Sees Dog BaldEagle
+axiom T6 : Sees Dog Bear
+axiom T7 : Sees Squirrel Bear
 
 axiom R1 : ∀ x : obj, Kind x → Visits x BaldEagle
 axiom R2 : ∀ x : obj, Nice Dog ∧ Cold Dog → Sees Dog Squirrel

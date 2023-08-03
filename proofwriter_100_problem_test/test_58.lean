@@ -15,17 +15,17 @@ constant Big : obj → Prop
 constant Cold : obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Furry Anne
-axiom A2 : Kind Anne
-axiom A3 : Nice Anne
-axiom A4 : Young Anne
-axiom A5 : Big Bob
-axiom A6 : Furry Bob
-axiom A7 : Nice Charlie
-axiom A8 : Young Charlie
-axiom A9 : Cold Dave
-axiom A10 : Kind Dave
-axiom A11 : Young Dave
+axiom T1 : Furry Anne
+axiom T2 : Kind Anne
+axiom T3 : Nice Anne
+axiom T4 : Young Anne
+axiom T5 : Big Bob
+axiom T6 : Furry Bob
+axiom T7 : Nice Charlie
+axiom T8 : Young Charlie
+axiom T9 : Cold Dave
+axiom T10 : Kind Dave
+axiom T11 : Young Dave
 
 axiom R1 : ∀ x : obj, Cold x ∧ Big x → Furry x
 axiom R2 : ∀ x : obj, Big x → Rough x

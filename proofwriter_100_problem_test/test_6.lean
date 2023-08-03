@@ -15,13 +15,13 @@ constant Nice : obj → Prop
 constant Rough : obj → Prop
 constant Kind : obj → Prop
 
-axiom A1 : Blue Anne
-axiom A2 : Furry Anne
-axiom A3 : Red Anne
-axiom A4 : White Charlie
-axiom A5 : Nice Gary
-axiom A6 : Rough Gary
-axiom A7 : Nice Harry
+axiom T1 : Blue Anne
+axiom T2 : Furry Anne
+axiom T3 : Red Anne
+axiom T4 : White Charlie
+axiom T5 : Nice Gary
+axiom T6 : Rough Gary
+axiom T7 : Nice Harry
 
 axiom R1 : ∀ x : obj, Kind x ∧ White x → Furry x
 axiom R2 : ∀ x : obj, Blue x → Furry x

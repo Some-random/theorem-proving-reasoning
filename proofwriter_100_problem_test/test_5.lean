@@ -15,18 +15,18 @@ constant White : obj → Prop
 constant Furry : obj → Prop
 constant Nice : obj → Prop
 
-axiom A1 : Blue Charlie
-axiom A2 : Quiet Charlie
-axiom A3 : Blue Dave
-axiom A4 : Cold Dave
-axiom A5 : Young Dave
-axiom A6 : Blue Erin
-axiom A7 : Quiet Erin
-axiom A8 : White Erin
-axiom A9 : Young Erin
-axiom A10 : Cold Gary
-axiom A11 : Quiet Gary
-axiom A12 : Young Gary
+axiom T1 : Blue Charlie
+axiom T2 : Quiet Charlie
+axiom T3 : Blue Dave
+axiom T4 : Cold Dave
+axiom T5 : Young Dave
+axiom T6 : Blue Erin
+axiom T7 : Quiet Erin
+axiom T8 : White Erin
+axiom T9 : Young Erin
+axiom T10 : Cold Gary
+axiom T11 : Quiet Gary
+axiom T12 : Young Gary
 
 axiom R1 : ∀ x : obj, Quiet x → Furry x
 axiom R2 : Cold Charlie → Young Charlie

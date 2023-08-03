@@ -16,18 +16,18 @@ constant Young : obj → Prop
 constant Big : obj → Prop
 constant Green : obj → Prop
 
-axiom A1 : Needs BaldEagle Lion
-axiom A2 : Visits BaldEagle Lion
-axiom A3 : ¬ Cold Lion
-axiom A4 : ¬ Likes Lion Tiger
-axiom A5 : Visits Lion Tiger
-axiom A6 : Kind Squirrel
-axiom A7 : Young Squirrel
-axiom A8 : Likes Squirrel Tiger
-axiom A9 : ¬ Needs Squirrel Lion
-axiom A10 : Visits Squirrel BaldEagle
-axiom A11 : Cold Tiger
-axiom A12 : Visits Tiger BaldEagle
+axiom T1 : Needs BaldEagle Lion
+axiom T2 : Visits BaldEagle Lion
+axiom T3 : ¬ Cold Lion
+axiom T4 : ¬ Likes Lion Tiger
+axiom T5 : Visits Lion Tiger
+axiom T6 : Kind Squirrel
+axiom T7 : Young Squirrel
+axiom T8 : Likes Squirrel Tiger
+axiom T9 : ¬ Needs Squirrel Lion
+axiom T10 : Visits Squirrel BaldEagle
+axiom T11 : Cold Tiger
+axiom T12 : Visits Tiger BaldEagle
 
 axiom R1 : ∀ x : obj, Visits x BaldEagle → Big x
 axiom R2 : ∀ x : obj, Big x → Needs x Squirrel

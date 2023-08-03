@@ -15,16 +15,16 @@ constant Red : obj → Prop
 constant Round : obj → Prop
 constant Green : obj → Prop
 
-axiom A1 : Big Anne
-axiom A2 : Rough Anne
-axiom A3 : Blue Dave
-axiom A4 : Cold Dave
-axiom A5 : Red Dave
-axiom A6 : Rough Dave
-axiom A7 : Round Dave
-axiom A8 : Round Gary
-axiom A9 : Cold Harry
-axiom A10 : Rough Harry
+axiom T1 : Big Anne
+axiom T2 : Rough Anne
+axiom T3 : Blue Dave
+axiom T4 : Cold Dave
+axiom T5 : Red Dave
+axiom T6 : Rough Dave
+axiom T7 : Round Dave
+axiom T8 : Round Gary
+axiom T9 : Cold Harry
+axiom T10 : Rough Harry
 
 axiom R1 : ∀ x : obj, Round x → Blue x
 axiom R2 : ∀ x : obj, Cold x → Blue x

@@ -15,13 +15,13 @@ constant Red : obj → Prop
 constant Furry : obj → Prop
 constant Cold : obj → Prop
 
-axiom A1 : Kind Anne
-axiom A2 : ¬ Big Charlie
-axiom A3 : Green Charlie
-axiom A4 : Green Erin
-axiom A5 : ¬ Kind Erin
-axiom A6 : Big Harry
-axiom A7 : Green Harry
+axiom T1 : Kind Anne
+axiom T2 : ¬ Big Charlie
+axiom T3 : Green Charlie
+axiom T4 : Green Erin
+axiom T5 : ¬ Kind Erin
+axiom T6 : Big Harry
+axiom T7 : Green Harry
 
 axiom R1 : ∀ x : obj, Big x ∧ Green x → Young x
 axiom R2 : ∀ x : obj, Big x → Young x

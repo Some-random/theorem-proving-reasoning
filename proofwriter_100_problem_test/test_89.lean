@@ -15,18 +15,18 @@ constant Cold : obj → Prop
 constant Quiet : obj → Prop
 constant Smart : obj → Prop
 
-axiom A1 : Rough Anne
-axiom A2 : Young Anne
-axiom A3 : Nice Bob
-axiom A4 : Red Bob
-axiom A5 : Young Bob
-axiom A6 : Cold Charlie
-axiom A7 : Quiet Charlie
-axiom A8 : Red Charlie
-axiom A9 : Rough Charlie
-axiom A10 : Smart Charlie
-axiom A11 : Cold Fiona
-axiom A12 : Quiet Fiona
+axiom T1 : Rough Anne
+axiom T2 : Young Anne
+axiom T3 : Nice Bob
+axiom T4 : Red Bob
+axiom T5 : Young Bob
+axiom T6 : Cold Charlie
+axiom T7 : Quiet Charlie
+axiom T8 : Red Charlie
+axiom T9 : Rough Charlie
+axiom T10 : Smart Charlie
+axiom T11 : Cold Fiona
+axiom T12 : Quiet Fiona
 
 axiom R1 : ∀ x : obj, Cold x → Young x
 axiom R2 : ∀ x : obj, Rough x ∧ Young x → Nice x

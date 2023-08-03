@@ -14,17 +14,17 @@ constant Nice : obj → Prop
 constant Cold : obj → Prop
 constant Quiet : obj → Prop
 
-axiom A1 : Big Anne
-axiom A2 : Blue Anne
-axiom A3 : Kind Anne
-axiom A4 : Nice Anne
-axiom A5 : Big Charlie
-axiom A6 : Blue Charlie
-axiom A7 : Nice Charlie
-axiom A8 : Blue Dave
-axiom A9 : Cold Dave
-axiom A10 : Nice Dave
-axiom A11 : Blue Harry
+axiom T1 : Big Anne
+axiom T2 : Blue Anne
+axiom T3 : Kind Anne
+axiom T4 : Nice Anne
+axiom T5 : Big Charlie
+axiom T6 : Blue Charlie
+axiom T7 : Nice Charlie
+axiom T8 : Blue Dave
+axiom T9 : Cold Dave
+axiom T10 : Nice Dave
+axiom T11 : Blue Harry
 
 axiom R1 : Cold Charlie → Nice Charlie
 axiom R2 : Kind Harry ∧ Nice Harry → Quiet Harry

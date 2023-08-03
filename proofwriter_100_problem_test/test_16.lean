@@ -15,13 +15,13 @@ constant Nice : obj → Prop
 constant Green : obj → Prop
 constant Red : obj → Prop
 
-axiom A1 : Eats BaldEagle Cow
-axiom A2 : Young BaldEagle
-axiom A3 : Nice Cow
-axiom A4 : Sees Cow BaldEagle
-axiom A5 : Eats Dog BaldEagle
-axiom A6 : Eats Tiger Cow
-axiom A7 : Needs Tiger BaldEagle
+axiom T1 : Eats BaldEagle Cow
+axiom T2 : Young BaldEagle
+axiom T3 : Nice Cow
+axiom T4 : Sees Cow BaldEagle
+axiom T5 : Eats Dog BaldEagle
+axiom T6 : Eats Tiger Cow
+axiom T7 : Needs Tiger BaldEagle
 
 axiom R1 : ∀ x : obj, Green x ∧ Eats x Cow → ¬ Sees x BaldEagle
 axiom R2 : ∀ x : obj, Eats x Tiger → Young Tiger

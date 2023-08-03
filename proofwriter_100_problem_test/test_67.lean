@@ -16,18 +16,18 @@ constant Nice : obj → Prop
 constant Needs : obj → obj → Prop
 constant Cold : obj → Prop
 
-axiom A1 : Sees BaldEagle Cat
-axiom A2 : Eats Cat Dog
-axiom A3 : Big Cat
-axiom A4 : Kind Cat
-axiom A5 : Eats Dog BaldEagle
-axiom A6 : Eats Dog Cat
-axiom A7 : Kind Dog
-axiom A8 : Sees Dog Lion
-axiom A9 : Eats Lion BaldEagle
-axiom A10 : Green Lion
-axiom A11 : Nice Lion
-axiom A12 : Sees Lion Dog
+axiom T1 : Sees BaldEagle Cat
+axiom T2 : Eats Cat Dog
+axiom T3 : Big Cat
+axiom T4 : Kind Cat
+axiom T5 : Eats Dog BaldEagle
+axiom T6 : Eats Dog Cat
+axiom T7 : Kind Dog
+axiom T8 : Sees Dog Lion
+axiom T9 : Eats Lion BaldEagle
+axiom T10 : Green Lion
+axiom T11 : Nice Lion
+axiom T12 : Sees Lion Dog
 
 axiom R1 : ∀ x : obj, Cold x → Green x
 axiom R2 : ∀ x : obj, Sees x Lion → Needs x Dog

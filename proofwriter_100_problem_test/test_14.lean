@@ -15,16 +15,16 @@ constant Rough : obj → Prop
 constant Red : obj → Prop
 constant Big : obj → Prop
 
-axiom A1 : Kind Bear
-axiom A2 : Likes Bear Cat
-axiom A3 : Likes Cat Bear
-axiom A4 : Needs Cat Cow
-axiom A5 : Sees Cat Bear
-axiom A6 : Sees Cat Cow
-axiom A7 : Rough Cow
-axiom A8 : Likes Mouse Cat
-axiom A9 : Needs Mouse Bear
-axiom A10 : Sees Mouse Cow
+axiom T1 : Kind Bear
+axiom T2 : Likes Bear Cat
+axiom T3 : Likes Cat Bear
+axiom T4 : Needs Cat Cow
+axiom T5 : Sees Cat Bear
+axiom T6 : Sees Cat Cow
+axiom T7 : Rough Cow
+axiom T8 : Likes Mouse Cat
+axiom T9 : Needs Mouse Bear
+axiom T10 : Sees Mouse Cow
 
 axiom R1 : ∀ x : obj, Sees x Bear → Needs x Mouse
 axiom R2 : ∀ x : obj, Needs x Bear ∧ Needs Bear Cow → Needs Bear Cat

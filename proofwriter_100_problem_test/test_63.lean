@@ -15,13 +15,13 @@ constant Rough : obj → Prop
 constant Blue : obj → Prop
 constant Furry : obj → Prop
 
-axiom A1 : Smart Anne
-axiom A2 : Quiet Bob
-axiom A3 : Young Bob
-axiom A4 : ¬ Quiet Fiona
-axiom A5 : Kind Gary
-axiom A6 : Rough Gary
-axiom A7 : Smart Gary
+axiom T1 : Smart Anne
+axiom T2 : Quiet Bob
+axiom T3 : Young Bob
+axiom T4 : ¬ Quiet Fiona
+axiom T5 : Kind Gary
+axiom T6 : Rough Gary
+axiom T7 : Smart Gary
 
 axiom R1 : ∀ x : obj, Rough x ∧ Kind x → Blue x
 axiom R2 : ∀ x : obj, Young x ∧ Kind x → Rough x

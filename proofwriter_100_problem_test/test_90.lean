@@ -15,18 +15,18 @@ constant Chases : obj → obj → Prop
 constant Nice : obj → Prop
 constant Round : obj → Prop
 
-axiom A1 : Blue BaldEagle
-axiom A2 : Red BaldEagle
-axiom A3 : Likes BaldEagle Lion
-axiom A4 : Needs BaldEagle Bear
-axiom A5 : Needs BaldEagle Dog
-axiom A6 : ¬ Blue Bear
-axiom A7 : Nice Bear
-axiom A8 : Needs Bear Dog
-axiom A9 : Chases Dog BaldEagle
-axiom A10 : Red Dog
-axiom A11 : ¬ Needs Dog Bear
-axiom A12 : ¬ Likes Lion Bear
+axiom T1 : Blue BaldEagle
+axiom T2 : Red BaldEagle
+axiom T3 : Likes BaldEagle Lion
+axiom T4 : Needs BaldEagle Bear
+axiom T5 : Needs BaldEagle Dog
+axiom T6 : ¬ Blue Bear
+axiom T7 : Nice Bear
+axiom T8 : Needs Bear Dog
+axiom T9 : Chases Dog BaldEagle
+axiom T10 : Red Dog
+axiom T11 : ¬ Needs Dog Bear
+axiom T12 : ¬ Likes Lion Bear
 
 axiom R1 : ∀ x : obj, Likes x Lion ∧ ¬ Red x → Chases x Lion
 axiom R2 : ∀ x : obj, Red x ∧ Needs x BaldEagle → Needs BaldEagle Lion

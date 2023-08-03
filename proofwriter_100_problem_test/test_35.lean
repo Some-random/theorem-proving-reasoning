@@ -16,22 +16,22 @@ constant Sees : obj → obj → Prop
 constant Needs : obj → obj → Prop
 constant Visits : obj → obj → Prop
 
-axiom A1 : Blue Bear
-axiom A2 : Green Bear
-axiom A3 : Red Bear
-axiom A4 : Sees Bear Rabbit
-axiom A5 : Blue Cow
-axiom A6 : Needs Cow Tiger
-axiom A7 : Visits Cow Rabbit
-axiom A8 : Cold Rabbit
-axiom A9 : Nice Rabbit
-axiom A10 : Needs Rabbit Cow
-axiom A11 : Sees Rabbit Cow
-axiom A12 : Sees Rabbit Tiger
-axiom A13 : Needs Tiger Bear
-axiom A14 : Needs Tiger Rabbit
-axiom A15 : Visits Tiger Bear
-axiom A16 : Visits Tiger Cow
+axiom T1 : Blue Bear
+axiom T2 : Green Bear
+axiom T3 : Red Bear
+axiom T4 : Sees Bear Rabbit
+axiom T5 : Blue Cow
+axiom T6 : Needs Cow Tiger
+axiom T7 : Visits Cow Rabbit
+axiom T8 : Cold Rabbit
+axiom T9 : Nice Rabbit
+axiom T10 : Needs Rabbit Cow
+axiom T11 : Sees Rabbit Cow
+axiom T12 : Sees Rabbit Tiger
+axiom T13 : Needs Tiger Bear
+axiom T14 : Needs Tiger Rabbit
+axiom T15 : Visits Tiger Bear
+axiom T16 : Visits Tiger Cow
 
 axiom R1 : ∀ x : obj, Green x → Visits x Tiger
 axiom R2 : ∀ x : obj, Sees x Bear ∧ Cold x → Green Bear

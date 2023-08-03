@@ -15,13 +15,13 @@ constant White : obj → Prop
 constant Cold : obj → Prop
 constant Big : obj → Prop
 
-axiom A1 : Kind Bob
-axiom A2 : Round Bob
-axiom A3 : Rough Charlie
-axiom A4 : Green Erin
-axiom A5 : Rough Erin
-axiom A6 : Round Erin
-axiom A7 : Cold Gary
+axiom T1 : Kind Bob
+axiom T2 : Round Bob
+axiom T3 : Rough Charlie
+axiom T4 : Green Erin
+axiom T5 : Rough Erin
+axiom T6 : Round Erin
+axiom T7 : Cold Gary
 
 axiom R1 : ∀ x : obj, Rough x → Green x
 axiom R2 : ∀ x : obj, Green x → White x

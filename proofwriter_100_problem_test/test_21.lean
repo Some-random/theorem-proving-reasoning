@@ -15,16 +15,16 @@ constant Furry : obj → Prop
 constant Young : obj → Prop
 constant Smart : obj → Prop
 
-axiom A1 : Nice Anne
-axiom A2 : Big Bob
-axiom A3 : Blue Bob
-axiom A4 : Cold Bob
-axiom A5 : Big Charlie
-axiom A6 : Cold Charlie
-axiom A7 : Nice Charlie
-axiom A8 : Young Charlie
-axiom A9 : Furry Fiona
-axiom A10 : Young Fiona
+axiom T1 : Nice Anne
+axiom T2 : Big Bob
+axiom T3 : Blue Bob
+axiom T4 : Cold Bob
+axiom T5 : Big Charlie
+axiom T6 : Cold Charlie
+axiom T7 : Nice Charlie
+axiom T8 : Young Charlie
+axiom T9 : Furry Fiona
+axiom T10 : Young Fiona
 
 axiom R1 : ∀ x : obj, Furry x ∧ Nice x → Cold x
 axiom R2 : Blue Bob ∧ Big Bob → Cold Bob

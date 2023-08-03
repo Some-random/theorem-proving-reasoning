@@ -15,16 +15,16 @@ constant Furry : obj → Prop
 constant Green : obj → Prop
 constant Quiet : obj → Prop
 
-axiom A1 : Kind Anne
-axiom A2 : Round Anne
-axiom A3 : Blue Dave
-axiom A4 : Cold Dave
-axiom A5 : Furry Dave
-axiom A6 : Green Dave
-axiom A7 : Quiet Dave
-axiom A8 : Green Erin
-axiom A9 : Furry Fiona
-axiom A10 : Round Fiona
+axiom T1 : Kind Anne
+axiom T2 : Round Anne
+axiom T3 : Blue Dave
+axiom T4 : Cold Dave
+axiom T5 : Furry Dave
+axiom T6 : Green Dave
+axiom T7 : Quiet Dave
+axiom T8 : Green Erin
+axiom T9 : Furry Fiona
+axiom T10 : Round Fiona
 
 axiom R1 : Quiet Fiona ∧ Kind Fiona → Green Fiona
 axiom R2 : ∀ x : obj, Green x → Blue x

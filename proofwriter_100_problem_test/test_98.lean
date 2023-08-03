@@ -15,13 +15,13 @@ constant Young : obj → Prop
 constant Furry : obj → Prop
 constant Round : obj → Prop
 
-axiom A1 : Quiet Anne
-axiom A2 : ¬ Rough Bob
-axiom A3 : Big Gary
-axiom A4 : Kind Gary
-axiom A5 : Rough Gary
-axiom A6 : Young Gary
-axiom A7 : Young Harry
+axiom T1 : Quiet Anne
+axiom T2 : ¬ Rough Bob
+axiom T3 : Big Gary
+axiom T4 : Kind Gary
+axiom T5 : Rough Gary
+axiom T6 : Young Gary
+axiom T7 : Young Harry
 
 axiom R1 : ∀ x : obj, Big x → Furry x
 axiom R2 : ∀ x : obj, Young x → Furry x

@@ -15,22 +15,22 @@ constant Blue : obj → Prop
 constant Cold : obj → Prop
 constant Red : obj → Prop
 
-axiom A1 : Needs BaldEagle Cow
-axiom A2 : Needs BaldEagle Tiger
-axiom A3 : Sees BaldEagle Cow
-axiom A4 : Big Cow
-axiom A5 : Needs Cow BaldEagle
-axiom A6 : Needs Cow Tiger
-axiom A7 : Eats Mouse Cow
-axiom A8 : Blue Mouse
-axiom A9 : Cold Mouse
-axiom A10 : Needs Mouse BaldEagle
-axiom A11 : Sees Mouse Cow
-axiom A12 : Sees Mouse Tiger
-axiom A13 : Eats Tiger Cow
-axiom A14 : Needs Tiger BaldEagle
-axiom A15 : Needs Tiger Cow
-axiom A16 : Needs Tiger Mouse
+axiom T1 : Needs BaldEagle Cow
+axiom T2 : Needs BaldEagle Tiger
+axiom T3 : Sees BaldEagle Cow
+axiom T4 : Big Cow
+axiom T5 : Needs Cow BaldEagle
+axiom T6 : Needs Cow Tiger
+axiom T7 : Eats Mouse Cow
+axiom T8 : Blue Mouse
+axiom T9 : Cold Mouse
+axiom T10 : Needs Mouse BaldEagle
+axiom T11 : Sees Mouse Cow
+axiom T12 : Sees Mouse Tiger
+axiom T13 : Eats Tiger Cow
+axiom T14 : Needs Tiger BaldEagle
+axiom T15 : Needs Tiger Cow
+axiom T16 : Needs Tiger Mouse
 
 axiom R1 : ∀ x : obj, Needs x Tiger → Red x
 axiom R2 : ∀ x : obj, Needs Mouse BaldEagle ∧ Needs BaldEagle Cow → Needs Mouse Cow

@@ -15,13 +15,13 @@ constant Kind : obj → Prop
 constant Round : obj → Prop
 constant Quiet : obj → Prop
 
-axiom A1 : Young Anne
-axiom A2 : Red Bob
-axiom A3 : Rough Bob
-axiom A4 : Green Erin
-axiom A5 : Kind Erin
-axiom A6 : Kind Gary
-axiom A7 : Round Gary
+axiom T1 : Young Anne
+axiom T2 : Red Bob
+axiom T3 : Rough Bob
+axiom T4 : Green Erin
+axiom T5 : Kind Erin
+axiom T6 : Kind Gary
+axiom T7 : Round Gary
 
 axiom R1 : ∀ x : obj, Red Anne ∧ Young Anne → Quiet Anne
 axiom R2 : ∀ x : obj, Round x → Kind x

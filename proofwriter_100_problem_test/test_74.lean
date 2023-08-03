@@ -16,22 +16,22 @@ constant Round : obj → Prop
 constant Big : obj → Prop
 constant Cold : obj → Prop
 
-axiom A1 : Green Bear
-axiom A2 : Likes Bear Cat
-axiom A3 : Likes Bear Dog
-axiom A4 : Visits Bear Dog
-axiom A5 : Young Cat
-axiom A6 : Sees Cat Bear
-axiom A7 : Sees Cat Dog
-axiom A8 : Visits Cat Bear
-axiom A9 : Visits Cat Mouse
-axiom A10 : Round Dog
-axiom A11 : Likes Dog Bear
-axiom A12 : Likes Dog Mouse
-axiom A13 : Visits Dog Mouse
-axiom A14 : Big Mouse
-axiom A15 : Cold Mouse
-axiom A16 : Round Mouse
+axiom T1 : Green Bear
+axiom T2 : Likes Bear Cat
+axiom T3 : Likes Bear Dog
+axiom T4 : Visits Bear Dog
+axiom T5 : Young Cat
+axiom T6 : Sees Cat Bear
+axiom T7 : Sees Cat Dog
+axiom T8 : Visits Cat Bear
+axiom T9 : Visits Cat Mouse
+axiom T10 : Round Dog
+axiom T11 : Likes Dog Bear
+axiom T12 : Likes Dog Mouse
+axiom T13 : Visits Dog Mouse
+axiom T14 : Big Mouse
+axiom T15 : Cold Mouse
+axiom T16 : Round Mouse
 
 axiom R1 : ∀ x : obj, Visits x Mouse ∧ Visits Mouse Dog → Cold x
 axiom R2 : ∀ x : obj, Likes x Cat → Visits x Dog

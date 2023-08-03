@@ -16,20 +16,20 @@ constant Cold : obj → Prop
 constant Young : obj → Prop
 constant Round : obj → Prop
 
-axiom A1 : Big BaldEagle
-axiom A2 : ¬ Green BaldEagle
-axiom A3 : Likes BaldEagle Bear
-axiom A4 : Likes BaldEagle Squirrel
-axiom A5 : Chases Bear Lion
-axiom A6 : Green Bear
-axiom A7 : Visits Bear BaldEagle
-axiom A8 : Visits Bear Squirrel
-axiom A9 : ¬ Green Lion
-axiom A10 : Likes Lion Bear
-axiom A11 : Visits Lion Squirrel
-axiom A12 : Chases Squirrel BaldEagle
-axiom A13 : Cold Squirrel
-axiom A14 : Visits Squirrel BaldEagle
+axiom T1 : Big BaldEagle
+axiom T2 : ¬ Green BaldEagle
+axiom T3 : Likes BaldEagle Bear
+axiom T4 : Likes BaldEagle Squirrel
+axiom T5 : Chases Bear Lion
+axiom T6 : Green Bear
+axiom T7 : Visits Bear BaldEagle
+axiom T8 : Visits Bear Squirrel
+axiom T9 : ¬ Green Lion
+axiom T10 : Likes Lion Bear
+axiom T11 : Visits Lion Squirrel
+axiom T12 : Chases Squirrel BaldEagle
+axiom T13 : Cold Squirrel
+axiom T14 : Visits Squirrel BaldEagle
 
 axiom R1 : ∀ x : obj, Cold x → ¬ Young x
 axiom R2 : ∀ x : obj, Big x → ¬ Green x

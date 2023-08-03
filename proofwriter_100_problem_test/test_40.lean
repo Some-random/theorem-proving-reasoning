@@ -15,18 +15,18 @@ constant Blue : obj → Prop
 constant Kind : obj → Prop
 constant Big : obj → Prop
 
-axiom A1 : Eats Cat Squirrel
-axiom A2 : Round Cat
-axiom A3 : Needs Cat Dog
-axiom A4 : Needs Cat Squirrel
-axiom A5 : Likes Dog Cat
-axiom A6 : Likes Dog Tiger
-axiom A7 : Blue Squirrel
-axiom A8 : ¬ Round Squirrel
-axiom A9 : Blue Tiger
-axiom A10 : Kind Tiger
-axiom A11 : Round Tiger
-axiom A12 : Needs Tiger Squirrel
+axiom T1 : Eats Cat Squirrel
+axiom T2 : Round Cat
+axiom T3 : Needs Cat Dog
+axiom T4 : Needs Cat Squirrel
+axiom T5 : Likes Dog Cat
+axiom T6 : Likes Dog Tiger
+axiom T7 : Blue Squirrel
+axiom T8 : ¬ Round Squirrel
+axiom T9 : Blue Tiger
+axiom T10 : Kind Tiger
+axiom T11 : Round Tiger
+axiom T12 : Needs Tiger Squirrel
 
 axiom R1 : ∀ x : obj, Likes x Tiger ∧ Needs Tiger Dog → Round x
 axiom R2 : ∀ x : obj, Eats x Cat → Needs x Dog

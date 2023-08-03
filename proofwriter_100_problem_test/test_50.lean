@@ -15,13 +15,13 @@ constant Rough : obj → Prop
 constant Young : obj → Prop
 constant Green : obj → Prop
 
-axiom A1 : Big Charlie
-axiom A2 : Nice Dave
-axiom A3 : Round Dave
-axiom A4 : Big Erin
-axiom A5 : Nice Erin
-axiom A6 : Red Fiona
-axiom A7 : Rough Fiona
+axiom T1 : Big Charlie
+axiom T2 : Nice Dave
+axiom T3 : Round Dave
+axiom T4 : Big Erin
+axiom T5 : Nice Erin
+axiom T6 : Red Fiona
+axiom T7 : Rough Fiona
 
 axiom R1 : ∀ x : obj, Red x ∧ Big x → Nice x
 axiom R2 : Round Dave ∧ Rough Dave → Big Dave

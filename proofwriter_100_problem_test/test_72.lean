@@ -15,17 +15,17 @@ constant Young : obj → Prop
 constant Round : obj → Prop
 constant Red : obj → Prop
 
-axiom A1 : Chases BaldEagle Cat
-axiom A2 : ¬ Eats BaldEagle Mouse
-axiom A3 : Eats Cat Cow
-axiom A4 : Eats Cow Cat
-axiom A5 : Blue Cow
-axiom A6 : Young Cow
-axiom A7 : Sees Cow Cat
-axiom A8 : ¬ Sees Cow Mouse
-axiom A9 : ¬ Chases Mouse Cow
-axiom A10 : Eats Mouse BaldEagle
-axiom A11 : Round Mouse
+axiom T1 : Chases BaldEagle Cat
+axiom T2 : ¬ Eats BaldEagle Mouse
+axiom T3 : Eats Cat Cow
+axiom T4 : Eats Cow Cat
+axiom T5 : Blue Cow
+axiom T6 : Young Cow
+axiom T7 : Sees Cow Cat
+axiom T8 : ¬ Sees Cow Mouse
+axiom T9 : ¬ Chases Mouse Cow
+axiom T10 : Eats Mouse BaldEagle
+axiom T11 : Round Mouse
 
 axiom R1 : ∀ x : obj, Eats x Mouse → Round x
 axiom R2 : Red Mouse → Sees Mouse Cow

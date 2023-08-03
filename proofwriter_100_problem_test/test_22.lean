@@ -16,20 +16,20 @@ constant Visits : obj → obj → Prop
 constant Round : obj → Prop
 constant Nice : obj → Prop
 
-axiom A1 : Green BaldEagle
-axiom A2 : Rough BaldEagle
-axiom A3 : Young BaldEagle
-axiom A4 : Needs BaldEagle Squirrel
-axiom A5 : Sees BaldEagle Squirrel
-axiom A6 : Round Cat
-axiom A7 : Needs Cat BaldEagle
-axiom A8 : Needs Cat Dog
-axiom A9 : Visits Cat BaldEagle
-axiom A10 : Needs Dog BaldEagle
-axiom A11 : Sees Dog BaldEagle
-axiom A12 : Visits Dog Cat
-axiom A13 : Needs Squirrel Cat
-axiom A14 : Visits Squirrel BaldEagle
+axiom T1 : Green BaldEagle
+axiom T2 : Rough BaldEagle
+axiom T3 : Young BaldEagle
+axiom T4 : Needs BaldEagle Squirrel
+axiom T5 : Sees BaldEagle Squirrel
+axiom T6 : Round Cat
+axiom T7 : Needs Cat BaldEagle
+axiom T8 : Needs Cat Dog
+axiom T9 : Visits Cat BaldEagle
+axiom T10 : Needs Dog BaldEagle
+axiom T11 : Sees Dog BaldEagle
+axiom T12 : Visits Dog Cat
+axiom T13 : Needs Squirrel Cat
+axiom T14 : Visits Squirrel BaldEagle
 
 axiom R1 : ∀ x : obj, Sees x Dog → Sees x Cat
 axiom R2 : ∀ x : obj, Needs x Dog ∧ Round x → Needs x Cat

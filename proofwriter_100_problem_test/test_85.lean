@@ -14,17 +14,17 @@ constant Round : obj → Prop
 constant Big : obj → Prop
 constant Kind : obj → Prop
 
-axiom A1 : Sees Bear Squirrel
-axiom A2 : Visits Bear Rabbit
-axiom A3 : ¬ Round Lion
-axiom A4 : ¬ Likes Lion Rabbit
-axiom A5 : Visits Lion Bear
-axiom A6 : ¬ Big Rabbit
-axiom A7 : Kind Rabbit
-axiom A8 : Likes Rabbit Squirrel
-axiom A9 : Sees Rabbit Bear
-axiom A10 : ¬ Visits Rabbit Bear
-axiom A11 : Visits Squirrel Lion
+axiom T1 : Sees Bear Squirrel
+axiom T2 : Visits Bear Rabbit
+axiom T3 : ¬ Round Lion
+axiom T4 : ¬ Likes Lion Rabbit
+axiom T5 : Visits Lion Bear
+axiom T6 : ¬ Big Rabbit
+axiom T7 : Kind Rabbit
+axiom T8 : Likes Rabbit Squirrel
+axiom T9 : Sees Rabbit Bear
+axiom T10 : ¬ Visits Rabbit Bear
+axiom T11 : Visits Squirrel Lion
 
 axiom R1 : ∀ x : obj, Big x ∧ Visits x Lion → Visits Lion Rabbit
 axiom R2 : ∀ x : obj, Sees x Lion → ¬ Likes x Lion

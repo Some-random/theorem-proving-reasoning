@@ -15,17 +15,17 @@ constant Blue : obj → Prop
 constant Kind : obj → Prop
 constant Nice : obj → Prop
 
-axiom A1 : Green Anne
-axiom A2 : Big Charlie
-axiom A3 : Quiet Charlie
-axiom A4 : Round Charlie
-axiom A5 : Green Erin
-axiom A6 : Kind Erin
-axiom A7 : Nice Erin
-axiom A8 : Quiet Erin
-axiom A9 : Blue Fiona
-axiom A10 : Kind Fiona
-axiom A11 : Quiet Fiona
+axiom T1 : Green Anne
+axiom T2 : Big Charlie
+axiom T3 : Quiet Charlie
+axiom T4 : Round Charlie
+axiom T5 : Green Erin
+axiom T6 : Kind Erin
+axiom T7 : Nice Erin
+axiom T8 : Quiet Erin
+axiom T9 : Blue Fiona
+axiom T10 : Kind Fiona
+axiom T11 : Quiet Fiona
 
 axiom R1 : ∀ x : obj, Kind x → Nice x
 axiom R2 : ∀ x : obj, Round x ∧ Quiet x → Blue x

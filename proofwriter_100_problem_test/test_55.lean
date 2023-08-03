@@ -14,16 +14,16 @@ constant Chases : obj → obj → Prop
 constant Young : obj → Prop
 constant Cold : obj → Prop
 
-axiom A1 : Big BaldEagle
-axiom A2 : Likes BaldEagle Cat
-axiom A3 : Sees BaldEagle Squirrel
-axiom A4 : Chases Cat Squirrel
-axiom A5 : Sees Cat Squirrel
-axiom A6 : Likes Squirrel Cat
-axiom A7 : ¬ Likes Squirrel Tiger
-axiom A8 : Big Tiger
-axiom A9 : ¬ Young Tiger
-axiom A10 : Sees Tiger Squirrel
+axiom T1 : Big BaldEagle
+axiom T2 : Likes BaldEagle Cat
+axiom T3 : Sees BaldEagle Squirrel
+axiom T4 : Chases Cat Squirrel
+axiom T5 : Sees Cat Squirrel
+axiom T6 : Likes Squirrel Cat
+axiom T7 : ¬ Likes Squirrel Tiger
+axiom T8 : Big Tiger
+axiom T9 : ¬ Young Tiger
+axiom T10 : Sees Tiger Squirrel
 
 axiom R1 : Likes Tiger BaldEagle → Sees BaldEagle Squirrel
 axiom R2 : ∀ x : obj, Likes x Tiger ∧ ¬ Chases x Cat → ¬ Big Cat

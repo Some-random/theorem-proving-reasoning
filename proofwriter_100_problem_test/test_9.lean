@@ -15,18 +15,18 @@ constant Big : obj → Prop
 constant Green : obj → Prop
 constant Young : obj → Prop
 
-axiom A1 : Furry Anne
-axiom A2 : Smart Anne
-axiom A3 : Kind Bob
-axiom A4 : Nice Bob
-axiom A5 : Big Charlie
-axiom A6 : Green Charlie
-axiom A7 : Nice Charlie
-axiom A8 : Young Charlie
-axiom A9 : Furry Gary
-axiom A10 : Kind Gary
-axiom A11 : Nice Gary
-axiom A12 : Young Gary
+axiom T1 : Furry Anne
+axiom T2 : Smart Anne
+axiom T3 : Kind Bob
+axiom T4 : Nice Bob
+axiom T5 : Big Charlie
+axiom T6 : Green Charlie
+axiom T7 : Nice Charlie
+axiom T8 : Young Charlie
+axiom T9 : Furry Gary
+axiom T10 : Kind Gary
+axiom T11 : Nice Gary
+axiom T12 : Young Gary
 
 axiom R1 : ∀ x : obj, Young x → Nice x
 axiom R2 : Green Anne → Big Anne

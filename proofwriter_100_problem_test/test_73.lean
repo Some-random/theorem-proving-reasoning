@@ -15,13 +15,13 @@ constant Nice : obj → Prop
 constant Young : obj → Prop
 constant Quiet : obj → Prop
 
-axiom A1 : Blue Anne
-axiom A2 : Blue Bob
-axiom A3 : Green Bob
-axiom A4 : Smart Bob
-axiom A5 : Big Dave
-axiom A6 : Nice Dave
-axiom A7 : Smart Fiona
+axiom T1 : Blue Anne
+axiom T2 : Blue Bob
+axiom T3 : Green Bob
+axiom T4 : Smart Bob
+axiom T5 : Big Dave
+axiom T6 : Nice Dave
+axiom T7 : Smart Fiona
 
 axiom R1 : ∀ x : obj, Nice x → ¬ Green x
 axiom R2 : ∀ x : obj, Quiet x ∧ Blue x → Big x

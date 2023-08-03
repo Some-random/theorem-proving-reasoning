@@ -15,16 +15,16 @@ constant Green : obj → Prop
 constant Nice : obj → Prop
 constant Quiet : obj → Prop
 
-axiom A1 : Big Anne
-axiom A2 : Rough Anne
-axiom A3 : Young Anne
-axiom A4 : Young Bob
-axiom A5 : Cold Charlie
-axiom A6 : Green Charlie
-axiom A7 : Nice Charlie
-axiom A8 : Young Charlie
-axiom A9 : Green Gary
-axiom A10 : Young Gary
+axiom T1 : Big Anne
+axiom T2 : Rough Anne
+axiom T3 : Young Anne
+axiom T4 : Young Bob
+axiom T5 : Cold Charlie
+axiom T6 : Green Charlie
+axiom T7 : Nice Charlie
+axiom T8 : Young Charlie
+axiom T9 : Green Gary
+axiom T10 : Young Gary
 
 axiom R1 : ∀ x : obj, Big x ∧ Quiet x → Green x
 axiom R2 : ∀ x : obj, Cold x ∧ Young x → Nice x

@@ -15,13 +15,13 @@ constant Cold : obj → Prop
 constant Blue : obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Green Bob
-axiom A2 : Nice Charlie
-axiom A3 : Smart Charlie
-axiom A4 : White Charlie
-axiom A5 : Nice Erin
-axiom A6 : Nice Harry
-axiom A7 : White Harry
+axiom T1 : Green Bob
+axiom T2 : Nice Charlie
+axiom T3 : Smart Charlie
+axiom T4 : White Charlie
+axiom T5 : Nice Erin
+axiom T6 : Nice Harry
+axiom T7 : White Harry
 
 axiom R1 : Green Charlie → Blue Charlie
 axiom R2 : ∀ x : obj, Nice x → Cold x

@@ -15,17 +15,17 @@ constant Blue : obj → Prop
 constant Young : obj → Prop
 constant Nice : obj → Prop
 
-axiom A1 : Eats BaldEagle Cat
-axiom A2 : Needs BaldEagle Cow
-axiom A3 : Visits BaldEagle Squirrel
-axiom A4 : ¬ Eats Cat Squirrel
-axiom A5 : Green Cat
-axiom A6 : Needs Cat Cow
-axiom A7 : Young Cow
-axiom A8 : Eats Squirrel Cat
-axiom A9 : Blue Squirrel
-axiom A10 : Needs Squirrel BaldEagle
-axiom A11 : Needs Squirrel Cow
+axiom T1 : Eats BaldEagle Cat
+axiom T2 : Needs BaldEagle Cow
+axiom T3 : Visits BaldEagle Squirrel
+axiom T4 : ¬ Eats Cat Squirrel
+axiom T5 : Green Cat
+axiom T6 : Needs Cat Cow
+axiom T7 : Young Cow
+axiom T8 : Eats Squirrel Cat
+axiom T9 : Blue Squirrel
+axiom T10 : Needs Squirrel BaldEagle
+axiom T11 : Needs Squirrel Cow
 
 axiom R1 : ∀ x : obj, Needs x Cow ∧ ¬ Nice x → Eats x Squirrel
 axiom R2 : ∀ x : obj, Eats x Cow ∧ Needs Cow BaldEagle → Eats x Squirrel

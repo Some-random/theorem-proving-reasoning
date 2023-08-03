@@ -15,13 +15,13 @@ constant Blue : obj → Prop
 constant Green : obj → Prop
 constant Furry : obj → Prop
 
-axiom A1 : Quiet Bob
-axiom A2 : Smart Bob
-axiom A3 : Kind Charlie
-axiom A4 : Smart Charlie
-axiom A5 : White Charlie
-axiom A6 : Blue Erin
-axiom A7 : Green Harry
+axiom T1 : Quiet Bob
+axiom T2 : Smart Bob
+axiom T3 : Kind Charlie
+axiom T4 : Smart Charlie
+axiom T5 : White Charlie
+axiom T6 : Blue Erin
+axiom T7 : Green Harry
 
 axiom R1 : ∀ x : obj, White x ∧ Green x → Smart x
 axiom R2 : ∀ x : obj, Smart x ∧ Quiet x → White x

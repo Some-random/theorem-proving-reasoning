@@ -15,16 +15,16 @@ constant Round : obj → Prop
 constant Big : obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Quiet Anne
-axiom A2 : Red Anne
-axiom A3 : Kind Bob
-axiom A4 : Nice Bob
-axiom A5 : Quiet Bob
-axiom A6 : ¬ Red Bob
-axiom A7 : Round Bob
-axiom A8 : Big Charlie
-axiom A9 : Kind Charlie
-axiom A10 : Quiet Fiona
+axiom T1 : Quiet Anne
+axiom T2 : Red Anne
+axiom T3 : Kind Bob
+axiom T4 : Nice Bob
+axiom T5 : Quiet Bob
+axiom T6 : ¬ Red Bob
+axiom T7 : Round Bob
+axiom T8 : Big Charlie
+axiom T9 : Kind Charlie
+axiom T10 : Quiet Fiona
 
 axiom R1 : ∀ x : obj, Round x → Nice x
 axiom R2 : ∀ x : obj, Kind x ∧ Red x → Rough x

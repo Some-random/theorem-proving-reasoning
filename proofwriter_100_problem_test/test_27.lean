@@ -14,13 +14,13 @@ constant Needs : obj → obj → Prop
 constant Sees : obj → obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Kind BaldEagle
-axiom A2 : ¬ Red BaldEagle
-axiom A3 : Likes BaldEagle Dog
-axiom A4 : Needs Dog Lion
-axiom A5 : ¬ Needs Lion BaldEagle
-axiom A6 : Likes Mouse Dog
-axiom A7 : ¬ Sees Mouse Dog
+axiom T1 : Kind BaldEagle
+axiom T2 : ¬ Red BaldEagle
+axiom T3 : Likes BaldEagle Dog
+axiom T4 : Needs Dog Lion
+axiom T5 : ¬ Needs Lion BaldEagle
+axiom T6 : Likes Mouse Dog
+axiom T7 : ¬ Sees Mouse Dog
 
 axiom R1 : ∀ x : obj, Needs x Mouse → ¬ Sees Mouse BaldEagle
 axiom R2 : ∀ x : obj, Needs x Dog → Needs Dog Lion

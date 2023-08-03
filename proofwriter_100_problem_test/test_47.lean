@@ -15,18 +15,18 @@ constant White : obj → Prop
 constant Young : obj → Prop
 constant Blue : obj → Prop
 
-axiom A1 : Big Anne
-axiom A2 : Big Bob
-axiom A3 : Furry Bob
-axiom A4 : Nice Bob
-axiom A5 : Rough Bob
-axiom A6 : White Bob
-axiom A7 : Young Bob
-axiom A8 : Blue Erin
-axiom A9 : Nice Harry
-axiom A10 : Rough Harry
-axiom A11 : White Harry
-axiom A12 : Young Harry
+axiom T1 : Big Anne
+axiom T2 : Big Bob
+axiom T3 : Furry Bob
+axiom T4 : Nice Bob
+axiom T5 : Rough Bob
+axiom T6 : White Bob
+axiom T7 : Young Bob
+axiom T8 : Blue Erin
+axiom T9 : Nice Harry
+axiom T10 : Rough Harry
+axiom T11 : White Harry
+axiom T12 : Young Harry
 
 axiom R1 : ∀ x : obj, Big x → Furry x
 axiom R2 : ∀ x : obj, Furry Erin ∧ White Erin → Blue Erin

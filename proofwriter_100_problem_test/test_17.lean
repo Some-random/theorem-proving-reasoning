@@ -15,13 +15,13 @@ constant Likes : obj → obj → Prop
 constant Blue : obj → Prop
 constant Red : obj → Prop
 
-axiom A1 : Needs BaldEagle Cow
-axiom A2 : Needs BaldEagle Mouse
-axiom A3 : Round Cow
-axiom A4 : ¬ Visits Mouse Rabbit
-axiom A5 : Green Rabbit
-axiom A6 : Needs Rabbit BaldEagle
-axiom A7 : Visits Rabbit BaldEagle
+axiom T1 : Needs BaldEagle Cow
+axiom T2 : Needs BaldEagle Mouse
+axiom T3 : Round Cow
+axiom T4 : ¬ Visits Mouse Rabbit
+axiom T5 : Green Rabbit
+axiom T6 : Needs Rabbit BaldEagle
+axiom T7 : Visits Rabbit BaldEagle
 
 axiom R1 : ∀ x : obj, Visits x Mouse → Likes x Cow
 axiom R2 : ∀ x : obj, Likes x Mouse ∧ Blue x → Needs Mouse Rabbit

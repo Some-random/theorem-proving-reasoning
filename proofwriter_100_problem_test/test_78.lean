@@ -15,13 +15,13 @@ constant Blue : obj → Prop
 constant Green : obj → Prop
 constant Round : obj → Prop
 
-axiom A1 : Chases BaldEagle Squirrel
-axiom A2 : Eats BaldEagle Bear
-axiom A3 : ¬ Eats Bear Lion
-axiom A4 : Visits Bear Lion
-axiom A5 : ¬ Eats Lion BaldEagle
-axiom A6 : Red Squirrel
-axiom A7 : Visits Squirrel BaldEagle
+axiom T1 : Chases BaldEagle Squirrel
+axiom T2 : Eats BaldEagle Bear
+axiom T3 : ¬ Eats Bear Lion
+axiom T4 : Visits Bear Lion
+axiom T5 : ¬ Eats Lion BaldEagle
+axiom T6 : Red Squirrel
+axiom T7 : Visits Squirrel BaldEagle
 
 axiom R1 : ∀ x : obj, Round x → Eats x Squirrel
 axiom R2 : ∀ x : obj, Blue x ∧ Green x → Chases x BaldEagle

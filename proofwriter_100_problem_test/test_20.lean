@@ -15,22 +15,22 @@ constant Round : obj → Prop
 constant Big : obj → Prop
 constant Cold : obj → Prop
 
-axiom A1 : Blue Bob
-axiom A2 : White Bob
-axiom A3 : Green Charlie
-axiom A4 : Quiet Charlie
-axiom A5 : Round Charlie
-axiom A6 : White Charlie
-axiom A7 : Blue Erin
-axiom A8 : Cold Erin
-axiom A9 : Green Erin
-axiom A10 : Big Gary
-axiom A11 : Blue Gary
-axiom A12 : Cold Gary
-axiom A13 : Green Gary
-axiom A14 : Quiet Gary
-axiom A15 : Round Gary
-axiom A16 : White Gary
+axiom T1 : Blue Bob
+axiom T2 : White Bob
+axiom T3 : Green Charlie
+axiom T4 : Quiet Charlie
+axiom T5 : Round Charlie
+axiom T6 : White Charlie
+axiom T7 : Blue Erin
+axiom T8 : Cold Erin
+axiom T9 : Green Erin
+axiom T10 : Big Gary
+axiom T11 : Blue Gary
+axiom T12 : Cold Gary
+axiom T13 : Green Gary
+axiom T14 : Quiet Gary
+axiom T15 : Round Gary
+axiom T16 : White Gary
 
 axiom R1 : ∀ x : obj, White x → Cold x
 axiom R2 : ∀ x : obj, Blue x → White x

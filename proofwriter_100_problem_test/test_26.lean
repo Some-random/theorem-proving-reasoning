@@ -15,13 +15,13 @@ constant Young : obj → Prop
 constant Nice : obj → Prop
 constant Big : obj → Prop
 
-axiom A1 : Cold Anne
-axiom A2 : Furry Anne
-axiom A3 : ¬ Quiet Anne
-axiom A4 : Kind Charlie
-axiom A5 : ¬ Quiet Fiona
-axiom A6 : Young Fiona
-axiom A7 : Cold Harry
+axiom T1 : Cold Anne
+axiom T2 : Furry Anne
+axiom T3 : ¬ Quiet Anne
+axiom T4 : Kind Charlie
+axiom T5 : ¬ Quiet Fiona
+axiom T6 : Young Fiona
+axiom T7 : Cold Harry
 
 axiom R1 : ∀ x : obj, Kind x → Furry x
 axiom R2 : ∀ x : obj, Nice x → Big x

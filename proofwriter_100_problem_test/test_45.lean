@@ -15,13 +15,13 @@ constant Rough : obj → Prop
 constant Cold : obj → Prop
 constant Kind : obj → Prop
 
-axiom A1 : Blue Anne
-axiom A2 : Smart Anne
-axiom A3 : Green Bob
-axiom A4 : Round Bob
-axiom A5 : Rough Erin
-axiom A6 : Cold Harry
-axiom A7 : Kind Harry
+axiom T1 : Blue Anne
+axiom T2 : Smart Anne
+axiom T3 : Green Bob
+axiom T4 : Round Bob
+axiom T5 : Rough Erin
+axiom T6 : Cold Harry
+axiom T7 : Kind Harry
 
 axiom R1 : ∀ x : obj, Kind x → Round x
 axiom R2 : ∀ x : obj, Rough x → Round x

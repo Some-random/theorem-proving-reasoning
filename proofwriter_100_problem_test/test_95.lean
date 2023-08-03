@@ -15,17 +15,17 @@ constant Red : obj → Prop
 constant Young : obj → Prop
 constant Nice : obj → Prop
 
-axiom A1 : Big Anne
-axiom A2 : Furry Anne
-axiom A3 : Blue Bob
-axiom A4 : Green Bob
-axiom A5 : Young Bob
-axiom A6 : Furry Charlie
-axiom A7 : Green Charlie
-axiom A8 : Red Charlie
-axiom A9 : Furry Gary
-axiom A10 : Green Gary
-axiom A11 : Young Gary
+axiom T1 : Big Anne
+axiom T2 : Furry Anne
+axiom T3 : Blue Bob
+axiom T4 : Green Bob
+axiom T5 : Young Bob
+axiom T6 : Furry Charlie
+axiom T7 : Green Charlie
+axiom T8 : Red Charlie
+axiom T9 : Furry Gary
+axiom T10 : Green Gary
+axiom T11 : Young Gary
 
 axiom R1 : ∀ x : obj, Furry x ∧ Green x → Blue x
 axiom R2 : ∀ x : obj, Big x → Green x

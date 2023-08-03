@@ -15,18 +15,18 @@ constant Smart : obj → Prop
 constant Kind : obj → Prop
 constant Big : obj → Prop
 
-axiom A1 : Nice Anne
-axiom A2 : White Anne
-axiom A3 : Young Anne
-axiom A4 : Cold Dave
-axiom A5 : Nice Dave
-axiom A6 : Smart Dave
-axiom A7 : Cold Erin
-axiom A8 : ¬ Kind Erin
-axiom A9 : ¬ Nice Erin
-axiom A10 : Smart Erin
-axiom A11 : Young Erin
-axiom A12 : Kind Fiona
+axiom T1 : Nice Anne
+axiom T2 : White Anne
+axiom T3 : Young Anne
+axiom T4 : Cold Dave
+axiom T5 : Nice Dave
+axiom T6 : Smart Dave
+axiom T7 : Cold Erin
+axiom T8 : ¬ Kind Erin
+axiom T9 : ¬ Nice Erin
+axiom T10 : Smart Erin
+axiom T11 : Young Erin
+axiom T12 : Kind Fiona
 
 axiom R1 : ∀ x : obj, Smart x → White x
 axiom R2 : ∀ x : obj, Kind x ∧ Cold x → Smart x

@@ -15,13 +15,13 @@ constant Rough : obj → Prop
 constant Nice : obj → Prop
 constant Green : obj → Prop
 
-axiom A1 : Eats Bear Rabbit
-axiom A2 : Sees Bear Squirrel
-axiom A3 : Eats Mouse Squirrel
-axiom A4 : Kind Mouse
-axiom A5 : Sees Mouse Rabbit
-axiom A6 : Needs Rabbit Squirrel
-axiom A7 : Eats Squirrel Bear
+axiom T1 : Eats Bear Rabbit
+axiom T2 : Sees Bear Squirrel
+axiom T3 : Eats Mouse Squirrel
+axiom T4 : Kind Mouse
+axiom T5 : Sees Mouse Rabbit
+axiom T6 : Needs Rabbit Squirrel
+axiom T7 : Eats Squirrel Bear
 
 axiom R1 : ∀ x : obj, Sees x Squirrel ∧ Sees Squirrel Bear → Needs Squirrel Mouse
 axiom R2 : ∀ x : obj, Needs x Rabbit ∧ Sees Rabbit Mouse → Sees Mouse Rabbit

@@ -15,17 +15,17 @@ constant Nice : obj → Prop
 constant Green : obj → Prop
 constant Young : obj → Prop
 
-axiom A1 : Chases Cat Dog
-axiom A2 : Chases Cat Mouse
-axiom A3 : Chases Cat Tiger
-axiom A4 : Eats Cat Dog
-axiom A5 : Big Dog
-axiom A6 : Sees Dog Cat
-axiom A7 : ¬ Eats Mouse Cat
-axiom A8 : Eats Mouse Tiger
-axiom A9 : ¬ Sees Mouse Tiger
-axiom A10 : Eats Tiger Dog
-axiom A11 : Nice Tiger
+axiom T1 : Chases Cat Dog
+axiom T2 : Chases Cat Mouse
+axiom T3 : Chases Cat Tiger
+axiom T4 : Eats Cat Dog
+axiom T5 : Big Dog
+axiom T6 : Sees Dog Cat
+axiom T7 : ¬ Eats Mouse Cat
+axiom T8 : Eats Mouse Tiger
+axiom T9 : ¬ Sees Mouse Tiger
+axiom T10 : Eats Tiger Dog
+axiom T11 : Nice Tiger
 
 axiom R1 : ∀ x : obj, Young x ∧ Eats x Tiger → Eats x Dog
 axiom R2 : ∀ x : obj, Sees x Mouse ∧ Eats x Mouse → Sees Mouse Tiger

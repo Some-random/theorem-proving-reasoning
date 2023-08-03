@@ -15,16 +15,16 @@ constant Rough : obj → Prop
 constant Green : obj → Prop
 constant Quiet : obj → Prop
 
-axiom B1 : Big Bob
-axiom B2 : Blue Bob
-axiom B3 : Cold Bob
-axiom B4 : Red Bob
-axiom B5 : Rough Bob
-axiom C1 : ¬ Cold Charlie
-axiom C2 : Green Charlie
-axiom G1 : Blue Gary
-axiom H1 : Cold Harry
-axiom H2 : Rough Harry
+axiom T1 : Big Bob
+axiom T2 : Blue Bob
+axiom T3 : Cold Bob
+axiom T4 : Red Bob
+axiom T5 : Rough Bob
+axiom T6 : ¬ Cold Charlie
+axiom T7 : Green Charlie
+axiom T8 : Blue Gary
+axiom T9 : Cold Harry
+axiom T10 : Rough Harry
 
 axiom R1 : ∀ x : obj, Quiet x ∧ Blue x → Big x
 axiom R2 : ∀ x : obj, Rough x ∧ Quiet x → Red x

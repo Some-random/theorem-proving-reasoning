@@ -15,13 +15,13 @@ constant Red : obj → Prop
 constant Blue : obj → Prop
 constant Young : obj → Prop
 
-axiom A1 : ¬ Round Bob
-axiom A2 : Furry Charlie
-axiom A3 : Nice Charlie
-axiom A4 : Smart Charlie
-axiom A5 : Red Erin
-axiom A6 : Furry Fiona
-axiom A7 : Young Fiona
+axiom T1 : ¬ Round Bob
+axiom T2 : Furry Charlie
+axiom T3 : Nice Charlie
+axiom T4 : Smart Charlie
+axiom T5 : Red Erin
+axiom T6 : Furry Fiona
+axiom T7 : Young Fiona
 
 -- Rule R1: All red people are not round
 axiom R1 : ∀ x : obj, Red x → ¬ Round x

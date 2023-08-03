@@ -15,13 +15,13 @@ constant Round : obj → Prop
 constant Quiet : obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Big Dave
-axiom A2 : Furry Dave
-axiom A3 : Blue Erin
-axiom A4 : Cold Erin
-axiom A5 : Round Erin
-axiom A6 : Quiet Fiona
-axiom A7 : Rough Gary
+axiom T1 : Big Dave
+axiom T2 : Furry Dave
+axiom T3 : Blue Erin
+axiom T4 : Cold Erin
+axiom T5 : Round Erin
+axiom T6 : Quiet Fiona
+axiom T7 : Rough Gary
 
 axiom R1 : ∀ x : obj, Rough x ∧ Cold x → Furry x
 axiom R2 : ∀ x : obj, Quiet x ∧ Big x → ¬ Round x

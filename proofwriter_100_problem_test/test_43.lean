@@ -15,16 +15,16 @@ constant Red : obj → Prop
 constant Smart : obj → Prop
 constant Rough : obj → Prop
 
-axiom A1 : Big Anne
-axiom A2 : Nice Anne
-axiom A3 : Round Anne
-axiom A4 : Nice Bob
-axiom A5 : Round Bob
-axiom A6 : Blue Dave
-axiom A7 : Red Dave
-axiom A8 : Smart Dave
-axiom A9 : Red Erin
-axiom A10 : Round Erin
+axiom T1 : Big Anne
+axiom T2 : Nice Anne
+axiom T3 : Round Anne
+axiom T4 : Nice Bob
+axiom T5 : Round Bob
+axiom T6 : Blue Dave
+axiom T7 : Red Dave
+axiom T8 : Smart Dave
+axiom T9 : Red Erin
+axiom T10 : Round Erin
 
 axiom R1 : ∀ x : obj, Big x ∧ Round x → Smart x
 axiom R2 : ∀ x : obj, Rough x → Blue x

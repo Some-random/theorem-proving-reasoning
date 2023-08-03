@@ -15,18 +15,18 @@ constant Visits : obj → obj → Prop
 constant Red : obj → Prop
 constant Green : obj → Prop
 
-axiom A1 : Eats Bear Squirrel
-axiom A2 : Cold Bear
-axiom A3 : Rough Bear
-axiom A4 : Visits Bear Lion
-axiom A5 : Eats Cat Lion
-axiom A6 : Likes Lion Cat
-axiom A7 : Visits Lion Bear
-axiom A8 : Eats Squirrel Lion
-axiom A9 : Cold Squirrel
-axiom A10 : Rough Squirrel
-axiom A11 : Likes Squirrel Bear
-axiom A12 : Visits Squirrel Lion
+axiom T1 : Eats Bear Squirrel
+axiom T2 : Cold Bear
+axiom T3 : Rough Bear
+axiom T4 : Visits Bear Lion
+axiom T5 : Eats Cat Lion
+axiom T6 : Likes Lion Cat
+axiom T7 : Visits Lion Bear
+axiom T8 : Eats Squirrel Lion
+axiom T9 : Cold Squirrel
+axiom T10 : Rough Squirrel
+axiom T11 : Likes Squirrel Bear
+axiom T12 : Visits Squirrel Lion
 
 axiom R1 : ∀ x : obj, Red x → Green x
 axiom R2 : ∀ x : obj, Eats x Lion → Red Lion

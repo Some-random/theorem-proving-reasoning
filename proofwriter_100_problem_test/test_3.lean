@@ -15,13 +15,13 @@ constant Rough : obj → Prop
 constant Needs : obj → obj → Prop
 constant Kind : obj → Prop
 
-axiom A1 : Round Bear
-axiom A2 : Likes Bear Cow
-axiom A3 : Visits Bear Lion
-axiom A4 : Big Cow
-axiom A5 : Rough Cow
-axiom A6 : Needs Lion Bear
-axiom A7 : Likes Mouse Lion
+axiom T1 : Round Bear
+axiom T2 : Likes Bear Cow
+axiom T3 : Visits Bear Lion
+axiom T4 : Big Cow
+axiom T5 : Rough Cow
+axiom T6 : Needs Lion Bear
+axiom T7 : Likes Mouse Lion
 
 axiom R1 : ∀ x : obj, Visits x Lion → Round x
 axiom R2 : ∀ x : obj, Needs x Bear → Needs x Lion
