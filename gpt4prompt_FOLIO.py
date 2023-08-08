@@ -82,8 +82,15 @@ def data_generation_folio(json_file):
         if item['context'] not in qa_pairs:
             qa_pairs[item['context']] = []
         qa_pairs[item['context']].append((item['question'], item['answer']))
-    random_qa_pairs = random.sample(qa_pairs, 100)
-    return random_qa_pairs
+    # random_keys = random.sample(list(qa_pairs.keys()), 50)
+    random_keys = list(qa_pairs.keys())
+    random_result_pairs = [qa_pairs[key] for key in random_keys]
+    res, prompts = [], [example_true_textual_input.split('\n')[0], example_false_textual_input.split('\n')[0], example_unknown_textual_input.split('\n')[0]]
+    for i in range(len(random_result_pairs)):
+        if "Textual context: " + random_keys[i] not in prompts:
+            res.append((random_keys[i], random_result_pairs[i]))
+    res = res[: 30]
+    return res
 
 
 def run_prompt(random_qa_pairs):
@@ -121,11 +128,13 @@ def run_prompt(random_qa_pairs):
             json.dump(gpt_config, json_file)
 
     # make a json file to store the random_qa_pairs and its corresponding outputs
-    for i in range(1, 4):
+    for i in range(1, 2):
         try:
             qa_pair = random_qa_pairs[i]
             if not split_formalization_and_proof:
-                prompt_input = "Textual context: " + qa_pair[0] + "\n" + "Question: " + qa_pair[1]
+                prompt_input = "Textual context: " + qa_pair[0]
+                for j in range(len(qa_pair[1])):
+                    prompt_input += "\nQuestion " + str(j + 1) + ": " + qa_pair[1][j][0]
             else:
                 temp_d = json.load(open("2023_Jul_29_01_30_56_gpt-4_baseline/output_" + str(i) + ".json"))
                 prompt_input = "Textual context: " + qa_pair[0] + "\n" + "Question: " + qa_pair[1] + '\n---\n' + \
@@ -167,6 +176,9 @@ def run_prompt(random_qa_pairs):
             print("This is problem: " + str(i) +  ". The predicted answer is: " + predicted_answer + ", The GT answer is: " + str(qa_pair[-1]))
             json.dump(d, json_file, indent=4, ensure_ascii=False)
             json_file.close()
+            write_file = open(folder_name + '/output_' + str(i) + '.lean', 'w')
+            write_file.write(res)
+            write_file.close()
         except Exception as e: 
             print(e)
             print("Error in problem: " + str(i) + ".")
@@ -176,8 +188,8 @@ if __name__ == "__main__":
     start_time = time.time()
     # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
     # random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
-    FOLIO_dev_qa_pairs = data_generation_folio("data/FOLIO/dev.json")
+    # FOLIO_dev_qa_pairs = data_generation_folio("data/FOLIO/dev.json")
     FOLIO_train_qa_pairs = data_generation_folio("data/FOLIO/train.json")
-    run_prompt(FOLIO_dev_qa_pairs)
+    run_prompt(FOLIO_train_qa_pairs)
     print("Time elapsed: ", time.time() - start_time)
 
