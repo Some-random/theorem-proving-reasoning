@@ -128,7 +128,7 @@ def run_prompt(random_qa_pairs):
             json.dump(gpt_config, json_file)
 
     # make a json file to store the random_qa_pairs and its corresponding outputs
-    for i in range(1, 2):
+    for i in range(0, 1):
         try:
             qa_pair = random_qa_pairs[i]
             if not split_formalization_and_proof:
@@ -188,8 +188,8 @@ if __name__ == "__main__":
     start_time = time.time()
     # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
     # random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
-    # FOLIO_dev_qa_pairs = data_generation_folio("data/FOLIO/dev.json")
-    FOLIO_train_qa_pairs = data_generation_folio("data/FOLIO/train.json")
-    run_prompt(FOLIO_train_qa_pairs)
+    FOLIO_dev_qa_pairs = data_generation_folio("data/FOLIO/dev.json")
+    # FOLIO_train_qa_pairs = data_generation_folio("data/FOLIO/train.json")
+    run_prompt(FOLIO_dev_qa_pairs)
     print("Time elapsed: ", time.time() - start_time)
 

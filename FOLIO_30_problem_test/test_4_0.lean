@@ -42,15 +42,3 @@ theorem not_real_madrid_ranks_higher : ¬ ranks_higher_than RealMadrid Barcelona
 begin
   sorry
 end
-
-
-theorem barcelona_ranks_higher : ranks_higher_than Barcelona RealMadrid Y2021_2022 :=
-begin
-  sorry
-end
-
-
-theorem not_barcelona_ranks_higher : ¬ ranks_higher_than Barcelona RealMadrid Y2021_2022 :=
-begin
-  sorry
-end

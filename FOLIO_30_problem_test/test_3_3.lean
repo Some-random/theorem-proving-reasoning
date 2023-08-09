@@ -31,42 +31,6 @@ axiom A5 : Watches_TV_Cinema James
 -- James goes to cinemas every week.
 -- Let's first prove the positive case.
 
-theorem James_Goes_Cinema_Weekly : Goes_Cinema_Weekly James :=
-begin
-  sorry
-end
-
-
-theorem not_James_Goes_Cinema_Weekly : ¬ Goes_Cinema_Weekly James :=
-begin
-  sorry
-end
-
-
-theorem James_Not_Goes_Cinema_Weekly : ¬ Goes_Cinema_Weekly James :=
-begin
-  sorry
-end
-
-
-theorem not_James_Not_Goes_Cinema_Weekly : Goes_Cinema_Weekly James :=
-begin
-  sorry
-end
-
-
-theorem James_Goes_Cinema_Weekly_Or_Watches_3_Movies : Goes_Cinema_Weekly James ∨ Subscribed_AMC James :=
-begin
-  sorry
-end
-
-
-theorem not_James_Goes_Cinema_Weekly_Or_Watches_3_Movies : ¬ (Goes_Cinema_Weekly James ∨ Subscribed_AMC James) :=
-begin
-  sorry
-end
-
-
 theorem James_Condition_1 : ¬ (Goes_Cinema_Weekly James ∧ Subscribed_HBO James) → (Subscribed_AMC James ∨ Prefers_TV_Series James) :=
 begin
   sorry
@@ -74,18 +38,6 @@ end
 
 
 theorem not_James_Condition_1 : (Goes_Cinema_Weekly James ∧ Subscribed_HBO James) ∨ ¬ (Subscribed_AMC James ∨ Prefers_TV_Series James) :=
-begin
-  sorry
-end
-
-
-theorem James_Condition_2 : (Subscribed_AMC James ∧ Watches_TV_Cinema James) → (Goes_Cinema_Weekly James ∧ Prefers_TV_Series James) :=
-begin
-  sorry
-end
-
-
-theorem not_James_Condition_2 : ¬ ((Subscribed_AMC James ∧ Watches_TV_Cinema James) → (Goes_Cinema_Weekly James ∧ Prefers_TV_Series James)) :=
 begin
   sorry
 end

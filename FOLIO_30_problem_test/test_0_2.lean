@@ -38,30 +38,6 @@ axiom A6 : published_in MiroslavVenhoda MethodOfStudyingGregorianChant Y1946
 -- Miroslav Venhoda loved music.
 -- Let's first prove the positive case.
 
-theorem miroslav_loved_music : loves_music MiroslavVenhoda :=
-begin
-  sorry
-end
-
-
-theorem not_miroslav_loved_music : ¬ loves_music MiroslavVenhoda :=
-begin
-  sorry
-end
-
-
-theorem czech_published_book_1946 : ∃ (p : Person), is_Czech p ∧ published_in p MethodOfStudyingGregorianChant Y1946 :=
-begin
-  sorry
-end
-
-
-theorem not_czech_published_book_1946 : ¬ ∃ (p : Person), is_Czech p ∧ published_in p MethodOfStudyingGregorianChant Y1946 :=
-begin
-  sorry
-end
-
-
 theorem no_choral_conductor_specialized_renaissance : ¬ ∃ (p : Person), is_choral_conductor p ∧ specializes_in_Renaissance p :=
 begin
   sorry
