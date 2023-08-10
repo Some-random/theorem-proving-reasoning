@@ -24,7 +24,7 @@ use_COT_in_all = True
 add_comment_and_use_COT= True
 
 if not split_formalization_and_proof:
-    prompt_inputs = [example_true_textual_input, example_false_textual_input, example_unknown_textual_input]
+    prompt_inputs = [example_textual_input_1, example_textual_input_2, example_textual_input_3]
     if not use_COT_in_all:
         prompt_outputs = [example_outputs_True, example_outputs_False, example_outputs_Unknown]
     else:
@@ -33,9 +33,9 @@ if not split_formalization_and_proof:
         else:
             prompt_outputs = [example_outputs_True, example_outputs_False, example_outputs_Unknown]
 else:
-    prompt_inputs = [example_true_textual_input + '\n---\n' + example_outputs_True, \
-                     example_false_textual_input + '\n---\n' + example_outputs_False, \
-                     example_unknown_textual_input + '\n---\n' + example_outputs_Unknown]
+    prompt_inputs = [example_textual_input_1 + '\n---\n' + example_outputs_True, \
+                     example_textual_input_2 + '\n---\n' + example_outputs_False, \
+                     example_textual_input_3 + '\n---\n' + example_outputs_Unknown]
     if not use_COT:
         prompt_outputs = [example_outputs_True, example_outputs_False, example_outputs_Unknown]
     else:
@@ -85,7 +85,7 @@ def data_generation_folio(json_file):
     # random_keys = random.sample(list(qa_pairs.keys()), 50)
     random_keys = list(qa_pairs.keys())
     random_result_pairs = [qa_pairs[key] for key in random_keys]
-    res, prompts = [], [example_true_textual_input.split('\n')[0], example_false_textual_input.split('\n')[0], example_unknown_textual_input.split('\n')[0]]
+    res, prompts = [], [example_textual_input_1.split('\n')[0], example_textual_input_2.split('\n')[0], example_textual_input_3.split('\n')[0]]
     for i in range(len(random_result_pairs)):
         if "Textual context: " + random_keys[i] not in prompts:
             res.append((random_keys[i], random_result_pairs[i]))
@@ -128,7 +128,8 @@ def run_prompt(random_qa_pairs):
             json.dump(gpt_config, json_file)
 
     # make a json file to store the random_qa_pairs and its corresponding outputs
-    for i in range(0, 1):
+    lss = [0, 1, 2, 6, 7]
+    for i in lss:
         try:
             qa_pair = random_qa_pairs[i]
             if not split_formalization_and_proof:
@@ -156,6 +157,9 @@ def run_prompt(random_qa_pairs):
                 )
                 res = response['choices'][0]['text'].strip()
             elif MODEL == 'gpt-4' or MODEL == 'gpt-3.5-turbo':
+                # print(prompt_input)
+                # print(prompt_inputs)
+                # print(prompt_outputs)
                 response = openai.ChatCompletion.create(
                     model=MODEL,
                     messages=[
@@ -188,8 +192,8 @@ if __name__ == "__main__":
     start_time = time.time()
     # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
     # random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
-    FOLIO_dev_qa_pairs = data_generation_folio("data/FOLIO/dev.json")
-    # FOLIO_train_qa_pairs = data_generation_folio("data/FOLIO/train.json")
-    run_prompt(FOLIO_dev_qa_pairs)
+    # FOLIO_dev_qa_pairs = data_generation_folio("data/FOLIO/dev.json")
+    FOLIO_train_qa_pairs = data_generation_folio("data/FOLIO/train.json")
+    run_prompt(FOLIO_train_qa_pairs)
     print("Time elapsed: ", time.time() - start_time)
 
