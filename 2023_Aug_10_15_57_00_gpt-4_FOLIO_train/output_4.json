@@ -1,0 +1,14 @@
+{
+    "input": "Textual context: LanguageA is a universal language If a universal language exists, then for every two people if they both know the same universal language they can communicate. Katya cannot communicate with Danil. Katya knows LanguageA.\nQuestion 1: Based on the above information, is the following statement true, false, or uncertain? Danil knows LanguageA.",
+    "input_tokens": 4193,
+    "output": "-- Introducing basic types for entities in our universe.\nconstant Person : Type\nconstant Language : Type\n\n-- Defining specific instances of people and languages.\nconstant Katya : Person\nconstant Danil : Person\nconstant LanguageA : Language\n\n-- Defining properties and relations among the entities.\nconstant knows : Person → Language → Prop\nconstant can_communicate : Person → Person → Prop\nconstant universal_language : Language → Prop\n\n-- Providing axioms based on the information given.\n\n-- LanguageA is a universal language\naxiom A1 : universal_language LanguageA\n\n-- If a universal language exists, then for every two people if they both know the same universal language they can communicate.\naxiom A2 : ∀ (l : Language) (p1 p2 : Person), \n    universal_language l → knows p1 l → knows p2 l → can_communicate p1 p2\n\n-- Katya cannot communicate with Danil.\naxiom A3 : ¬ can_communicate Katya Danil\n\n-- Katya knows LanguageA.\naxiom A4 : knows Katya LanguageA\n\n-- Formalizing the Questions\n\n-- Question 1\n-- Danil knows LanguageA.\n-- Let's first prove the positive case.\ntheorem danil_knows_languageA : knows Danil LanguageA :=\nbegin\n    sorry, -- Placeholder for proof\nend\n\n-- Let's try the negative case.\n\ntheorem not_danil_knows_languageA : ¬ knows Danil LanguageA :=\nbegin\n    intro h,\n    have temp := A2 LanguageA Katya Danil,\n    have temp2 := temp A1 A4 h,\n    contradiction,\nend\n\n-- The answer is True",
+    "output_tokens": 347,
+    "pred_answer": "A",
+    "gt_answer": [
+        [
+            "Based on the above information, is the following statement true, false, or uncertain? Danil knows LanguageA.",
+            "B"
+        ]
+    ],
+    "problem_id": 4
+}

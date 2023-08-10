@@ -1,0 +1,18 @@
+{
+    "input": "Textual context: Vic DiCara plays guitar and bass. The only style of music Vic DiCara plays is punk music. Vic DiCara played in the band Inside Out.\nQuestion 1: Based on the above information, is the following statement true, false, or uncertain? Inside Out was a punk band.\nQuestion 2: Based on the above information, is the following statement true, false, or uncertain? A musician of Inside Out plays bass.",
+    "input_tokens": 4214,
+    "output": "-- Introducing basic types for entities in our universe.\nconstant Person : Type\nconstant Band : Type\nconstant Style : Type\nconstant Instrument : Type\n\n-- Defining specific instances of persons, bands, styles and instruments.\nconstant VicDiCara : Person\nconstant InsideOut : Band\nconstant Punk : Style\nconstant Guitar : Instrument\nconstant Bass : Instrument\n\n-- Defining properties and relations among the entities.\nconstant plays_instrument : Person → Instrument → Prop\nconstant plays_style : Person → Style → Prop\nconstant plays_in_band : Person → Band → Prop\nconstant band_plays_style : Band → Style → Prop\nconstant musician_plays_instrument_in_band : Person → Instrument → Band → Prop\n\n-- Providing axioms based on the information given.\n\n-- Vic DiCara plays guitar and bass.\naxiom A1 : plays_instrument VicDiCara Guitar\naxiom A2 : plays_instrument VicDiCara Bass\n\n-- The only style of music Vic DiCara plays is punk music.\naxiom A3 : ∀ (s : Style), plays_style VicDiCara s ↔ s = Punk\n\n-- Vic DiCara played in the band Inside Out.\naxiom A4 : plays_in_band VicDiCara InsideOut\n\n-- Formalizing the Questions\n\n-- Question 1\n-- Inside Out was a punk band.\n-- Let's first prove the positive case.\ntheorem inside_out_is_punk : band_plays_style InsideOut Punk :=\nbegin\n    sorry, -- Placeholder for proof\nend\n\n-- Let's try the negative case.\n\ntheorem not_inside_out_is_punk : ¬ band_plays_style InsideOut Punk :=\nbegin\n    sorry, -- Placeholder for proof\nend\n\n-- The answer is Unknown\n\n-- Question 2\n-- A musician of Inside Out plays bass.\n-- Let's first prove the positive case.\ntheorem musician_plays_bass_in_inside_out : ∃ (p : Person), musician_plays_instrument_in_band p Bass InsideOut :=\nbegin\n    use VicDiCara,\n    sorry, -- Placeholder for proof\nend\n\n-- Let's try the negative case.\n\ntheorem not_musician_plays_bass_in_inside_out : ¬ ∃ (p : Person), musician_plays_instrument_in_band p Bass InsideOut :=\nbegin\n    sorry, -- Placeholder for proof\nend\n\n-- The answer is Unknown",
+    "output_tokens": 484,
+    "pred_answer": "C",
+    "gt_answer": [
+        [
+            "Based on the above information, is the following statement true, false, or uncertain? Inside Out was a punk band.",
+            "C"
+        ],
+        [
+            "Based on the above information, is the following statement true, false, or uncertain? A musician of Inside Out plays bass.",
+            "A"
+        ]
+    ],
+    "problem_id": 16
+}

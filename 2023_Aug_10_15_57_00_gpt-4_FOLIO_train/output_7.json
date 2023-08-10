@@ -1,0 +1,22 @@
+{
+    "input": "Textual context: If a legislator is found guilty of stealing government funds, they will be suspended from office. Tiffany T. Alston was a legislator in Maryland's House of Delegates from 2011 to 2013. Tiffany T. Alston was found guilty of stealing government funds in 2012.\nQuestion 1: Based on the above information, is the following statement true, false, or uncertain? Tiffany T. Alston was suspended from the Maryland House of Delegates.\nQuestion 2: Based on the above information, is the following statement true, false, or uncertain? Tiffany T. Alston was not suspended from the Maryland House of Delegates.\nQuestion 3: Based on the above information, is the following statement true, false, or uncertain? Tiffany T. Alston went to prison for stealing government funds.",
+    "input_tokens": 4291,
+    "output": "-- Introducing basic types for entities in our universe.\nconstant Person : Type\nconstant Office : Type\n\n-- Defining specific instances of persons and offices.\nconstant TiffanyTAlston : Person\nconstant MarylandHouseOfDelegates : Office\n\n-- Defining properties and relations among the entities.\nconstant is_legislator : Person → Office → Prop\nconstant found_guilty_of_stealing_gov_funds : Person → Prop\nconstant suspended_from_office : Person → Office → Prop\n\n-- Providing axioms based on the information given.\n\n-- Tiffany T. Alston was a legislator in Maryland's House of Delegates from 2011 to 2013.\naxiom A1 : is_legislator TiffanyTAlston MarylandHouseOfDelegates\n\n-- Tiffany T. Alston was found guilty of stealing government funds in 2012.\naxiom A2 : found_guilty_of_stealing_gov_funds TiffanyTAlston\n\n-- If a legislator is found guilty of stealing government funds, they will be suspended from office.\naxiom A3 : ∀ (p : Person) (o : Office), is_legislator p o → found_guilty_of_stealing_gov_funds p → suspended_from_office p o\n\n-- Formalizing the Questions\n\n-- Question 1\n-- Tiffany T. Alston was suspended from the Maryland House of Delegates.\n-- Let's first prove the positive case.\ntheorem tiffany_suspended : suspended_from_office TiffanyTAlston MarylandHouseOfDelegates :=\nbegin\n    apply A3,\n    exact A1,\n    exact A2,\nend\n\n-- Let's try the negative case.\n\ntheorem not_tiffany_suspended : ¬ suspended_from_office TiffanyTAlston MarylandHouseOfDelegates :=\nbegin\n    sorry,\nend\n\n-- The answer is Unknown\n\n-- Question 2\n-- Tiffany T. Alston was not suspended from the Maryland House of Delegates.\n-- Let's first prove the positive case.\ntheorem tiffany_not_suspended : ¬ suspended_from_office TiffanyTAlston MarylandHouseOfDelegates :=\nbegin\n    sorry, -- Placeholder for proof\nend\n\n-- Let's try the negative case.\n\ntheorem not_tiffany_not_suspended : suspended_from_office TiffanyTAlston MarylandHouseOfDelegates :=\nbegin\n    apply A3,\n    exact A1,\n    exact A2,\nend\n\n-- The answer is False\n\n-- Question 3\n-- Tiffany T. Alston went to prison for stealing government funds.\n-- Let's first prove the positive case.\ntheorem tiffany_went_to_prison : found_guilty_of_stealing_gov_funds TiffanyTAlston :=\nbegin\n    exact A2,\nend\n\n-- Let's try the negative case.\n\ntheorem not_tiffany_went_to_prison : ¬ found_guilty_of_stealing_gov_funds TiffanyTAlston :=\nbegin\n    sorry, -- Placeholder for proof\nend\n\n-- The answer is Unknown",
+    "output_tokens": 602,
+    "pred_answer": "C",
+    "gt_answer": [
+        [
+            "Based on the above information, is the following statement true, false, or uncertain? Tiffany T. Alston was suspended from the Maryland House of Delegates.",
+            "A"
+        ],
+        [
+            "Based on the above information, is the following statement true, false, or uncertain? Tiffany T. Alston was not suspended from the Maryland House of Delegates.",
+            "B"
+        ],
+        [
+            "Based on the above information, is the following statement true, false, or uncertain? Tiffany T. Alston went to prison for stealing government funds.",
+            "C"
+        ]
+    ],
+    "problem_id": 7
+}
