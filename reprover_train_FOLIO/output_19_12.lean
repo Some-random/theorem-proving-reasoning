@@ -40,12 +40,12 @@ begin
     intro h,
     have h1 : Drives James ∨ Student James, {
         cases A6, {
-            have Drives_James := A4 James h_1,
+            have h2 := A4 James h_1,
             left,
-            exact Drives_James,
+            exact h2,
         }, {
-            have High_income_Jame := A1 James h_1,
-            have not_Takes_bus_James := A2 James High_income_Jame,
+            have h3 := A1 James h_1,
+            have h4 := A2 James h3,
             cases A3 James, {
                 contradiction,
             }, {

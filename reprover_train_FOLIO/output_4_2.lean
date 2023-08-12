@@ -36,9 +36,9 @@ axiom A4 : knows Katya LanguageA
 theorem not_danil_knows_languageA : ¬ knows Danil LanguageA :=
 begin
     intro h,
-    have temp := A2 LanguageA Katya Danil,
-    have temp2 := temp A1 A4 h,
-    have temp3 := A3,
+    have h1 := A2 LanguageA Katya Danil,
+    have h2 := h1 A1 A4 h,
+    have h3 := A3,
     contradiction,
 end
 

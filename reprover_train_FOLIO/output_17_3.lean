@@ -35,33 +35,34 @@ axiom A6 : ¬ Nobel_laureate Amy → ¬ Olympic_gold_medal_winner Amy
 
 theorem Amy_is_neither_scientist_nor_winner : ¬ Scientist Amy ∧ ¬ Olympic_gold_medal_winner Amy :=
 begin
-    have not_scientist_Amy : ¬ Scientist Amy, {
+    have h1 : ¬ Scientist Amy, {
         intro h,
-        have not_Good_at_sports := A3 Amy h,
+        have h2 := A3 Amy h,
         cases A5, {
             contradiction,
         }, {
-            have athlete_Amy := A2 Amy h_1,
-            have Good_at_sports_Amy := A1 Amy athlete_Amy,
+            have h3 := A2 Amy h_1,
+            have h4 := A1 Amy h3,
             contradiction,
         }
     },
-    have not_winner_Amy : ¬ Olympic_gold_medal_winner Amy, {
+    have h2 : ¬ Olympic_gold_medal_winner Amy, {
         intro h,
-        have good_at_sports_Amy := A1 Amy (A2 Amy h),
+        have h2 := A2 Amy h,
+        have h3 := A1 Amy h2,
         by_cases Nobel_laureate Amy, {
-            have scientist_Amy := A4 Amy h,
-            have not_Good_at_sports_Amy := A3 Amy scientist_Amy,
+            have h4 := A4 Amy h,
+            have h5 := A3 Amy h4,
             contradiction,
         }, {
-            have not_Olympic_gold_medal_winner_Amy := A6 h,
+            have h6 := A6 h,
             contradiction,
         }
     },
     split, {
-        exact not_scientist_Amy,
+        exact h1,
     }, {
-        exact not_winner_Amy,
+        exact h2,
     }
 end
 

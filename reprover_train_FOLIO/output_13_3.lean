@@ -42,28 +42,28 @@ begin
     have not_interesting_TikTok : ¬ is_interesting TikTok,
     {
         intro h,
-        have not_good_TikTok : ¬ is_good TikTok := A8,
-        have good_TikTok : is_good TikTok := A7 TikTok h,
+        have h1 : ¬ is_good TikTok := A8,
+        have h2 : is_good TikTok := A7 TikTok h,
         contradiction,
     },
     have not_entertainment_TikTok : ¬ is_entertainment TikTok,
     {
         intro h,
-        have interesting_TikTok : is_interesting TikTok := A6 TikTok h,
+        have h1 : is_interesting TikTok := A6 TikTok h,
         contradiction,
     },
     have not_instagram_related_TikTok : ¬ is_instagram_related TikTok,
     {
         intro h,
-        have entertainment_TikTok : is_entertainment TikTok := A4 TikTok h,
+        have h2 : is_entertainment TikTok := A4 TikTok h,
         contradiction,
     },
     cases A3 TikTok, {
-        have video_app_TikTok : is_video_app TikTok := A2 TikTok h,
-        have software_TikTok : is_software TikTok := A1 TikTok video_app_TikTok,
-        have programmed_TikTok : is_programmed TikTok := A5 TikTok software_TikTok,
+        have h1 : is_video_app TikTok := A2 TikTok h,
+        have h2 : is_software TikTok := A1 TikTok h1,
+        have h3 : is_programmed TikTok := A5 TikTok h2,
         right,
-        exact programmed_TikTok,
+        exact h3,
     }, {
         contradiction,
     }

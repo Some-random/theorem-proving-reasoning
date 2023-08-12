@@ -37,28 +37,28 @@ axiom A6 : ¬ (Goes_to_fast_food Jeremy ∧ Conscious_environment_health Jeremy)
 
 theorem Jeremy_busy_schedule_or_enjoys_food : Busy_schedule Jeremy ∨ Enjoys_hamburgers_steaks Jeremy :=
 begin
-    have temp : Goes_to_fast_food Jeremy, {
+    have h1 : Goes_to_fast_food Jeremy, {
         apply A6,
         intro h,
         cases h,
-        have temp2 := A4 Jeremy h_right,
+        have h1 := A4 Jeremy h_right,
         contradiction,
     },
-    have temp2 : ¬ Conscious_environment_health Jeremy, {
+    have h2 : ¬ Conscious_environment_health Jeremy, {
         intro h,
-        have temp3 := A4 Jeremy h,
+        have h1 := A4 Jeremy h,
         contradiction,
     },
-    have temp3 : ¬ Vegetarian Jeremy, {
+    have h3 : ¬ Vegetarian Jeremy, {
         intro h,
-        have temp4 := A3 Jeremy h,
+        have h1 := A3 Jeremy h,
         contradiction,
     },
     cases A1 Jeremy, {
         cases h,
-        have temp5 := A2 Jeremy h_left,
+        have h1 := A2 Jeremy h_left,
         right,
-        exact temp5,
+        exact h1,
     }, {
         cases h,
         contradiction,

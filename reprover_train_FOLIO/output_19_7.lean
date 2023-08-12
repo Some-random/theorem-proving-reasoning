@@ -38,12 +38,12 @@ axiom A6 : Has_car James ∨ Works_at_Meta James
 theorem James_drives_or_student : Drives James ∨ Student James :=
 begin
     cases A6, {
-        have Drives_James := A4 James h,
+        have h1 := A4 James h,
         left,
-        exact Drives_James,
+        exact h1,
     }, {
-        have High_income_Jame := A1 James h,
-        have not_Takes_bus_James := A2 James High_income_Jame,
+        have h2 := A1 James h,
+        have h3 := A2 James h2,
         cases A3 James, {
             contradiction,
         }, {

@@ -39,23 +39,23 @@ axiom A8 : ¬ is_good TikTok
 
 theorem tiktok_youtube_or_program : is_youtube_related TikTok ∨ is_programmed TikTok :=
 begin
-    have not_interesting_TikTok : ¬ is_interesting TikTok,
+    have h1 : ¬ is_interesting TikTok,
     {
         intro h,
-        have not_good_TikTok : ¬ is_good TikTok := A8,
-        have good_TikTok : is_good TikTok := A7 TikTok h,
+        have h1 : ¬ is_good TikTok := A8,
+        have h2 : is_good TikTok := A7 TikTok h,
         contradiction,
     },
-    have not_entertainment_TikTok : ¬ is_entertainment TikTok,
+    have h2 : ¬ is_entertainment TikTok,
     {
         intro h,
-        have interesting_TikTok : is_interesting TikTok := A6 TikTok h,
+        have h1 : is_interesting TikTok := A6 TikTok h,
         contradiction,
     },
-    have not_instagram_related_TikTok : ¬ is_instagram_related TikTok,
+    have h3 : ¬ is_instagram_related TikTok,
     {
         intro h,
-        have entertainment_TikTok : is_entertainment TikTok := A4 TikTok h,
+        have h1 : is_entertainment TikTok := A4 TikTok h,
         contradiction,
     },
     cases A3 TikTok, {

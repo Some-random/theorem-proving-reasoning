@@ -40,12 +40,12 @@ begin
     intro h,
     have h1 : ¬ Drives James, from A5 James h,
     cases A3 James, {
-        have not_High_Income_James : ¬ High_income James, {
+        have h2 : ¬ High_income James, {
             intro h2,
             have h3 : ¬ Takes_bus James, from A2 James h2,
             contradiction,
         },
-        have not_Work_at_Meta_James : ¬ Works_at_Meta James, {
+        have h3 : ¬ Works_at_Meta James, {
             intro h4,
             have h5 : High_income James, from A1 James h4,
             contradiction,

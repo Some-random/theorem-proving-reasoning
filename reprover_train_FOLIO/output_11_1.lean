@@ -43,14 +43,14 @@ axiom A6 : ∀ (s : Song), s ≠ Perfect → ¬ plays_song Sam s
 
 theorem sam_project_in_Cpp : written_in_Cpp Sam_Project :=
 begin
-    have temp := A3 Sam_Project A1,
+    have h1 := A3 Sam_Project A1,
     have not_written_in_python : ¬ written_in_Python Sam_Project, {
         intro h,
-        have h1 := temp h,
-        have h3 := A4,
+        have h1 := h1 h,
+        have h2 := A4,
         contradiction,
     },
-    cases A2 Sam_Project with h h,
+    cases A2 Sam_Project,
     {
         assumption,
     },

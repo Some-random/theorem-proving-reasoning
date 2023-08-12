@@ -39,20 +39,23 @@ axiom A7 : YaleStudent Susan → ¬ Diet Susan
 
 theorem not_Susan_notDiet_Diligent : ¬ (¬ Diet Susan ∧ Diligent Susan) :=
 begin
-    have not_YaleStudent_Susan : ¬ YaleStudent Susan, {
-        intro h_YaleStudent_Susan,
-        have not_Diet_Susan := A7 h_YaleStudent_Susan,
-        have Diet_Susan := A1 Susan (A2 Susan (A3 Susan h_YaleStudent_Susan)),
+    have h1 : ¬ YaleStudent Susan, {
+        intro h,
+        have h1 := A7 h,
+        have h2 := A3 Susan h,
+        have h3 := A2 Susan h2,
+        have h4 := A1 Susan h3,
         contradiction,
     },
-    have HarvardStudent_Susan : HarvardStudent Susan, {
+    have h2 : HarvardStudent Susan, {
         cases A4, {
             contradiction,
         }, {
             exact h,
         },
     },
-    have Diet_Susan := A1 Susan (A6 HarvardStudent_Susan),
+    have h3 := A6 h2,
+    have h4 := A1 Susan h3,
     intro h,
     cases h,
     contradiction,

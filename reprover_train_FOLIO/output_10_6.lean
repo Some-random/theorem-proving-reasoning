@@ -41,18 +41,14 @@ begin
     intro h,
     split, {
         intro h2,
-        have temp : Busy_schedule Jeremy ∨ Enjoys_hamburgers_steaks Jeremy, {
-            left,
-            exact h2,
-        },
-        contradiction
+        apply h,
+        left,
+        exact h2,
     }, {
         intro h2,
-        have temp : Busy_schedule Jeremy ∨ Enjoys_hamburgers_steaks Jeremy, {
-            right,
-            exact h2,
-        },
-        contradiction
+        apply h,
+        right,
+        exact h2,
     }
     
 end
