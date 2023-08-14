@@ -2,7 +2,10 @@
 name = "proofwriter_100_problem_test"
 version = "0.1"
 lean_version = "leanprover-community/lean:3.50.3"
+# lean_version = "3.4.2"
 # path = "proofwriter_100_problem_test"
 # path = "reprover_train_FOLIO"
 # path = "FOLIO_30_problem_test"
-path = "reprover_train_FOLIO_new"
+# path = "smt2"
+path = "FOLIO_30_problem_test_all"
+
