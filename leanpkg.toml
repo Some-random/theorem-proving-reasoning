@@ -8,5 +8,6 @@ lean_version = "leanprover-community/lean:3.50.3"
 # path = "FOLIO_30_problem_test"
 # path = "smt2"
 # path = "FOLIO_30_problem_test_all"
-path = 'ProofWriter_test_all'
+# path = 'ProofWriter_test_all'
+path = 'FOLIO_30_problem_test_all_correct'
 
