@@ -1,5 +1,5 @@
 import openai
-from input_output import *
+from prompts import *
 import time
 import json
 import random
@@ -12,33 +12,30 @@ import utils
 MODEL = "gpt-4"
 # MODEL = "text-davinci-003"
 seed = 2024
-# openai.organization = "org-xxx"
-openai.api_key = "sk-xxx"
-# openai.organization = utils.openai_bob_joy_organization
-# openai.api_key = utils.openai_fake_api_key
 openai.api_key = utils.openai_api_key
+openai.organization = utils.openai_edinburgh_organization
 split_formalization_and_proof = False
 use_COT = True
 use_COT_in_all = True
 add_comment_and_use_COT= True
 
 if not split_formalization_and_proof:
-    prompt_inputs = [example_true_textual_input, example_false_textual_input, example_unknown_textual_input]
+    prompt_inputs = [ProofWriter_example_true_textual_input, ProofWriter_example_false_textual_input, ProofWriter_example_unknown_textual_input]
     if not use_COT_in_all:
-        prompt_outputs = [example_true_all_output, example_false_all_output, example_unknown_all_output]
+        prompt_outputs = [ProofWriter_example_true_all_output, ProofWriter_example_false_all_output, ProofWriter_example_unknown_all_output]
     else:
         if not add_comment_and_use_COT:
-            prompt_outputs = [example_true_all_COT_output, example_false_all_COT_output, example_unknown_all_COT_output]
+            prompt_outputs = [ProofWriter_example_true_all_COT_output, ProofWriter_example_false_all_COT_output, ProofWriter_example_unknown_all_COT_output]
         else:
-            prompt_outputs = [example_true_all_COT_comment_output, example_false_all_COT_comment_output, example_unknown_all_COT_comment_output]
+            prompt_outputs = [ProofWriter_example_true_all_COT_comment_output, ProofWriter_example_false_all_COT_comment_output, ProofWriter_example_unknown_all_COT_comment_output]
 else:
-    prompt_inputs = [example_true_textual_input + '\n---\n' + example_true_formalization, \
-                     example_false_textual_input + '\n---\n' + example_false_formalization, \
-                     example_unknown_textual_input + '\n---\n' + example_unknown_formalization]
+    prompt_inputs = [ProofWriter_example_true_textual_input + '\n---\n' + ProofWriter_example_true_formalization, \
+                     ProofWriter_example_false_textual_input + '\n---\n' + ProofWriter_example_false_formalization, \
+                     ProofWriter_example_unknown_textual_input + '\n---\n' + ProofWriter_example_unknown_formalization]
     if not use_COT:
-        prompt_outputs = [example_true_proof, example_false_proof, example_unknown_proof]
+        prompt_outputs = [ProofWriter_example_true_proof, ProofWriter_example_false_proof, ProofWriter_example_unknown_proof]
     else:
-        prompt_outputs = [example_true_proof_COT, example_false_proof_COT, example_unknown_proof_COT]
+        prompt_outputs = [ProofWriter_example_true_proof_COT, ProofWriter_example_false_proof_COT, ProofWriter_example_unknown_proof_COT]
 proof_writer_answer_map = {"True": "A", "False": "B", "Unknown": "C"}
 
 
@@ -69,20 +66,20 @@ def data_generation_proofwriter(filename):
     return temp_random_qa_pairs
 
 
-def data_generation_logiclm(json_file):
+def data_generation_proofwriter_logiclm(json_file):
     d = json.load(open(json_file, 'r'))
     qa_pairs = []
     random.seed(seed)
     for item in d:
         qa_pairs.append((item['context'], item['question'], item['answer']))
-    random_qa_pairs = random.sample(qa_pairs, 100)
-    return random_qa_pairs
+    # random_qa_pairs = random.sample(qa_pairs, 100)
+    return qa_pairs
 
 
 def run_prompt(random_qa_pairs):
     # make a folder to store the outputs and config files, make sure the folder contain current timestamp and model name
     timestamp = datetime.datetime.now().strftime('%Y_%b_%d_%H_%M_%S')
-    folder_name = timestamp + '_' + MODEL
+    folder_name = 'ProofWriter_' + timestamp + '_' + MODEL
     os.mkdir(folder_name)
 
     # dump the prompt to a file
@@ -114,15 +111,14 @@ def run_prompt(random_qa_pairs):
             json.dump(gpt_config, json_file)
 
     # make a json file to store the random_qa_pairs and its corresponding outputs
-    for i in range(1, 5):
+    for i in range(0, len(random_qa_pairs)):
         try:
             qa_pair = random_qa_pairs[i]
             if not split_formalization_and_proof:
                 prompt_input = "Textual context: " + qa_pair[0] + "\n" + "Question: " + qa_pair[1]
             else:
-                temp_d = json.load(open("2023_Jul_29_01_30_56_gpt-4_baseline/output_" + str(i) + ".json"))
-                prompt_input = "Textual context: " + qa_pair[0] + "\n" + "Question: " + qa_pair[1] + '\n---\n' + \
-                        temp_d["output"].split("theorem")[0]
+                print('If you want to separate the formalization and proof process, you need to first generate the formalization then put the formalization into the prompt to generate proof. It is not supported in this project because it will generate inferior results.')
+                exit(0)
             if MODEL == "text-davinci-003":
                 prompt = "Task Description: " + system_message + "\n\n------------" + "Input:\n" + prompt_inputs[0] + "- - - - - - - - - - - -" + prompt_outputs[0] + '\n------------' + \
                             "Input:\n" + prompt_inputs[1] + "- - - - - - - - - - - -" + prompt_outputs[1] + '\n------------' + \
@@ -169,8 +165,8 @@ if __name__ == "__main__":
     start_time = time.time()
     # select random questions from proofwriter OWA depth-5 dataset, to use it, download it from https://allenai.org/data/proofwriter
     # random_qa_pairs = data_generation_proofwriter(filename='proofwriter-dataset-V2020.12.3/OWA/depth-5/meta-test.jsonl')
-    proof_writer_dev_qa_pairs = data_generation_logiclm("data/ProofWriter/dev.json")
-    folio_train_qa_pairs = data_generation_logiclm("data/FOLIO/train.json")
-    run_prompt(folio_train_qa_pairs)
+    # as we're following the same setup as LogicLM, we use the same data
+    proof_writer_dev_qa_pairs = data_generation_proofwriter_logiclm("data/ProofWriter/dev.json")
+    run_prompt(proof_writer_dev_qa_pairs)
     print("Time elapsed: ", time.time() - start_time)
 
