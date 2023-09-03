@@ -1,7 +1,7 @@
 # theorem-proving-reasoning
 
 ## Step 1:
-Get the formalization of ProofWriter and FOLIO dataset using GPT-4.
+Get the formalization of ProofWriter and FOLIO dataset using GPT-4. We use GPT-4 and the **add_comment_and_use_COT** config, which adds comment in the formalization process and tries to provide step-by-step proof even when we can't prove the theorem. The prompt input are stored in ```prompts.py``` while the prompt output are store in ```output_prompt``` and ```output_prompt_FOLIO```
 
 ```python gpt4prompt.py```
 
