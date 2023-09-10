@@ -10,6 +10,7 @@ Get the formalization of ProofWriter and FOLIO dataset using GPT-4. We use GPT-4
 
 ## Step 2:
 Compile the formalized Lean code and preprocess it with LeanDoJo.
+The training data for FOLIO can be found in ```reprover_train_FOLIO```
 
 ## Step 3:
 Train ReProver Premise Selection Model and ReProver Tactic Generation Model
