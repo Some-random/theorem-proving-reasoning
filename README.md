@@ -10,6 +10,7 @@ For FOLIO: ```python gpt4prompt_FOLIO.py```
 
 ## Step 2:
 Compile the formalized Lean code and preprocess it with LeanDoJo.
+The training data for FOLIO can be found in ```reprover_train_FOLIO```
 
 ## Step 3:
 Train ReProver Premise Selection Model and ReProver Tactic Generation Model
