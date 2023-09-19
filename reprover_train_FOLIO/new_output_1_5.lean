@@ -39,52 +39,30 @@ begin
     intro h,
     cases h, {
         right,
-        have h1 : ¬ works_remotely James, {
-            apply A6,
-            exact h,
-        },
-        have h2 : ¬ has_lunch_at_home James, {
-            intro h3,
-            have h4 := A4 James h3,
-            contradiction,
-        },
-        split,
-        exact h2,
-        exact h1,
+        split, {
+            intro h1,
+            exact (A6 James h) (A4 James h1),
+        }, {
+            exact A6 James h,
+        }
     }, {
         left,
-        have h1 : works_remotely James, {
-            apply A5,
-            exact h,
-        },
-        have h2 : ¬ is_manager James, {
-            intro h3,
-            have h4 := A6 James h3,
-            contradiction,
-        },
-        cases A7, {
-            cases h_1,
-            contradiction,
-        }, {
-            cases h_1,
-            have h3 : ¬ schedules_meeting James, {
-                intro h4,
-                have h5 := A1 James h4,
-                contradiction,
-            },
-            have h4 : ¬ has_lunch_in_company James, {
-                intro h5,
-                have h6 := A2 James h5,
-                contradiction,
-            },
+        split, {
             cases A3 James, {
-                contradiction,
+                have h1 := A5 James h,
+                cases A7 with h2 h3, {
+                    have h4 := A6 James h2.left,
+                    contradiction,
+                }, {
+                    have h4 := A1 James (A2 James h_1),
+                    cc,
+                }
             }, {
-                split,
                 exact h_1,
-                exact h1,
             }
-        },
+        }, {
+            exact A5 James h,
+        }
     }
 end
 

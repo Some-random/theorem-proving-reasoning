@@ -34,32 +34,14 @@ axiom A6 : (is_eel sea_eel ∨ is_plant sea_eel) → (is_eel sea_eel ∨ is_anim
 theorem not_sea_eel_is_paper : ¬ is_paper sea_eel :=
 begin
     cases A3 sea_eel, {
-        have h1 : ¬ is_fish sea_eel, {
-            intro h,
-            have temp := A2 sea_eel h,
-            contradiction,
-        },
-        have h2 : ¬ is_eel sea_eel, {
-            intro h,
-            have temp := A1 sea_eel h,
-            contradiction,
-        },
-        have h3 : is_eel sea_eel ∨ is_plant sea_eel, {
-            right,
-            assumption,
-        },
-        have h4 : is_eel sea_eel ∨ is_animal sea_eel := A6 h3,
-        cases h4, {
+        cases A6 (or.inr h), {
+            have h1 := A2 sea_eel (A1 sea_eel h_1),
             contradiction,
         }, {
-            have h5 : breathes sea_eel := A5 sea_eel h4,
-            have h6 : ¬ is_paper sea_eel := A4 sea_eel h5,
-            contradiction,
+            exact A4 sea_eel (A5 sea_eel h_1),
         }
     }, {
-        have h1 : breathes sea_eel := A5 sea_eel h,
-        have h2 : ¬ is_paper sea_eel := A4 sea_eel h1,
-        contradiction,
+        exact A4 sea_eel (A5 sea_eel h),
     }
 end
 
