@@ -35,29 +35,17 @@ axiom A6 : Has_car James ∨ Works_at_Meta James
 -- James has a high income.
 -- Let's first prove the positive case.
 
+-- Theorem to prove that James is not a student.
 theorem not_James_is_student : ¬ Student James :=
 begin
     intro h,
-    have h1 : ¬ Drives James, from A5 James h,
-    cases A3 James, {
-        have h2 : ¬ High_income James, {
-            intro h2,
-            have h3 : ¬ Takes_bus James, from A2 James h2,
-            contradiction,
-        },
-        have h3 : ¬ Works_at_Meta James, {
-            intro h4,
-            have h5 : High_income James, from A1 James h4,
-            contradiction,
-        },
-        cases A6, {
-            have Drives_James := A4 James h_2,
-            contradiction,
-        }, {
-            contradiction,
-        }
+    cases A6, {
+        exact (A5 James h) (A4 James h_1),
     }, {
-        contradiction,
+        have h1 := (A2 James (A1 James h_1)),
+        have h2 := A5 James h,
+        have h3 := (A3 James),
+        cc,
     }
 end
 
@@ -66,3 +54,4 @@ end
 -- Question 4
 -- James drives to his destination or he is a student.
 -- Let's first prove the positive case.
+

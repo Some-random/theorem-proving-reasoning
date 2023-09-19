@@ -31,20 +31,13 @@ axiom A5 : is_still Rock
 
 theorem rock_is_turtle_or_cute : is_turtle Rock ∨ is_cute Rock :=
 begin
-    have h1 : ¬ is_skittish Rock, {
-        intro h,
-        have h2 : is_still Rock, from A5,
-        have h3 : ¬ is_still Rock, from A3 Rock h,
-        contradiction,
-    },
     cases A2 Rock, {
-        have h2 : is_cute Rock, from A1 Rock h,
         right,
-        exact h2,
+        exact A1 Rock h,
     }, {
-        have h2 : is_skittish Rock, from A4 Rock h,
-        contradiction,
-    },
+        exfalso,
+        exact A3 Rock (A4 Rock h) A5,
+    }
 end
 
 -- Let's try the negative case.

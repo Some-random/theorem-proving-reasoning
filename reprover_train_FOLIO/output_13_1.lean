@@ -39,33 +39,14 @@ axiom A8 : ¬ is_good TikTok
 
 theorem tiktok_is_program : is_programmed TikTok :=
 begin
-    have not_interesting_TikTok : ¬ is_interesting TikTok,
-    {
-        intro h,
-        have h1 : ¬ is_good TikTok := A8,
-        have h2 : is_good TikTok := A7 TikTok h,
-        contradiction,
-    },
-    have not_entertainment_TikTok : ¬ is_entertainment TikTok,
-    {
-        intro h,
-        have h1 : is_interesting TikTok := A6 TikTok h,
-        contradiction,
-    },
-    have not_instagram_related_TikTok : ¬ is_instagram_related TikTok,
-    {
-        intro h,
-        have h1 : is_entertainment TikTok := A4 TikTok h,
-        contradiction,
-    },
-    cases A3 TikTok, {
-        have h1 : is_video_app TikTok := A2 TikTok h,
-        have h2 : is_software TikTok := A1 TikTok h1,
-        have h3 : is_programmed TikTok := A5 TikTok h2,
-        exact h3,
-    }, {
-        contradiction,
-    }
+    by_cases h : is_instagram_related TikTok,
+    
+    -- If TikTok is Instagram-related.
+    { exfalso,
+      exact A8 (A7 TikTok (A6 TikTok (A4 TikTok h))) },
+    
+    -- Else, TikTok is YouTube-related.
+    { exact A5 TikTok (A1 TikTok (A2 TikTok (or.resolve_right (A3 TikTok) h))) }
 end
 
 -- Let's try the negative case.

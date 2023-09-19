@@ -43,20 +43,18 @@ axiom A6 : ∀ (s : Song), s ≠ Perfect → ¬ plays_song Sam s
 
 theorem sam_project_in_Cpp : written_in_Cpp Sam_Project :=
 begin
-    have h1 := A3 Sam_Project A1,
-    have not_written_in_python : ¬ written_in_Python Sam_Project, {
-        intro h,
-        have h1 := h1 h,
-        have h2 := A4,
-        contradiction,
+    by_cases h : written_in_Python Sam_Project,
+
+    -- If Sam's project is in Python.
+    { exfalso,
+      apply A3 Sam_Project A1 h,
+      exact A4 
     },
-    cases A2 Sam_Project,
-    {
-        assumption,
-    },
-    {
-        contradiction,
-    },
+
+    -- Else, Sam's project is in C++.
+    { cases A2 Sam_Project with h1 h2,
+        exact h1,
+        contradiction }
 end
 
 -- Let's try the negative case.

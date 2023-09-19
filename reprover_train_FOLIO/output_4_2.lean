@@ -37,9 +37,7 @@ theorem not_danil_knows_languageA : ¬ knows Danil LanguageA :=
 begin
     intro h,
     have h1 := A2 LanguageA Katya Danil,
-    have h2 := h1 A1 A4 h,
-    have h3 := A3,
-    contradiction,
+    exact A3 (h1 A1 A4 h),
 end
 
 -- The answer is True

@@ -38,19 +38,7 @@ axiom A6 : ¬ (Goes_to_fast_food Jeremy ∧ Conscious_environment_health Jeremy)
 theorem not_Jeremy_busy_schedule_or_enjoys_food_implies_not : 
 ¬ (Busy_schedule Jeremy ∨ Enjoys_hamburgers_steaks Jeremy) → ¬ Busy_schedule Jeremy ∧ ¬ Enjoys_hamburgers_steaks Jeremy :=
 begin
-    intro h,
-    split, {
-        intro h2,
-        apply h,
-        left,
-        exact h2,
-    }, {
-        intro h2,
-        apply h,
-        right,
-        exact h2,
-    }
-    
+    cc,
 end
 
 -- The answer is Unknown

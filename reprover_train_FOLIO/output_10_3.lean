@@ -31,6 +31,33 @@ axiom A6 : ¬ (Goes_to_fast_food Jeremy ∧ Conscious_environment_health Jeremy)
 
 -- Formalizing the Questions
 
+theorem Jeremy_busy_schedule_or_enjoys_food : Busy_schedule Jeremy ∨ Enjoys_hamburgers_steaks Jeremy :=
+begin
+    by_cases h : Goes_to_fast_food Jeremy ∧ Conscious_environment_health Jeremy,
+
+    -- Case 1: Jeremy goes to fast food places and is conscious of environment/health. This is a contradiction.
+    { exfalso,
+      exact A4 Jeremy h.right h.left },
+
+    -- Case 2: Jeremy either doesn't go to fast food places or isn't conscious of environment/health.
+    { have h1 := A6 h,
+      cases A1 Jeremy with h2 h3,
+
+      -- Sub-case 1: Jeremy eats meat regularly.
+      { right,
+        exact A2 Jeremy h2.left },
+
+      -- Sub-case 2: Jeremy is vegetarian.
+      { left,
+        have h_not_ff := A4 Jeremy (A3 Jeremy h3.right),
+        -- The contradiction arises because Jeremy goes to fast food but is also conscious of environment/health. 
+        contradiction }
+    }
+end
+
+
+
+
 -- Question 1
 -- Jeremy has a busy schedule without time to cook.
 -- Let's first prove the positive case.

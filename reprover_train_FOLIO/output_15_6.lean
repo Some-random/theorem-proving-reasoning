@@ -39,26 +39,16 @@ axiom A7 : YaleStudent Susan → ¬ Diet Susan
 
 theorem not_Susan_notDiet_Diligent : ¬ (¬ Diet Susan ∧ Diligent Susan) :=
 begin
-    have h1 : ¬ YaleStudent Susan, {
-        intro h,
-        have h1 := A7 h,
-        have h2 := A3 Susan h,
-        have h3 := A2 Susan h2,
-        have h4 := A1 Susan h3,
-        contradiction,
-    },
-    have h2 : HarvardStudent Susan, {
-        cases A4, {
-            contradiction,
-        }, {
-            exact h,
-        },
-    },
-    have h3 := A6 h2,
-    have h4 := A1 Susan h3,
     intro h,
-    cases h,
-    contradiction,
+    cases A4 with h1 h2,
+
+    -- Susan is a Yale student
+    {exact h.left (A1 Susan (A2 Susan (A3 Susan h1)))},
+    
+
+    { -- Susan is a Harvard student
+      exact h.left (A1 Susan (A6 h2)),
+      }
 end
 
 -- The answer is Unknown

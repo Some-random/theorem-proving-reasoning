@@ -30,23 +30,14 @@ axiom A5 : is_streaming_service onenineeightfour → is_hardcover_book onenineei
 -- 1984 is printed text.
 -- Let's first prove the positive case.
 
-theorem not_onenineeightfour_is_streaming_service : ¬ is_streaming_service onenineeightfour :=
+theorem onenineeightfour_is_not_streaming_service : ¬ is_streaming_service onenineeightfour :=
 begin
-    intro h,
-    have h1 : is_hardcover_book onenineeightfour, from A5 h,
-    have h2 : is_printed_text onenineeightfour, from A4 onenineeightfour h1,
-    have h3 : is_analog onenineeightfour, from A2 onenineeightfour h2,
-    have h4 : ¬ is_digital_media onenineeightfour, {
-        intro h5,
-        have h6 : ¬ is_analog onenineeightfour, from A1 onenineeightfour h5,
-        contradiction,
-    },
-    have h5 : ¬ is_streaming_service onenineeightfour, {
-        intro h7,
-        have h8 := A3 onenineeightfour h7,
-        contradiction,
-    },
-    contradiction,
+  intro h,
+  -- Use A5 to conclude that 1984 is a hardcover book
+  -- Then use A4 to deduce that it's printed text, and subsequently an analog object using A2
+  apply A1 onenineeightfour (A3 onenineeightfour h),
+  -- Chain the results to arrive at the contradiction
+  apply A2 onenineeightfour (A4 onenineeightfour (A5 h)),
 end
 
 -- The answer is Unknown

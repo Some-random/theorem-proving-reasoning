@@ -39,27 +39,9 @@ axiom A7 : YaleStudent Susan → ¬ Diet Susan
 
 theorem Susan_Diet_Diligent : Diet Susan ∧ Diligent Susan :=
 begin
-    have h1 : ¬ YaleStudent Susan, {
-        intro h1,
-        have h2 := A7 h1,
-        have h3 := A3 Susan h1,
-        have h4 := A2 Susan h3,
-        have h5 := A1 Susan h4,
-        contradiction,
-    },
-    have h2 : HarvardStudent Susan, {
-        cases A4, {
-            contradiction,
-        }, {
-            exact h,
-        },
-    },
-    have h3 := A5 Susan h2,
-    have h4 := A6 h2,
-    have h5 := A1 Susan h4,
-    split,
-    exact h5,
-    exact h3,
+    cases A4 with yale harvard,
+    { exfalso, exact A7 yale (A1 Susan (A2 Susan (A3 Susan yale))) },
+    { exact ⟨A1 Susan (A6 harvard), A5 Susan harvard⟩ }
 end
 
 -- Let's try the negative case.

@@ -43,8 +43,7 @@ begin
     intro h,
     have h1 := A2 Basque Spanish Romance,
     have h2 := h1 (and.intro h A4),
-    have h3 := A6 Spanish,
-    contradiction,
+    exact (A6 Spanish) h2,
 end
 
 -- The answer is False

@@ -46,10 +46,8 @@ theorem not_black_mirror_is_popular : ¬ is_popular BlackMirror :=
 begin
     intro h,
     have h1 := A4 BlackMirror A3 h,
-    have h2 := A5 BlackMirror,
-    have h3 := h2.mp h1,
-    have h4 := A6,
-    contradiction,
+    have h2 := (A5 BlackMirror).mp h1,
+    exact A6 h2,
 end
 
 -- The answer is False

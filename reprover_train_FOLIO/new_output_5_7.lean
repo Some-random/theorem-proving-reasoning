@@ -32,23 +32,12 @@ axiom A5 : is_still Rock
 theorem rock_condition_1 : ¬ (is_turtle Rock ∧ is_squirrel Rock) → is_cute Rock ∨ is_skittish Rock :=
 begin
     intro h,
-    have h1 : ¬ is_skittish Rock, {
-        intro h2,
-        have h3 : is_still Rock, from A5,
-        have h4 : ¬ is_still Rock, from A3 Rock h2,
-        contradiction,
-    },
-    have h2 : ¬ is_squirrel Rock, {
-        intro h2,
-        have h3 : is_skittish Rock, from A4 Rock h2,
-        contradiction,
-    },
     cases A2 Rock, {
-        have h3 : is_cute Rock, from A1 Rock h_1,
         left,
-        exact h3,
+        exact A1 Rock h_1,
     }, {
-        contradiction,
+        exfalso,
+        exact A3 Rock (A4 Rock h_1) A5,
     }
 end
 

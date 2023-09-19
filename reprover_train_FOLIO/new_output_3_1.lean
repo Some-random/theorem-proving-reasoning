@@ -38,33 +38,29 @@ axiom turkey_type_exclusivity : ∀ (t : Turkey),
 
 theorem tom_is_ocellated_wild_turkey : is_ocellated_wild_turkey Tom :=
 begin
-    cases turkey_type_exclusivity Tom A6, {
-        have h1 : ¬ is_eastern_wild_turkey Tom, from A1,
-        contradiction,
-    }, {
-        cases h, {
-            have h1 : ¬ is_osceola_wild_turkey Tom, from A2,
-            contradiction,
-        }, {
-            cases h, {
-                have h1 : ¬ is_goulds_wild_turkey Tom, from A3,
-                contradiction,
-            }, {
-                cases h, {
-                    have h1 : ¬ is_merriams_wild_turkey Tom, from A4,
-                    contradiction,
-                }, {
-                    cases h, {
-                        have h1 : ¬ is_rio_grande_wild_turkey Tom, from A5,
-                        contradiction,
-                    }, {
-                        assumption,
-                    }
-                }
-            }
-        }
-    }
+    cases turkey_type_exclusivity Tom A6,
+    exfalso,
+    exact A1 h,
+    
+    cases h,
+    exfalso,
+    exact A2 h,
+    
+    cases h,
+    exfalso,
+    exact A3 h,
+    
+    cases h,
+    exfalso,
+    exact A4 h,
+    
+    cases h,
+    exfalso,
+    exact A5 h,
+    
+    exact h,
 end
+
 
 -- Let's try the negative case.
 

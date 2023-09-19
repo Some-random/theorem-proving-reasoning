@@ -37,38 +37,18 @@ axiom A8 : ¬ is_good TikTok
 -- Tiktok is a program.
 -- Let's first prove the positive case.
 
-theorem not_tiktok_not_youtube_and_program : (is_youtube_related TikTok ∧ is_programmed TikTok) :=
+theorem tiktok_youtube_or_program : is_youtube_related TikTok ∧ is_programmed TikTok :=
 begin
-    have h1 : ¬ is_interesting TikTok,
-    {
-        intro h,
-        have h2 : ¬ is_good TikTok := A8,
-        have h3 : is_good TikTok := A7 TikTok h,
-        contradiction,
-    },
-    have h2 : ¬ is_entertainment TikTok,
-    {
-        intro h,
-        have h1 : is_interesting TikTok := A6 TikTok h,
-        contradiction,
-    },
-    have h3 : ¬ is_instagram_related TikTok,
-    {
-        intro h,
-        have h1 : is_entertainment TikTok := A4 TikTok h,
-        contradiction,
-    },
-    cases A3 TikTok, {
-        have h1 : is_video_app TikTok := A2 TikTok h,
-        have h2 : is_software TikTok := A1 TikTok h1,
-        have h3 : is_programmed TikTok := A5 TikTok h2,
-        split,
-        exact h,
-        exact h3,
-    }, {
-        contradiction,
-    }
+    by_cases h : is_instagram_related TikTok,
+    -- If TikTok is Instagram-related.
+    { exfalso, exact A8 (A7 TikTok (A6 TikTok (A4 TikTok h))) },
+    
+    -- Else, TikTok is YouTube-related.
+    { split,
+      exact or.resolve_right (A3 TikTok) h,
+      exact A5 TikTok (A1 TikTok (A2 TikTok (or.resolve_right (A3 TikTok) h))) }
 end
+
 
 -- The answer is Unknown
 

@@ -31,38 +31,21 @@ axiom A5 : is_still Rock
 
 theorem not_rock_condition_2 : ¬ ((is_cute Rock ∧ is_still Rock) → (is_turtle Rock ∧ is_skittish Rock)) :=
 begin
-    intro h,
-    have h1 : ¬ (is_turtle Rock ∧ is_skittish Rock), {
-        intro h2,
-        have h3 : is_skittish Rock, from and.elim_right h2,
-        have h4 : ¬ is_skittish Rock, {
-            intro h5,
-            have h6 : is_still Rock, from A5,
-            have h7 : ¬ is_still Rock, from A3 Rock h5,
-            contradiction,
-        },
-        contradiction,
-    },
-    have h2 : ¬ is_skittish Rock, {
-        intro h3,
-        have h4 : is_still Rock, from A5,
-        have h5 : ¬ is_still Rock, from A3 Rock h3,
-        contradiction,
-    },
-    have h3 : ¬ is_squirrel Rock, {
-        intro h4,
-        have h5 : is_skittish Rock, from A4 Rock h4,
-        contradiction,
-    },
-    cases A2 Rock, {
-        have h4 : is_cute Rock, from A1 Rock h_1,
-        have h5 : is_still Rock, from A5,
-        have h6 : is_cute Rock ∧ is_still Rock, from and.intro h4 h5,
-        have h7 : is_turtle Rock ∧ is_skittish Rock, from h h6,
-        contradiction,
-    }, {
-        contradiction,
-    }
+  intro h,
+  cases A2 Rock,
+  { 
+    -- Proving that Rock is cute based on him being a rabbit.
+    have h1 := A1 Rock h_1,
+    specialize h ⟨h1, A5⟩,
+    -- This contradicts the fact that skittish animals are not still.
+    exact A3 Rock h.right A5,
+  },
+  -- If Rock is a squirrel, then Rock is skittish.
+  { 
+    -- Proving that Rock is skittish based on him being a squirrel.
+    have h1 := A4 Rock h_1,
+    exact A3 Rock h1 A5,
+  }
 end
 
 -- The answer is Unknown

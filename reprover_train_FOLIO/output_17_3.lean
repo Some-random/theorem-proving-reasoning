@@ -35,35 +35,19 @@ axiom A6 : ¬ Nobel_laureate Amy → ¬ Olympic_gold_medal_winner Amy
 
 theorem Amy_is_neither_scientist_nor_winner : ¬ Scientist Amy ∧ ¬ Olympic_gold_medal_winner Amy :=
 begin
-    have h1 : ¬ Scientist Amy, {
-        intro h,
-        have h2 := A3 Amy h,
-        cases A5, {
-            contradiction,
-        }, {
-            have h3 := A2 Amy h_1,
-            have h4 := A1 Amy h3,
-            contradiction,
-        }
-    },
-    have h2 : ¬ Olympic_gold_medal_winner Amy, {
-        intro h,
-        have h2 := A2 Amy h,
-        have h3 := A1 Amy h2,
-        by_cases Nobel_laureate Amy, {
-            have h4 := A4 Amy h,
-            have h5 := A3 Amy h4,
-            contradiction,
-        }, {
-            have h6 := A6 h,
-            contradiction,
-        }
-    },
-    split, {
-        exact h1,
-    }, {
-        exact h2,
-    }
+    split,
+
+    -- Case 1: Amy is not a Scientist
+    intro h,
+    cases A5 with h1 h2,
+    exact A3 Amy h h1,
+    exact A3 Amy h (A1 Amy (A2 Amy h2)),
+
+    -- Case 2: Amy is not an Olympic Gold Medal Winner
+    intro h,
+    cases (classical.em (Nobel_laureate Amy)) with h1 h2,
+    exact A3 Amy (A4 Amy h1) (A1 Amy (A2 Amy h)),
+    exact A6 h2 h
 end
 
 -- Let's try the negative case.

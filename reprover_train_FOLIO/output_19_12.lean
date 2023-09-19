@@ -44,8 +44,7 @@ begin
             left,
             exact h2,
         }, {
-            have h3 := A1 James h_1,
-            have h4 := A2 James h3,
+            have h3 := A2 James (A1 James h_1),
             cases A3 James, {
                 contradiction,
             }, {
@@ -56,19 +55,11 @@ begin
     },
     have h2 : ¬ (High_income James ∧ Student James), {
         intro h3,
-        have h4 : High_income James, from and.elim_left h3,
-        have h5 : Student James, from and.elim_right h3,
-        have h6 : ¬ Drives James, from A5 James h5,
-        have h7 : ¬ Takes_bus James, from A2 James h4,
-        have h8 : Takes_bus James ∨ Drives James, from A3 James,
-        cases h8, {
-            contradiction,
-        }, {
-            contradiction,
-        }
+        cases A3 James,
+        exact (A2 James (and.elim_left h3)) h_1,
+        exact (A5 James (and.elim_right h3)) h_1
     },
-    have High_income_and_Student_James := h h1,
-    contradiction
+    cc,
 end
 
 -- The answer is Unknown
