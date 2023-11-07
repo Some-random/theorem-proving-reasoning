@@ -33,6 +33,9 @@ FOLIO_example_textual_input_1 = "Textual context: All people who regularly drink
 FOLIO_example_textual_input_2 = "Textual context: There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is also not a Gould's wild turkey, or a Merriam's wild turkey, or a Rio Grande wild turkey. Tom is a wild turkey.\nQuestion 1: Based on the above information, is the following statement true, false, or uncertain? Tom is an Ocellated wild turkey.\nQuestion 2: Based on the above information, is the following statement true, false, or uncertain? Tom is an Eastern wild turkey.\nQuestion 3: Based on the above information, is the following statement true, false, or uncertain? Joey is a wild turkey."
 FOLIO_example_textual_input_3 = "Textual context: A La Liga soccer team ranks higher than another if it receives more points. If two La Liga soccer teams recieve the same points, the team which recieves more points from the games between the two teams ranks higher. Real Madrid and Barcelona are both La Liga soccer teams. In La Liga 2021-2022, Real Madrid recieves 86 points and Barcelon recieves 73 points. In La Liga 2021-2022, Real Madrid and Barcelona both recieve 3 points from the games between them.\nQuestion 1: Based on the above information, is the following statement true, false, or uncertain? In La Liga 2021-2022, Real Madrid ranks higher than Barcelona.\nQuestion 2: Based on the above information, is the following statement true, false, or uncertain? In La Liga 2021-2022, Barcelona ranks higher than Real Madrid."
 
-FOLIO_example_outputs_True = "".join(open("output_prompt_FOLIO/FOLIO_train_multi_1.lean").readlines())
-FOLIO_example_outputs_False = "".join(open("output_prompt_FOLIO/FOLIO_train_multi_2.lean").readlines())
-FOLIO_example_outputs_Unknown = "".join(open("output_prompt_FOLIO/FOLIO_train_multi_3.lean").readlines())
+import os
+
+if os.path.exists("output_prompt_FOLIO"):
+    FOLIO_example_outputs_True = "".join(open("output_prompt_FOLIO/FOLIO_train_multi_1.lean").readlines())
+    FOLIO_example_outputs_False = "".join(open("output_prompt_FOLIO/FOLIO_train_multi_2.lean").readlines())
+    FOLIO_example_outputs_Unknown = "".join(open("output_prompt_FOLIO/FOLIO_train_multi_3.lean").readlines())
