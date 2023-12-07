@@ -254,7 +254,7 @@ def get_model_answer(model_output):
 def run_prompt(random_qa_pairs, model, **kwargs):
     # make a folder to store the outputs and config files, make sure the folder contain current timestamp and model name
     timestamp = datetime.datetime.now().strftime("%Y_%b_%d_%H_%M_%S")
-    folder_name = "ProofWriter_" + timestamp + "_" + model
+    folder_name = "ProofWriter_" + timestamp + "_" + model.split('/')[-1]
     os.mkdir(folder_name)
 
     # dump the prompt to a file
@@ -356,6 +356,13 @@ if __name__ == "__main__":
         --data_path ../Logic-LLM/data/ProofWriter/dev.json \
         --model llama-2-7b-chat \
         --model_checkpoint_path /path/to/hugginface/checkpoint/ \
+        --model_dtype float16 \
+        --max_length 512
+
+
+    > python llmprompt.py \
+        --data_path ../Logic-LLM/data/ProofWriter/dev.json \
+        --model codellama/CodeLlama-7b-Instruct-hf \
         --model_dtype float16 \
         --max_length 512
     """
