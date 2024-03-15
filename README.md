@@ -1,6 +1,12 @@
 # LeanReasoner
 
-## Step 1: Get formalization result with GPT-4
+## Installation
+Please refer to the installation section of LeanDoJo for instructions. Please also clone ReProver in this directory if you want to train the models.
+
+
+## Running experiments
+
+### Step 1: Get formalization result with GPT-4
 We use GPT-4 with the **add_comment_and_use_COT** config, which adds comments in the formalization process and tries to provide step-by-step proof even when we can't prove the theorem. The prompt input are stored in ```prompts.py``` while the prompt output are store in ```output_prompt``` and ```output_prompt_FOLIO```
 
 For ProofWriter, run: ```python gpt4prompt.py```
@@ -8,7 +14,7 @@ For ProofWriter, run: ```python gpt4prompt.py```
 For FOLIO, run: ```python gpt4prompt_FOLIO.py```
 
 
-## Step 2: Preprocess Lean code with LeanDoJo
+### Step 2: Preprocess Lean code with LeanDoJo
 The training data for FOLIO can be found in ```reprover_train_FOLIO```
 To generate training data, in the LeanDoJo folder, run 
 
@@ -20,7 +26,7 @@ Setup ReProver training, run
 and change the config accordingly
 
 
-## Step 3: Train premise selection and tactic generation
+### Step 3: Train premise selection and tactic generation
 Premise Selection Training: 
 
 ```python retrieval/main.py fit --config retrieval/confs/cli_random_text_math_FOLIO_concise.yaml```
@@ -38,7 +44,7 @@ Tactic generation:
 ```python generator/main.py fit --config generator/confs/cli_random_math_text_FOLIO_concise.yaml --model.ret_ckpt_path logs/premise_math_FOLIO_concise/lightning_logs/version_0/checkpoints/epoch=176-step=8319.ckpt --data.preds_path logs/premise_math_FOLIO_concise/lightning_logs/version_1/predictions.pickle```
 
 
-## Step 4: Do ProofSearch
+### Step 4: Do ProofSearch
 
 ReIndex the corpus: 
 
