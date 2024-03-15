@@ -1,6 +1,0 @@
-{
-    "input": "Dave is blue. Dave is furry. Fiona is blue. Gary is not white. Harry is furry. Harry is green. Harry is white. All green things are smart. If something is blue and furry then it is green. Blue things are kind. If Fiona is kind then Fiona is furry. All kind, furry things are blue. If something is kind then it is white. If something is smart then it is big. Question: Fiona is not big.?",
-    "input_tokens": 1893,
-    "output": "universe u\n\nconstant obj : Type u\n\nconstant Dave : obj\nconstant Fiona : obj\nconstant Gary : obj\nconstant Harry : obj\n\nconstant Blue : obj → Prop\nconstant Furry : obj → Prop\nconstant Green : obj → Prop\nconstant White : obj → Prop\nconstant Smart : obj → Prop\nconstant Kind : obj → Prop\nconstant Big : obj → Prop\n\naxiom T1 : Blue Dave\naxiom T2 : Furry Dave\naxiom T3 : Blue Fiona\naxiom T4 : ¬ White Gary\naxiom T5 : Furry Harry\naxiom T6 : Green Harry\naxiom T7 : White Harry\n\naxiom R1 : ∀ x : obj, Green x → Smart x\naxiom R2 : ∀ x : obj, Blue x ∧ Furry x → Green x\naxiom R3 : ∀ x : obj, Blue x → Kind x\naxiom R4 : Kind Fiona → Furry Fiona\naxiom R5 : ∀ x : obj, Kind x ∧ Furry x → Blue x\naxiom R6 : ∀ x : obj, Kind x → White x\naxiom R7 : ∀ x : obj, Smart x → Big x\n\ntheorem fiona_is_not_big : ¬ Big Fiona :=\nbegin\n  sorry,\nend",
-    "output_tokens": 272
-}
