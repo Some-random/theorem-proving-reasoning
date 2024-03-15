@@ -3,11 +3,12 @@
 ## Installation
 Please refer to the installation section of [LeanDoJo](https://github.com/lean-dojo/LeanDojo?tab=readme-ov-file#installation) for instructions. Please also clone and install [ReProver](https://github.com/lean-dojo/ReProver) in this directory if you want to train the models.
 
+## Data
 
 ## Running experiments
 
 ### Step 1: Get formalization result with GPT-4
-We use GPT-4 with the **add_comment_and_use_COT** config, which adds comments in the formalization process and tries to provide step-by-step proof even when we can't prove the theorem. The prompt input are stored in ```prompts.py``` while the prompt output are store in ```output_prompt``` and ```output_prompt_FOLIO```
+We use GPT-4 with the **add_comment_and_use_COT** configuration, which adds comments in the formalization process and tries to provide step-by-step proof even when we can't prove the theorem. The prompt input are stored in ```prompts.py``` while the prompt output are store in ```output_prompt``` and ```output_prompt_FOLIO```
 
 For ProofWriter, run: ```python gpt4prompt.py```
 
