@@ -1,23 +1,23 @@
 # LeanReasoner
 
 ## Step 1: Get formalization result with GPT-4
-We use GPT-4 with the **add_comment_and_use_COT** config, which adds comment in the formalization process and tries to provide step-by-step proof even when we can't prove the theorem. The prompt input are stored in ```prompts.py``` while the prompt output are store in ```output_prompt``` and ```output_prompt_FOLIO```
+We use GPT-4 with the **add_comment_and_use_COT** config, which adds comments in the formalization process and tries to provide step-by-step proof even when we can't prove the theorem. The prompt input are stored in ```prompts.py``` while the prompt output are store in ```output_prompt``` and ```output_prompt_FOLIO```
 
-For ProofWriter: ```python gpt4prompt.py```
+For ProofWriter, run: ```python gpt4prompt.py```
 
-For FOLIO: ```python gpt4prompt_FOLIO.py```
+For FOLIO, run: ```python gpt4prompt_FOLIO.py```
 
 
 ## Step 2: Preprocess Lean code with LeanDoJo
 The training data for FOLIO can be found in ```reprover_train_FOLIO```
-To generate training data, in LeanDoJo folder, run 
+To generate training data, in the LeanDoJo folder, run 
 
 ```python test_dataset_construction.py output_dir_name```
 
 Setup ReProver training, run 
 ```cp -r output_dir_name ReProver/data/```
 
-and change config accordingly
+and change the config accordingly
 
 
 ## Step 3: Train premise selection and tactic generation
