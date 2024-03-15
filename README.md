@@ -1,7 +1,7 @@
 # LeanReasoner
 
 ## Installation
-Please refer to the installation section of LeanDoJo for instructions. Please also clone ReProver in this directory if you want to train the models.
+Please refer to the installation section of [LeanDoJo]([https://pages.github.com/](https://github.com/lean-dojo/LeanDojo?tab=readme-ov-file#installation)) for instructions. Please also clone and install [ReProver](https://github.com/lean-dojo/ReProver) in this directory if you want to train the models.
 
 
 ## Running experiments
