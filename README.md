@@ -5,8 +5,11 @@ Please refer to the installation section of [LeanDoJo](https://github.com/lean-d
 
 ## Data
 Two files with detailed to help understand the process of formalizing natural language question to theorems: examples_with_detailed annotation
+
 The annotated data for ProofWriter: data_for_share/ProofWriter
+
 The annotated data for FOLIO - concise version: data_for_share/FOLIO/concise
+
 The annotated data for FOLIO - intuitive version: data_for_share/FOLIO/intuitive
 
 ## Running experiments
