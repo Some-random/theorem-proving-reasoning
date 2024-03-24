@@ -66,3 +66,13 @@ Evaluate:
 ```python prover/evaluate.py --data-path data/test_FOLIO_all_true/random --ckpt_path logs/tacgen_math_FOLIO_concise/lightning_logs/version_0/checkpoints/epoch=59-step=2160.ckpt --indexed-corpus-path logs/tacgen_math_FOLIO_concise/lightning_logs/version_0/indexed_corpus --split train --num-cpus 10```
 
 
+
+## Citation
+```bibtex
+@inproceedings{jiang2024leanreasoner,
+ title={LeanReasoner: Boosting Complex Logical Reasoning with Lean}, 
+ author = {Jiang, Dongwei and Fonseca, Marcio and Cohen, Shay B.},
+ booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+ year = {2024}
+}
+```
