@@ -72,7 +72,7 @@ Evaluate:
 @inproceedings{jiang2024leanreasoner,
  title={LeanReasoner: Boosting Complex Logical Reasoning with Lean}, 
  author = {Jiang, Dongwei and Fonseca, Marcio and Cohen, Shay B.},
- booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+ booktitle = {Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
  year = {2024}
 }
 ```
