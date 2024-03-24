@@ -3,6 +3,9 @@
 ## Installation
 Please refer to the installation section of [LeanDoJo](https://github.com/lean-dojo/LeanDojo?tab=readme-ov-file#installation) for instructions. Please also clone and install [ReProver](https://github.com/lean-dojo/ReProver) in this directory if you want to train the models.
 
+The LeanDoJo version I used was. To install:
+The ReProver version I used was. To install:
+
 ## Data
 Two files with detailed to help understand the process of formalizing natural language question to theorems: examples_with_detailed annotation
 
