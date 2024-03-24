@@ -1,10 +1,15 @@
 # LeanReasoner
 
 ## Installation
-Please refer to the installation section of [LeanDoJo](https://github.com/lean-dojo/LeanDojo?tab=readme-ov-file#installation) for instructions. Please also clone and install [ReProver](https://github.com/lean-dojo/ReProver) in this directory if you want to train the models.
 
-The LeanDoJo version I used was. To install:
-The ReProver version I used was. To install:
+To set up your environment, please follow the instructions provided below. Our setup relies on external repositories, [LeanDojo](https://github.com/lean-dojo/LeanDojo) and [ReProver](https://github.com/lean-dojo/ReProver), for complete installation. There isn't a specific `requirements.txt` file for this project as all necessary installations are covered through these resources.
+
+### Step 1: Install LeanDojo
+First, visit the [LeanDojo repository](https://github.com/lean-dojo/LeanDojo?tab=readme-ov-file#installation) and follow the installation instructions provided there. For reference, the commit used for this setup was `be04dd3fca520addb497e91339f725e55b3bee74`.
+
+### Step 2: Clone and Set Up ReProver
+Next, clone the ReProver repository to your local machine. Follow the [installation instructions](https://github.com/lean-dojo/ReProver?tab=readme-ov-file#requirements) detailed within to properly set up ReProver for training LeanReasoner. The specific commit used for ReProver in this setup was `ada8cc1f7e8c356ea1af9d3c27e44a6d7494817b`.
+
 
 ## Data
 Two files with detailed to help understand the process of formalizing natural language question to theorems: examples_with_detailed annotation
