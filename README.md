@@ -38,6 +38,8 @@ and change the config accordingly
 
 
 ### Step 3: Train premise selection and tactic generation
+(For the following commands, use the 'retrieval' folder located within the Reprover repository)
+
 Premise Selection Training: 
 
 ```python retrieval/main.py fit --config retrieval/confs/cli_random_text_math_FOLIO_concise.yaml```
