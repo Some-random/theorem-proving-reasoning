@@ -32,6 +32,7 @@ For FOLIO, run: ```python gpt4prompt_FOLIO.py```
 
 ### Step 2: Preprocess Lean code with LeanDoJo
 The training data for FOLIO can be found in ```reprover_train_FOLIO```
+
 To generate training data, in the LeanDoJo folder, run 
 
 ```python test_dataset_construction.py output_dir_name```
